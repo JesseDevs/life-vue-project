@@ -7,17 +7,17 @@
 		<social-block>
 			<ul>
 				<li>
-					<a to="twitter.com" target="_blank">
+					<a href="twitter.com" target="_blank">
 						<Icon name="entypo-social:twitter" />
 					</a>
 				</li>
 				<li>
-					<a to="twitter.com" target="_blank">
+					<a href="twitter.com" target="_blank">
 						<Icon name="ph:instagram-logo-fill"
 					/></a>
 				</li>
 				<li>
-					<a to="twitter.com" target="_blank">
+					<a href="twitter.com" target="_blank">
 						<Icon name="mdi:gmail" />
 					</a>
 				</li>

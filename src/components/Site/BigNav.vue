@@ -7,20 +7,20 @@
 			<nav>
 				<ul>
 					<li :class="{ active: activeTab === 'mission' }">
-						<a to="#mission">Mission </a>
+						<a href="#mission">Mission </a>
 					</li>
 					<li :class="{ active: activeTab === 'gallery' }">
-						<a to="#gallery">Gallery </a>
+						<a href="#gallery">Gallery </a>
 					</li>
 					<li :class="{ active: activeTab === 'team' }">
-						<a to="#team">Our Team </a>
+						<a href="#team">Our Team </a>
 					</li>
 
 					<li :class="{ active: activeTab === 'events' }">
-						<a to="#events">Events </a>
+						<a href="#events">Events </a>
 					</li>
 					<li :class="{ active: activeTab === 'contact' }">
-						<a to="#contact">Contact </a>
+						<a href="#contact">Contact </a>
 					</li>
 				</ul>
 			</nav>

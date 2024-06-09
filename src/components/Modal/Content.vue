@@ -4,23 +4,23 @@
 			<ul class="modal-btns">
 				<li>
 					<span class="step-3"> 01 </span>
-					<a class="step-3" @click="ui.closeMenu" to="#mission">Mission </a>
+					<a class="step-3" @click="ui.closeMenu" href="#mission">Mission </a>
 				</li>
 				<li>
 					<span class="step-3"> 02 </span>
-					<a class="step-3" to="#team" @click="ui.closeMenu"> Our Team </a>
+					<a class="step-3" href="#team" @click="ui.closeMenu"> Our Team </a>
 				</li>
 				<li>
 					<span class="step-3"> 03 </span>
-					<a class="step-3" @click="ui.closeMenu" to="#gallery">Gallery </a>
+					<a class="step-3" @click="ui.closeMenu" href="#gallery">Gallery </a>
 				</li>
 				<li>
 					<span class="step-3"> 04 </span>
-					<a class="step-3" @click="ui.closeMenu" to="#events">Events </a>
+					<a class="step-3" @click="ui.closeMenu" href="#events">Events </a>
 				</li>
 				<li>
 					<span class="step-3"> 05 </span>
-					<a class="step-3" @click="ui.closeMenu" to="#contact">Contact </a>
+					<a class="step-3" @click="ui.closeMenu" href="#contact">Contact </a>
 				</li>
 				<li>
 					<div class="button-container">

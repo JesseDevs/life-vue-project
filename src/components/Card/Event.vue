@@ -25,7 +25,7 @@
 				<p v-for="(item, index) in event.location" :key="index">{{ item }}</p>
 			</div>
 		</text-content>
-		<a class="shimmer" :to="event.link" target="blank">{{ event.linkText }}</a>
+		<a class="shimmer" :href="event.link" target="blank">{{ event.linkText }}</a>
 	</event-card>
 </template>
 
