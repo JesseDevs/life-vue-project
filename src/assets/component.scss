@@ -1,0 +1,58 @@
+.btn-bordered {
+	background-color: var(--background);
+	color: white;
+
+	font-weight: 600;
+	outline: none;
+	appearance: none;
+	border: none;
+	box-sizing: border-box;
+	border: 2px solid var(--brand-color);
+	padding: 12px 50px;
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
+	transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+	letter-spacing: .8px;
+
+	box-shadow:
+		0 0 5px rgba(var(--brand-color-rgb) / 0.5),
+		0 10px 25px rgba(var(--brand-color-rgb) / 0.5),
+		0 0 10px rgba(var(--brand-color-rgb) / 0.5),
+		0 0 50px rgba(var(--brand-color-rgb) / 0.5);
+
+	animation: blink 1.8s infinite linear;
+
+	&:hover {
+		background-color: rgba(var(--brand-color-rgb) / 0.5);
+		animation: pause;
+	}
+}
+
+@keyframes blink {
+
+	0%,
+	100% {
+		background-color: var(--background);
+		box-shadow:
+			0 0 5px rgba(var(--brand-two-color-rgb) / 0.5),
+			0 10px 25px rgba(var(--brand-two-color-rgb) / 0.5),
+			0 0 10px rgba(var(--brand-two-color-rgb) / 0.5),
+			0 0 50px rgba(var(--brand-two-color-rgb) / 0.5);
+	}
+
+	50% {
+		background-color: rgba(var(--brand-two-color-rgb) / 1);
+	}
+
+	25%,
+	75% {
+		background-color: rgba(var(--brand-color-rgb) / 0.3);
+
+		box-shadow:
+			0 0 5px rgba(var(--brand-color-rgb) / 0.3),
+			0 10px 25px rgba(var(--brand-color-rgb) / 0.3),
+			0 0 50px rgba(var(--brand-color-rgb) / 0.3),
+			0 0 50px rgba(var(--brand-color-rgb) / 0.3);
+	}
+}
