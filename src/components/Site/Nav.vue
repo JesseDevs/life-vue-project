@@ -45,7 +45,8 @@
 		top: 0;
 		width: 100%;
 		z-index: 9999;
-		backdrop-filter: blur(6px);
+		backdrop-filter: blur(7px);
+		color: rgb(250 250 250);
 		background-color: rgb(var(--background-rgb) / 0.25);
 
 		inner-column {
@@ -113,7 +114,7 @@
 	header.menu-open {
 		div.mbykw {
 			span {
-				background-color: var(--text);
+				background-color: rgb(250 250 250);
 			}
 			span:first-child {
 				transform: rotate(45deg);

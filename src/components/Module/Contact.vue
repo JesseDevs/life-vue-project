@@ -25,13 +25,13 @@
 					placeholder="email@domain"
 					required=""
 				/>
-				<label for="telephone">Telephone Number (Optional)</label>
+				<!-- <label for="telephone">Telephone Number (Optional)</label>
 				<input
 					type="tel"
 					name="telephone"
 					id="telephone"
 					placeholder="(555) 555-5555"
-				/>
+				/> -->
 				<label for="message">Message</label>
 				<textarea
 					rows="5"

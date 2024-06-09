@@ -1,5 +1,6 @@
 .btn-bordered {
-	background-color: var(--background);
+	background-color: rgb(246 213 238);
+	;
 	color: white;
 
 	font-weight: 600;
@@ -7,25 +8,20 @@
 	appearance: none;
 	border: none;
 	box-sizing: border-box;
-	border: 2px solid var(--brand-color);
+	// border: 2px solid var(--brand-color);
 	padding: 12px 50px;
 	z-index: 2;
 	position: relative;
 	cursor: pointer;
-	transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+	transition: all .2s ease-in-out;
 	letter-spacing: .8px;
-
-	box-shadow:
-		0 0 5px rgba(var(--brand-color-rgb) / 0.5),
-		0 10px 25px rgba(var(--brand-color-rgb) / 0.5),
-		0 0 10px rgba(var(--brand-color-rgb) / 0.5),
-		0 0 50px rgba(var(--brand-color-rgb) / 0.5);
 
 	animation: blink 1.8s infinite linear;
 
 	&:hover {
-		background-color: rgba(var(--brand-color-rgb) / 0.5);
-		animation: pause;
+		background-color: rgba(var(--brand-color-rgb) / 1);
+
+		transition: all .2s ease-in-out;
 	}
 }
 

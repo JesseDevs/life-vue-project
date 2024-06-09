@@ -51,7 +51,7 @@
 		inner-column {
 			padding-top: 0;
 			padding-bottom: 0%;
-			max-width: 700px;
+			max-width: 900px;
 		}
 	}
 </style>

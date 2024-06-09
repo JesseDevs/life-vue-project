@@ -32,6 +32,9 @@
 			scale: 2,
 			filter: 'blur(10px)',
 			opacity: 0,
+			onComplete: function () {
+				document.querySelector('.dot-grid-right').style.display = 'none';
+			},
 		});
 	});
 </script>
@@ -90,6 +93,15 @@
 				var(--brand-two-color)
 			);
 			opacity: 0.35;
+		}
+
+		@media (min-width: 700px) {
+			grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+
+			.dot-right {
+				width: 20px;
+				height: 20px;
+			}
 		}
 	}
 </style>

@@ -1,5 +1,6 @@
 <template>
 	<modal-content :class="{ 'modal-open': modal }">
+		<Space class="always-dark" />
 		<nav ref="nav">
 			<ul class="modal-btns">
 				<li>
@@ -79,9 +80,13 @@
 </script>
 
 <style lang="scss">
+	.always-dark {
+		background-color: rgb(11, 6, 11) !important;
+	}
 	modal-content {
 		touch-action: manipulation;
 		background-color: rgb(11, 6, 11);
+		color: rgb(250 250 250);
 
 		display: flex;
 		flex-direction: column;

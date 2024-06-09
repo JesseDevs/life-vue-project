@@ -1,5 +1,5 @@
 <template>
-	<Teleport href=".bottom">
+	<Teleport to=".bottom">
 		<glass-container @click="handleModalContainerClick" :class="`${ui.menuClass}`">
 			<Content />
 		</glass-container>
@@ -27,7 +27,7 @@
 		transition: opacity 0.5s ease;
 		position: fixed;
 
-		top: 72px;
+		top: 0;
 		left: 0;
 		right: 0;
 		transform: translateZ(0);
