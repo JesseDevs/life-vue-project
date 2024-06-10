@@ -23,13 +23,10 @@
 					<span class="step-3"> 05 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#contact">Contact </a>
 				</li>
-				<li>
-					<div class="button-container">
-						<button class="btn-bordered domine">DONATE</button>
-						<div class="btn-support"></div>
-					</div>
-				</li>
 			</ul>
+			<div class="btn-container">
+				<button class="btn-bordered">DONATE</button>
+			</div>
 		</nav>
 	</modal-content>
 </template>
@@ -119,6 +116,15 @@
 			display: flex;
 			overflow-x: hidden;
 			overflow-y: auto;
+
+			.btn-container {
+				margin: 0 auto;
+				margin-bottom: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 80%;
+			}
 		}
 	}
 
@@ -127,10 +133,6 @@
 		flex-direction: column;
 
 		padding-top: 40px;
-
-		li:last-of-type {
-			margin-top: 20px;
-		}
 
 		li {
 			opacity: 0;
@@ -163,12 +165,12 @@
 				width: 50px;
 				height: 50px;
 				font-weight: 100;
-				bottom: 0;
+				bottom: 5px;
 				left: 0;
 				transition: scale 0.4s ease-in-out;
 			}
 
-			&:not(:last-of-type):after {
+			&:after {
 				content: '';
 				width: 100%;
 				height: 1px;
@@ -180,7 +182,7 @@
 				transition: left 0.3s ease-in-out, rotate 0.3s ease-in-out;
 			}
 
-			&:not(:last-of-type):before {
+			&:before {
 				content: '';
 				width: 100%;
 				height: 1px;

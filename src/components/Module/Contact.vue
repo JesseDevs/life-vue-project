@@ -77,15 +77,15 @@
 			}
 			button.submit-btn {
 				margin-top: 10px;
-				background-color: var(--brand-color);
+				background-color: rgb(var(--brand-color-rgb) / 0.8);
 				color: white;
-				border-radius: 8px;
+
 				font-weight: 600;
 				outline: none;
 				appearance: none;
 				border: none;
 				box-sizing: border-box;
-				border: 2px solid var(--brand-color);
+				border: 2px solid rgb(var(--brand-color-rgb) / 0.8);
 				padding: 12px 50px;
 				z-index: 2;
 				position: relative;

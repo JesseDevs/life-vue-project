@@ -2,7 +2,9 @@
 	<header :class="` ${ui.menuClass} main-tool-bar site-header `">
 		<inner-column>
 			<nav class="main-menu animate-drop-in">
-				<SimpleLogo />
+				<a href="/">
+					<SimpleLogo />
+				</a>
 				<button
 					class="hamburger-button icon-button"
 					@click="ui.toggleMainMenu"
@@ -40,9 +42,6 @@
 
 <style lang="scss">
 	header {
-		position: fixed;
-		left: 0;
-		top: 0;
 		width: 100%;
 		z-index: 9999;
 		backdrop-filter: blur(7px);

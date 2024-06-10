@@ -13,25 +13,19 @@ export const useInterfaceService = defineStore('interface', () => {
 		mainMenuOpen.value = false;
 	};
 
-	// useHead({
-	// 	bodyAttrs: {
-	// 		class: computed(() => {
-	// 			if (mainMenuOpen.value) return 'overflow';
-
-	// 			return '';
-	// 		}),
-	// 	},
-	// });
-
-	// const goBack = () => {
-	// 	router.go(-1);
-	// };
+	watch(mainMenuOpen, (newValue) => {
+		const body = document.body;
+		if (newValue) {
+			body.classList.add('overflow-hidden');
+		} else {
+			body.classList.remove('overflow-hidden');
+		}
+	});
 
 	return {
 		mainMenuOpen,
 		menuClass,
 		toggleMainMenu,
 		closeMenu,
-		// goBack,
 	};
 });
