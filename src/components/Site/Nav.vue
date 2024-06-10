@@ -2,7 +2,7 @@
 	<header :class="` ${ui.menuClass} main-tool-bar site-header `">
 		<inner-column>
 			<nav class="main-menu animate-drop-in">
-				<p>DONATE BUTTON?</p>
+				<SimpleLogo />
 				<button
 					class="hamburger-button icon-button"
 					@click="ui.toggleMainMenu"
