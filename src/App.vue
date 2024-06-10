@@ -6,7 +6,6 @@
 	<div class="app-container">
 		<Container />
 
-		<Space />
 		<Nav class="smallnav" />
 		<BigNav class="bignav" />
 
@@ -27,6 +26,7 @@
 			overflow: hidden;
 			section {
 				overflow: hidden;
+				scroll-margin: -50px;
 			}
 		}
 	}

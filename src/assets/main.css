@@ -38,6 +38,10 @@ body {
 	transition: background-color .4s ease;
 }
 
+.overflow-hidden {
+	overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 }
@@ -102,10 +106,6 @@ p a {
 .hide {
 	opacity: 0;
 	pointer-events: none;
-}
-
-.overflow {
-	overflow: hidden;
 }
 
 .overlay {
