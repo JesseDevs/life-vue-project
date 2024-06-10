@@ -41,8 +41,9 @@
 		width: 100%;
 		position: relative;
 
-		p.brand {
+		.brand {
 			color: var(--brand-two-color);
+			border-bottom: 1px solid var(--brand-two-color);
 		}
 
 		.calendar {
