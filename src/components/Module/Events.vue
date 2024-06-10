@@ -1,6 +1,11 @@
 <template>
 	<module-events>
 		<SectionTitle text="Upcoming Events" />
+		<p v-if="events.length > 0">
+			You can find <span class="brand">The Party</span> at these events.
+		</p>
+
+		<p v-else>Currently we are not attending any events.</p>
 		<div class="calendar no-events">
 			<p>No Upcoming Events.</p>
 		</div>
@@ -35,6 +40,10 @@
 		gap: 30px;
 		width: 100%;
 		position: relative;
+
+		p.brand {
+			color: var(--brand-two-color);
+		}
 
 		.calendar {
 			padding: 20px 12px;

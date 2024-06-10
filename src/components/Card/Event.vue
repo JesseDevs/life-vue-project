@@ -56,7 +56,14 @@
 		background-color: rgb(var(--brand-color-rgb) / 0.3);
 		position: relative;
 		box-shadow: 0 8px 32px 0 rgba(var(--brand-color-rgb) / 0.2);
-
+		img {
+			transition: transform 0.3s ease-in-out;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 		.shimmer {
 			display: inline-block;
 			position: relative;

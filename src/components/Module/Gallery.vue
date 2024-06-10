@@ -90,6 +90,16 @@
 
 		.images-container picture {
 			max-width: 400px;
+			overflow: hidden;
+
+			img {
+				transition: transform 0.3s ease-in-out;
+			}
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
 		}
 
 		.images-container:first-of-type {

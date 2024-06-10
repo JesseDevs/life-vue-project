@@ -9,6 +9,7 @@
 				<h4 class="step-1">{{ p.name }}<span class="brand-color">.</span></h4>
 				<p v-html="p.context"></p>
 			</div>
+			<a :href="p.link" target="_blank">More Information</a>
 		</text-content>
 	</partner-card>
 </template>
@@ -79,27 +80,19 @@
 			grid-column: 1/-1;
 			display: flex;
 			flex-direction: column;
-			p + p {
-				padding-top: 15px;
+			gap: 15px;
+
+			a {
+				transition: 0.3s;
+				padding: 3px;
+			}
+
+			@media (hover: hover) {
+				a:hover {
+					background-color: var(--brand-two-color);
+					color: white;
+				}
 			}
 		}
-
-		// @media (min-width: 1000px) {
-		// 	grid-template-rows: 1fr 1fr;
-		// 	column-gap: 30px;
-		// 	row-gap: 8px;
-
-		// 	picture {
-		// 		grid-row: 1/-1;
-		// 		justify-content: center;
-		// 		align-items: center;
-		// 		margin-top: 60px;
-		// 	}
-
-		// 	text-content {
-		// 		grid-column: 2/-1;
-		// 		grid-row: 1/-1;
-		// 	}
-		// }
 	}
 </style>

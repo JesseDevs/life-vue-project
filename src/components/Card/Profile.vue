@@ -3,7 +3,7 @@
 		<picture class="profile-pic">
 			<img :src="profile.imgsrc" alt="profile picture" />
 		</picture>
-
+		<!--
 		<social-block>
 			<ul>
 				<li>
@@ -22,7 +22,7 @@
 					</a>
 				</li>
 			</ul>
-		</social-block>
+		</social-block> -->
 		<text-content>
 			<div class="title">
 				<h4 class="step-2">

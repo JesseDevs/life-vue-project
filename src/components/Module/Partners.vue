@@ -67,21 +67,21 @@
 			logo: '/partners/taco.png',
 		},
 		{
-			link: 'www.ocmecca.org',
+			link: 'https://www.ocmecca.org/',
 			name: 'MECCA: Multi-Ethnic Collaborative of COmmunity Agencies',
 			context:
 				'MECCA Services specialize in accessing and serving underserved or hard-to-reach individuals and communities and, as a collaborative, MECCA relies on the credibility and strength of its member agencies who have been serving communities across the county for decades. The power of the collaborative is evidenced by the ability to reach underserved populations on a scale that has never been done before.',
 			logo: '/partners/mecca.png',
 		},
 		{
-			link: 'https://endoverdose.net',
+			link: 'https://endoverdose.net/',
 			name: 'End Overdose',
 			context:
 				'End Overdose is a non-profit organization based in Los Angeles, California working to end drug-related overdose deaths through education, medical intervention, and public awareness.',
 			logo: '/partners/end.png',
 		},
 		{
-			link: 'www.tpor.org',
+			link: 'https://thepurposeofrecovery.org/index.html',
 			name: 'The Purpose of Recovery',
 			context:
 				'The Purpose of Recovery (TPOR) is a community-based recovery organization that provides peer recovery coaching, family recovery coaching, group support, sober social events, and is the regional producer of the annual Recovery Rally in Orange County, CA. The Purpose of Recovery currently serves adolescents, transitional-age youth, adults, and family members impacted by substance use. All services are offered in English and Spanish.',

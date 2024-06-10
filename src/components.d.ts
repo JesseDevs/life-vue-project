@@ -20,6 +20,7 @@ declare module 'vue' {
     Event: typeof import('./components/Card/Event.vue')['default']
     Events: typeof import('./components/Module/Events.vue')['default']
     FadeIn: typeof import('./components/Creative/FadeIn.vue')['default']
+    FlipEvent: typeof import('./components/Card/FlipEvent.vue')['default']
     Footer: typeof import('./components/Site/Footer.vue')['default']
     Gallery: typeof import('./components/Module/Gallery.vue')['default']
     GeneralContainer: typeof import('./components/GeneralContainer.vue')['default']
