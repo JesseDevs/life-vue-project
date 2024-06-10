@@ -92,7 +92,7 @@
 				var(--background),
 				var(--brand-two-color)
 			);
-			opacity: 0.35;
+			opacity: 0.79;
 		}
 
 		@media (min-width: 700px) {
