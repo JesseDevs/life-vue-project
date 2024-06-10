@@ -92,12 +92,8 @@
 		// max-width: 360px;
 		height: 100%;
 
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
-		border-bottom: 1px solid red;
-
 		overflow: hidden;
-		border-bottom: 2px solid rgb(78 171 232 / 0.5);
+
 		box-shadow: 0 2px 5px rgb(78 171 232 / 0.3);
 
 		transition: left 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease;

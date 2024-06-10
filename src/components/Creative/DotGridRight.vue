@@ -41,13 +41,13 @@
 
 <style lang="scss" scoped>
 	.dot-grid-right {
-		grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
 
 		pointer-events: none;
 		display: grid;
 		position: absolute;
 		left: 0;
-		top: -20dvh;
+		top: -18dvh;
 
 		@media (min-width: 650px) {
 			top: -10dvh;
@@ -84,8 +84,8 @@
 		}
 
 		.dot-right {
-			width: 10px;
-			height: 10px;
+			width: 20px;
+			height: 20px;
 			border-radius: 50%;
 			background: linear-gradient(
 				195deg,
