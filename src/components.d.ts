@@ -24,6 +24,7 @@ declare module 'vue' {
     Footer: typeof import('./components/Site/Footer.vue')['default']
     Gallery: typeof import('./components/Module/Gallery.vue')['default']
     GeneralContainer: typeof import('./components/GeneralContainer.vue')['default']
+    Heart: typeof import('./components/Svg/Heart.vue')['default']
     Landing: typeof import('./components/Module/Landing.vue')['default']
     Lives: typeof import('./components/Svg/Lives.vue')['default']
     Logo: typeof import('./components/Svg/Logo.vue')['default']

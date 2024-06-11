@@ -41,7 +41,7 @@
 
 <style lang="scss" scoped>
 	.dot-grid-right {
-		grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
 
 		pointer-events: none;
 		display: grid;
@@ -99,8 +99,8 @@
 			grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
 
 			.dot-right {
-				width: 20px;
-				height: 20px;
+				width: 15px;
+				height: 15px;
 			}
 		}
 	}
