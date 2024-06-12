@@ -18,6 +18,8 @@
 			lives are valued, health is prioritized, and communities are united in their
 			commitment to saving lives.
 		</p>
+		<p>You too can make a difference.</p>
+		<a href="/">Donate button</a>
 
 		<Lives />
 		<DotGridLeft />
