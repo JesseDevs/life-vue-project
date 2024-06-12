@@ -23,7 +23,7 @@
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: 'module-landing',
-				start: 'bottom-=100px center',
+				start: 'bottom-=100px center-=140px',
 				end: 'bottom-=100px  center',
 			},
 		});
@@ -40,12 +40,25 @@
 </script>
 
 <style lang="scss" scoped>
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.dot-grid-right {
+		animation: fadeIn 1.5s ease-in-out;
+	}
 	.dot-grid-right {
 		grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
 
 		pointer-events: none;
 		display: grid;
 		position: absolute;
+		opacity: 1;
 		left: 0;
 		top: -18dvh;
 
@@ -84,8 +97,8 @@
 		}
 
 		.dot-right {
-			width: 20px;
-			height: 20px;
+			width: 15px;
+			height: 15px;
 			border-radius: 50%;
 			background: linear-gradient(
 				195deg,

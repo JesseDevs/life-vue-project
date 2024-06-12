@@ -11,7 +11,10 @@
 				<div class="pulsing-circle"></div>
 			</picture>
 		</div>
-		<SVLCircle />
+		<div class="landing-svg-holder">
+			<SVL />
+			<DYP />
+		</div>
 		<!-- <small-calendar> </small-calendar> -->
 	</module-landing>
 </template>
@@ -33,7 +36,7 @@
 		.centered-content {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: center;
 			min-height: 200px;
 
@@ -90,6 +93,12 @@
 
 		box-shadow: 0 0 40px 20px rgb(var(--brand-two-color-rgb) / 0.2);
 		animation: pulse 1.5s infinite;
+	}
+
+	div.landing-svg-holder {
+		position: absolute;
+		bottom: -10vmin;
+		right: 0;
 	}
 
 	@keyframes pulse {

@@ -15,7 +15,7 @@
 		}
 	}
 
-	.landing inner-column {
-		padding-top: 6rem;
-	}
+	// .landing inner-column {
+	// 	padding-top: 6rem;
+	// }
 </style>

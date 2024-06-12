@@ -1,35 +1,37 @@
 <template>
 	<profile-card>
-		<picture class="profile-pic">
-			<img :src="profile.imgsrc" alt="profile picture" />
-		</picture>
-		<!--
-		<social-block>
-			<ul>
-				<li>
-					<a href="twitter.com" target="_blank">
-						<Icon name="entypo-social:twitter" />
-					</a>
-				</li>
-				<li>
-					<a href="twitter.com" target="_blank">
-						<Icon name="ph:instagram-logo-fill"
-					/></a>
-				</li>
-				<li>
-					<a href="twitter.com" target="_blank">
-						<Icon name="mdi:gmail" />
-					</a>
-				</li>
-			</ul>
-		</social-block> -->
-		<text-content>
+		<div class="profile-title">
+			<picture class="profile-pic">
+				<img :src="profile.imgsrc" alt="profile picture" />
+			</picture>
+			<!--
+			<social-block>
+				<ul>
+					<li>
+						<a href="twitter.com" target="_blank">
+							<Icon name="entypo-social:twitter" />
+						</a>
+					</li>
+					<li>
+						<a href="twitter.com" target="_blank">
+							<Icon name="ph:instagram-logo-fill"
+						/></a>
+					</li>
+					<li>
+						<a href="twitter.com" target="_blank">
+							<Icon name="mdi:gmail" />
+						</a>
+					</li>
+				</ul>
+			</social-block> -->
 			<div class="title">
 				<h4 class="step-2">
 					{{ profile.name }}<span class="brand-color">.</span>
 				</h4>
 				<h5>{{ profile.role }}</h5>
 			</div>
+		</div>
+		<text-content>
 			<p v-for="(text, index) in profile.text" :key="index">
 				<span>{{ text }}</span>
 			</p>
@@ -72,20 +74,26 @@
 			gap: 2px;
 			h4 {
 				font-family: 'Josefin Slab', serif;
-				font-weight: 700;
+				font-weight: 500;
 				font-style: italic;
 			}
 			h5 {
-				font-weight: 600;
+				font-weight: 400;
 				text-transform: uppercase;
 				letter-spacing: 0.8px;
 				font-style: italic;
 			}
 		}
-		picture {
+		.profile-title {
+			width: 100%;
 			max-width: 300px;
+		}
+		picture {
+			max-width: 325px;
 			aspect-ratio: 4/5;
 			margin-bottom: 20px;
+			align-self: start;
+			height: auto;
 
 			img {
 				object-fit: cover;
@@ -93,18 +101,11 @@
 			}
 		}
 
-		picture {
-			align-self: start;
-			height: auto;
-		}
-
 		text-content {
 			grid-column: 1/-1;
 			display: flex;
 			flex-direction: column;
-			p + p {
-				padding-top: 15px;
-			}
+			gap: 20px;
 		}
 
 		social-block {
@@ -138,13 +139,15 @@
 		}
 
 		@media (min-width: 700px) {
-			grid-template-rows: 1fr 1fr;
-			column-gap: 30px;
+			display: flex;
+			flex-direction: row;
+			column-gap: 40px;
 			row-gap: 8px;
 
-			picture {
-				grid-row: 1/-1;
-				margin-top: 60px;
+			.profile-title {
+				margin-top: 20px;
+				display: flex;
+				flex-direction: column-reverse;
 			}
 
 			social-block {
@@ -154,10 +157,6 @@
 				ul {
 					flex-direction: row;
 				}
-			}
-			text-content {
-				grid-column: 2/-1;
-				grid-row: 1/-1;
 			}
 		}
 	}

@@ -59,6 +59,9 @@
 
 		transition: right 0.3s ease-in-out;
 
+		@media (min-width: 460px) {
+			max-height: 660px;
+		}
 		.dot-wrapper {
 			padding: 0.8rem;
 			cursor: none;

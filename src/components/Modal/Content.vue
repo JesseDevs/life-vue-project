@@ -160,7 +160,7 @@
 				scale: 0.4;
 				width: 50px;
 				height: 50px;
-				font-weight: 100;
+				font-weight: 200;
 				bottom: 5px;
 				left: 0;
 				transition: scale 0.4s ease-in-out;

@@ -1,16 +1,18 @@
 <template>
 	<module-events>
 		<SectionTitle text="Upcoming Events" />
-		<p v-if="events.length > 0">
-			You can find <span class="brand">The Party</span> at these events.
-		</p>
-
-		<p v-else>Currently we are not attending any events.</p>
-		<div class="calendar no-events">
-			<p>No Upcoming Events.</p>
+		<div v-if="events.length > 0" class="events-container">
+			<p>You can find <span class="brand">The Party</span> at these events.</p>
+			<div class="calendar">
+				<Event v-for="event in events" :key="event.id" :event="event" />
+			</div>
 		</div>
-		<div class="calendar">
-			<Event v-for="event in events" :key="event.id" :event="event" />
+
+		<div v-else class="events-container">
+			<p>Currently we are not attending any events.</p>
+			<div class="calendar no-events">
+				<p>No Upcoming Events.</p>
+			</div>
 		</div>
 	</module-events>
 </template>
@@ -20,6 +22,19 @@
 		{
 			id: 1,
 			title: 'Santa Monica - Title',
+			img: '/images/event.jpg',
+			dateDay: '22',
+			month: 'June',
+			detail: 'Join us in Santa Monica, CA. Explore our Event on display and meet our team.',
+			fullDate: '',
+			timeSpan: ['June 22, 2024', 'June 24, 2024'],
+			location: ['The Crypto Arena', '1111 S Figueroa St', 'Los Angeles', '90015'],
+			link: '/',
+			linkText: 'Link to Event',
+		},
+		{
+			id: 1,
+			title: '2nd event',
 			img: '/images/event.jpg',
 			dateDay: '22',
 			month: 'June',
@@ -47,11 +62,12 @@
 		}
 
 		.calendar {
+			width: 100%;
 			padding: 20px 12px;
 			display: grid;
 			column-gap: 15px;
 			row-gap: 25px;
-			grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 			place-items: center;
 			min-height: 350px;
 			background: rgba(255, 255, 255, 0.12);
@@ -69,6 +85,14 @@
 			&.no-events {
 				grid-template-columns: 1fr;
 			}
+		}
+
+		div.events-container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
 		}
 	}
 </style>

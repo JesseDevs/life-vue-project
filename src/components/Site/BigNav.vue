@@ -1,31 +1,31 @@
 <template>
-	<big-nav>
-		<inner-column>
-			<!-- <div class="shape1"></div>
-				<div class="shape2"></div> -->
+	<nav class="big-nav">
+		<a href="/" class="shimmer">
+			<!-- <SimpleLogo /> -->
+			<div>
+				<p>Donate</p>
+			</div>
+			<Heart class="heart flicker" />
+		</a>
+		<ul>
+			<li :class="{ active: activeTab === 'mission' }">
+				<a href="#mission">Mission </a>
+			</li>
+			<li :class="{ active: activeTab === 'gallery' }">
+				<a href="#gallery">Gallery </a>
+			</li>
+			<li :class="{ active: activeTab === 'team' }">
+				<a href="#team">Our Team </a>
+			</li>
 
-			<nav>
-				<ul>
-					<li :class="{ active: activeTab === 'mission' }">
-						<a href="#mission">Mission </a>
-					</li>
-					<li :class="{ active: activeTab === 'gallery' }">
-						<a href="#gallery">Gallery </a>
-					</li>
-					<li :class="{ active: activeTab === 'team' }">
-						<a href="#team">Our Team </a>
-					</li>
-
-					<li :class="{ active: activeTab === 'events' }">
-						<a href="#events">Events </a>
-					</li>
-					<li :class="{ active: activeTab === 'contact' }">
-						<a href="#contact">Contact </a>
-					</li>
-				</ul>
-			</nav>
-		</inner-column>
-	</big-nav>
+			<li :class="{ active: activeTab === 'events' }">
+				<a href="#events">Events </a>
+			</li>
+			<li :class="{ active: activeTab === 'contact' }">
+				<a href="#contact">Contact </a>
+			</li>
+		</ul>
+	</nav>
 </template>
 
 <script setup>
@@ -70,128 +70,127 @@
 </script>
 
 <style lang="scss" scoped>
-	big-nav {
-		position: fixed;
-		left: 0;
-		top: 0;
+	.big-nav {
+		padding: 0px 1.2rem;
 		width: 100%;
-		z-index: 9999;
-		background-color: var(--background);
-		background-color: rgb(var(--background-rgb) / 0.1);
-		backdrop-filter: blur(10px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-		inner-column {
-			padding: 0;
-			height: 100%;
-			position: relative;
+		ul {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		nav {
-			padding: 0px 1.2rem;
 			width: 100%;
-			display: flex;
-			justify-content: center;
 			align-items: center;
+			justify-content: flex-end;
+			gap: 4vmin;
+			position: relative;
 
-			ul {
-				display: flex;
-				width: 100%;
-				align-items: center;
-				justify-content: flex-end;
-				gap: 4vmin;
+			::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background-color: var(--brand-two-color);
+				transition: width 0.3s, left 0.3s;
+			}
+
+			li {
+				opacity: 0.7;
+				transition: opacity 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 				position: relative;
-
-				::before {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					width: 0;
-					height: 2px;
-					background-color: var(--brand-two-color);
-					transition: width 0.3s, left 0.3s;
+				scale: 0.9;
+				&:hover {
+					opacity: 1;
 				}
-
-				li {
-					opacity: 0.7;
-					transition: opacity 0.3s ease-in-out, font-weight 0.3s ease-in-out;
-					position: relative;
-					scale: 0.9;
-					&:hover {
-						opacity: 1;
+				&.active {
+					opacity: 1;
+					&::before {
+						content: '';
+						position: absolute;
+						bottom: -1px;
+						left: 0;
+						width: 100%;
+						height: 3px;
+						background-color: var(--brand-color);
 					}
-					&.active {
-						opacity: 1;
-						&::before {
-							content: '';
-							position: absolute;
-							bottom: -1px;
-							left: 0;
-							width: 100%;
-							height: 3px;
-							background-color: var(--brand-color);
-						}
-					}
-					a {
-						padding: 1rem 5px;
-						display: block;
-					}
+				}
+				a {
+					padding: 1rem 5px;
+					display: block;
 				}
 			}
-			// z-index: 9999;
-			// background-color: var(--background);
-			// min-width: 650px;
-			// background-color: rgb(var(--brand-color-rgb) / 0.1);
+		}
+	}
+	.donate-button {
+		position: relative;
 
-			// box-shadow: 0 25px 23px rgb(var(--brand-color-rgb) / 0.15);
-			// border: 1.5px solid rgba(255, 255, 255, 0.06);
-			// border-radius: 25px;
-			// display: flex;
-			// padding: 10px 15px;
-			// overflow: hidden;
-			// z-index: 2;
+		overflow: hidden; /* Ensure the shimmer doesn't overflow the button */
+	}
 
-			// 	justify-content: space-evenly;
-			// 	li {
-			// 		a {
-			// 			font-family: 'Poppins', sans-serif;
-			// 			font-weight: 400;
-			// 		}
-			// 	}
-			// }
+	.shimmer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2px;
+		position: relative;
+		color: rgb(var(--white-rgb) / 0.8);
+		font-weight: bold;
+		text-align: center;
+		padding: 8px;
+		text-decoration: none;
+		background: linear-gradient(
+			100deg,
+			rgb(var(--brand-two-inner-color-rgb) / 0.5) 25%,
+			rgb(var(--brand-two-color-rgb) / 0.9) 50%,
+			rgb(var(--white-rgb) / 0.8) 85%
+		);
+		background-size: 200% auto;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shimmer 1.5s infinite;
+
+		.heart {
+			width: 2.5em;
+			height: 2.2em;
 		}
 
-		// .shape1,
-		// .shape2 {
-		// 	height: 100px;
-		// 	width: 100px;
-		// 	position: absolute;
-		// 	border-radius: 50%;
-		// 	z-index: -1;
-		// }
+		&:hover {
+			animation: pause;
+			color: var(--brand-two-color);
+			-webkit-text-fill-color: var(--brand-two-color);
 
-		// .shape1 {
-		// 	background: linear-gradient(
-		// 		135deg,
-		// 		rgb(var(--brand-two-color-rgb)),
-		// 		rgb(var(--brand-two-color-rgb) / 0.5)
-		// 	);
+			.heart {
+				animation: pause;
+			}
+		}
+	}
 
-		// 	top: -70px;
-		// 	right: -45px;
-		// }
-		// .shape2 {
-		// 	background: linear-gradient(
-		// 		135deg,
-		// 		rgb(var(--brand-two-color-rgb)),
-		// 		rgb(var(--brand-two-color-rgb) / 0.5)
-		// 	);
+	@keyframes shimmer {
+		0% {
+			background-position: -100%;
+		}
+		100% {
+			background-position: 100%;
+		}
+	}
 
-		// 	top: 30px;
-		// 	left: -35px;
-		// }
+	.flicker {
+		animation: flicker 1.75s infinite;
+	}
+
+	@keyframes flicker {
+		0%,
+		100% {
+			opacity: 0.55;
+		}
+		50% {
+			opacity: 1;
+		}
+		75% {
+			opacity: 0.8;
+		}
 	}
 </style>

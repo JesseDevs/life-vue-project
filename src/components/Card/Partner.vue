@@ -9,8 +9,8 @@
 				<h4 class="step-1">{{ p.name }}<span class="brand-color">.</span></h4>
 				<p v-html="p.context"></p>
 			</div>
-			<a :href="p.link" target="_blank">More Information</a>
 		</text-content>
+		<a :href="p.link" target="_blank">More Information <Arrow class="arrow" /> </a>
 	</partner-card>
 </template>
 
@@ -81,16 +81,37 @@
 			display: flex;
 			flex-direction: column;
 			gap: 15px;
+			p a {
+				display: inline-block;
+			}
 
 			a {
 				transition: 0.3s;
-				padding: 3px;
 			}
 
 			@media (hover: hover) {
 				a:hover {
-					background-color: var(--brand-two-color);
+					background-color: var(--brand-color);
 					color: white;
+				}
+			}
+		}
+
+		text-content + a {
+			transition: 0.3s;
+			padding: 3px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 4px;
+
+			div.arrow {
+				transition: transform 0.3s ease-in-out;
+			}
+
+			&:hover {
+				div.arrow {
+					transform: scale(1.4);
 				}
 			}
 		}

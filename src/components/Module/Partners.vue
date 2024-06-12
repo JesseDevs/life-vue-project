@@ -14,50 +14,6 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	let observer;
 
-	onMounted(() => {
-		observer = new IntersectionObserver(inViewport, {
-			threshold: 0.5,
-		});
-
-		const cards = document.querySelectorAll('.partner-grid > partner-card');
-		cards.forEach((card) => {
-			observer.observe(card);
-		});
-
-		gsap.registerPlugin(ScrollTrigger);
-		ScrollTrigger.create({
-			trigger: 'module-partners',
-			start: 'top center',
-			end: 'bottom+=25px center',
-
-			onToggle: (self) => {
-				if (self.isActive) {
-					// Scroll down
-					document.documentElement.style.setProperty(
-						'--background',
-						'rgb(246 213 238)',
-					);
-					document.documentElement.style.setProperty('--text', 'rgb(13 15 15)');
-					document.documentElement.style.setProperty('--text-rgb', '13 15 15');
-					document.documentElement.style.setProperty(
-						'--brand-color',
-						'var(--brand-color)',
-					);
-					document.documentElement.style.setProperty(
-						'--brand-color-rgb',
-						'var(--brand-color-rgb)',
-					);
-				} else {
-					// Scroll up
-					document.documentElement.style.setProperty('--background', '');
-					document.documentElement.style.setProperty('--text', '');
-					document.documentElement.style.setProperty('--text-rgb', '');
-					document.documentElement.style.setProperty('--brand-color-rgb', '');
-					document.documentElement.style.setProperty('--brand-color', '');
-				}
-			},
-		});
-	});
 	const partners = ref([
 		{
 			link: 'https://www.tacoinc.org/',
@@ -96,32 +52,43 @@
 		},
 	]);
 
-	function inViewport(entries) {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				const index = parseInt(entry.target.dataset.index);
-				const xDirection = index % 2 === 0 ? '-100%' : '100%';
-
-				gsap.fromTo(
-					entry.target,
-					{ opacity: 0, x: xDirection, filter: 'blur(10px)' },
-					{
-						opacity: 1,
-						x: '0%',
-						duration: 1,
-						ease: 'power3.out',
-						filter: 'blur(0px)',
-						delay: 0.3 * index,
-					},
-				);
-
-				observer.unobserve(entry.target);
-			}
+	onMounted(() => {
+		observer = new IntersectionObserver(inViewport, {
+			threshold: 0.5,
 		});
-	}
 
-	onBeforeUnmount(() => {
-		observer.disconnect();
+		const cards = document.querySelectorAll('.partner-grid > partner-card');
+		cards.forEach((card) => {
+			observer.observe(card);
+		});
+
+		function inViewport(entries) {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const index = parseInt(entry.target.dataset.index);
+					const xDirection = index % 2 === 0 ? '-100%' : '100%';
+
+					gsap.fromTo(
+						entry.target,
+						{ opacity: 0, x: xDirection, filter: 'blur(10px)' },
+						{
+							opacity: 1,
+							x: '0%',
+							duration: 1,
+							ease: 'power3.out',
+							filter: 'blur(0px)',
+							delay: 0.3 * index,
+						},
+					);
+
+					observer.unobserve(entry.target);
+				}
+			});
+		}
+
+		onBeforeUnmount(() => {
+			observer.disconnect();
+		});
 	});
 </script>
 
@@ -132,6 +99,7 @@
 		gap: 40px;
 		width: 100%;
 		position: relative;
+		background-color: rgb(171, 71, 71);
 
 		div.partner-grid {
 			display: flex;
@@ -140,7 +108,7 @@
 			justify-content: center;
 			align-items: center;
 			column-gap: 7vmin;
-			row-gap: 9vmin;
+			row-gap: 12vmin;
 		}
 	}
 </style>

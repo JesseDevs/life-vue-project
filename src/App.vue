@@ -7,7 +7,6 @@
 		<Container />
 
 		<Nav class="smallnav" />
-		<BigNav class="bignav" />
 
 		<RouterView />
 
@@ -26,23 +25,8 @@
 			overflow: hidden;
 			section {
 				overflow: hidden;
-				scroll-margin: -50px;
+				scroll-margin: 10px;
 			}
-		}
-	}
-
-	.bignav {
-		display: none;
-	}
-
-	@media (min-width: 700px) {
-		.bignav {
-			display: block;
-		}
-		.smallnav {
-			display: none;
-			opacity: 0;
-			pointer-events: none;
 		}
 	}
 

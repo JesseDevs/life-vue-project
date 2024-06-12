@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Arrow: typeof import('./components/Svg/Arrow.vue')['default']
     BigNav: typeof import('./components/Site/BigNav.vue')['default']
     BlurredCircle: typeof import('./components/Creative/BlurredCircle.vue')['default']
     BubbleGrid: typeof import('./components/Creative/BubbleGrid.vue')['default']
@@ -16,6 +17,7 @@ declare module 'vue' {
     DotGrid: typeof import('./components/Creative/DotGrid.vue')['default']
     DotGridLeft: typeof import('./components/Creative/DotGridLeft.vue')['default']
     DotGridRight: typeof import('./components/Creative/DotGridRight.vue')['default']
+    DYP: typeof import('./components/Svg/DYP.vue')['default']
     Error: typeof import('./components/General/Error.vue')['default']
     Event: typeof import('./components/Card/Event.vue')['default']
     Events: typeof import('./components/Module/Events.vue')['default']
@@ -39,7 +41,11 @@ declare module 'vue' {
     SectionTitle: typeof import('./components/General/SectionTitle.vue')['default']
     SimpleLogo: typeof import('./components/Svg/SimpleLogo.vue')['default']
     Space: typeof import('./components/General/Space.vue')['default']
+    STC: typeof import('./components/Svg/STC.vue')['default']
+    SVL: typeof import('./components/Svg/SVL.vue')['default']
     SVLCircle: typeof import('./components/Svg/SVLCircle.vue')['default']
+    SVLCIRCLE: typeof import('./components/Svg/SVLCIRCLE.vue')['default']
+    SVLOld: typeof import('./components/Svg/SVL-old.vue')['default']
     Team: typeof import('./components/Module/Team.vue')['default']
     Test: typeof import('./components/Test.vue')['default']
   }
