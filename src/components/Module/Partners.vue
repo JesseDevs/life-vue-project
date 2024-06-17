@@ -98,11 +98,9 @@
 		gap: 40px;
 		width: 100%;
 		position: relative;
-		background-color: rgb(171, 71, 71);
 
 		div.partner-grid {
 			display: flex;
-
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;

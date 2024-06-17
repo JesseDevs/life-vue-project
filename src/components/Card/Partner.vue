@@ -60,20 +60,27 @@
 			}
 		}
 		picture {
-			max-width: 200px;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			margin: 0 auto;
+			max-width: 250px;
+			max-height: 250px;
+			min-width: 200px;
+			min-height: 200px;
+
+			overflow: hidden; /* Ensures that any part of the image outside the circle is hidden */
+			padding: 10px;
+			display: flex; /* Centers the image within the container */
+			align-items: center; /* Centers the image vertically */
+			justify-content: center; /* Centers the image horizontally */
+			background-color: white;
 
 			img {
-				height: 100%;
+				width: 100%; /* Ensures the image covers the entire container */
+				height: 100%; /* Ensures the image covers the entire container */
+				object-fit: contain; /* Ensures the image covers the container while maintaining aspect ratio */
 			}
 		}
 
 		picture {
 			align-self: start;
-			height: auto;
 		}
 
 		text-content {
