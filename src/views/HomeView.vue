@@ -16,24 +16,13 @@
 			},
 		});
 
-		tl.to('.dot-create', {
-			scale: 2,
-			filter: 'blur(10px)',
-			opacity: 0,
-			onComplete: () => {
-				document.querySelector('.dot-create').style.display = 'none';
-			},
-		}).to(
-			'.dot-grid-left',
-			{
-				right: '0',
-				ease: 'power3.inOut',
-				filter: 'blur(0)',
-				scale: 1,
-				opacity: 1,
-			},
-			'-=0.5',
-		);
+		tl.to('.dot-grid-left', {
+			right: '0',
+			ease: 'power3.inOut',
+			filter: 'blur(0)',
+			scale: 1,
+			opacity: 1,
+		});
 
 		// GSAP animation for rotating text
 		gsap.set('#text', { transformOrigin: 'center center' });
@@ -47,7 +36,7 @@
 		// GSAP animation for scaling heart
 		gsap.set('#heart', { scale: 0.8, transformOrigin: 'center center' });
 		gsap.to('#heart', {
-			scale: 1.4,
+			scale: 1.2,
 			transformOrigin: 'center center',
 			duration: 0.8,
 			repeat: -1,
@@ -96,11 +85,6 @@
 			<Landing />
 		</GeneralContainer>
 
-		<div class="dot-create">
-			<inner-column>
-				<DotGridRight />
-			</inner-column>
-		</div>
 		<GeneralContainer class="mission" id="mission">
 			<Mission />
 		</GeneralContainer>
