@@ -1,56 +1,57 @@
 <template>
 	<module-contact>
 		<SectionTitle text="Contact Us" />
-		<form
-			action="https://formspree.io/f/mnqeoyvq"
-			method="POST"
-			id="fs-frm"
-			name="message-form"
-		>
-			<input name="subject" type="hidden" value="Need help with order" />
-			<fieldset id="fs-frm-inputs">
-				<label for="full-name">Full Name</label>
-				<input
-					type="text"
-					name="name"
-					id="full-name"
-					placeholder="First and Last"
-					required=""
-				/>
-				<label for="email-address">Email Address</label>
-				<input
-					type="email"
-					name="_replyto"
-					id="email-address"
-					placeholder="email@domain"
-					required=""
-				/>
-				<!-- <label for="telephone">Telephone Number (Optional)</label>
-				<input
-					type="tel"
-					name="telephone"
-					id="telephone"
-					placeholder="(555) 555-5555"
-				/> -->
-				<label for="message">Message</label>
-				<textarea
-					rows="5"
-					name="message"
-					id="message"
-					placeholder="Share your thoughts with us."
-					required=""
-				></textarea>
-				<input
-					type="hidden"
-					name="_subject"
-					id="email-subject"
-					value="Contact Submission"
-				/>
-			</fieldset>
-
-			<button class="submit-btn" type="submit">Submit</button>
-		</form>
-		<DotGrid />
+		<div id="section-content">
+			<form
+				action="https://formspree.io/f/mnqeoyvq"
+				method="POST"
+				id="fs-frm"
+				name="message-form"
+			>
+				<input name="subject" type="hidden" value="Need help with order" />
+				<fieldset id="fs-frm-inputs">
+					<label for="full-name">Full Name</label>
+					<input
+						type="text"
+						name="name"
+						id="full-name"
+						placeholder="First and Last"
+						required=""
+					/>
+					<label for="email-address">Email Address</label>
+					<input
+						type="email"
+						name="_replyto"
+						id="email-address"
+						placeholder="email@domain"
+						required=""
+					/>
+					<!-- <label for="telephone">Telephone Number (Optional)</label>
+					<input
+						type="tel"
+						name="telephone"
+						id="telephone"
+						placeholder="(555) 555-5555"
+					/> -->
+					<label for="message">Message</label>
+					<textarea
+						rows="5"
+						name="message"
+						id="message"
+						placeholder="Share your thoughts with us."
+						required=""
+					></textarea>
+					<input
+						type="hidden"
+						name="_subject"
+						id="email-subject"
+						value="Contact Submission"
+					/>
+				</fieldset>
+				<button class="submit-btn" type="submit">Submit</button>
+			</form>
+			<DotGrid />
+		</div>
 	</module-contact>
 </template>
 

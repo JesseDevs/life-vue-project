@@ -1,7 +1,7 @@
 <template>
 	<module-mission>
 		<SectionTitle text="Our Mission" />
-		<p>
+		<!-- <p>
 			Our mission is to minimize the devastating impact of opioid overdoses, protect
 			vulnerable individuals, and create a supportive non-judgmental network that
 			embraces harm reduction principles.
@@ -17,9 +17,26 @@
 			made in saving lives. Together, we can create fun social environments where
 			lives are valued, health is prioritized, and communities are united in their
 			commitment to saving lives.
-		</p>
-		<p>You too can make a difference.</p>
-		<a href="/">Donate button</a>
+		</p> -->
+
+		<div id="section-content">
+			<p>
+				Our mission is to reduce opioid overdoses, protect vulnerable individuals,
+				and build a supportive network embracing harm reduction principles.
+			</p>
+			<p>
+				At events like music festivals and community gatherings, we aim to empower
+				people with the knowledge and tools to recognize overdoses and administer
+				naloxone.
+			</p>
+			<p>
+				By normalizing naloxone use, we believe we can save lives. Together, we
+				can create environments where lives are valued, health is prioritized, and
+				communities unite to save lives.
+			</p>
+			<p>You too can make a difference.</p>
+			<a href="/">Donate button</a>
+		</div>
 
 		<Lives />
 		<DotGridLeft />

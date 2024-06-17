@@ -6,7 +6,7 @@
 	<div class="app-container">
 		<Container />
 
-		<Nav class="smallnav" />
+		<Nav />
 
 		<RouterView />
 

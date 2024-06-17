@@ -1,7 +1,7 @@
 <template>
 	<module-team>
 		<SectionTitle text="Our Team" />
-		<div class="card-grid">
+		<div class="card-grid" id="section-content">
 			<Profile v-for="profile in profiles" :key="profile.name" :profile="profile" />
 		</div>
 	</module-team>

@@ -382,39 +382,7 @@
 	</div>
 </template>
 
-<script setup>
-	import { gsap } from 'gsap';
-	onMounted(() => {
-		gsap.set('#text', { transformOrigin: 'center center' });
-		const animation = gsap.to('#text', {
-			rotation: -360,
-			duration: 10,
-			repeat: -1,
-			ease: 'linear',
-		});
-
-		document
-			.querySelector('.svl-container svg')
-			.addEventListener('mouseenter', () => {
-				gsap.to(animation, {
-					timeScale: 5, // Speed up the animation
-					duration: 0.5, // How long it takes to speed up
-					onComplete: () => {
-						gsap.to(animation, { timeScale: 1, duration: 0.4 }); // Slow down the animation
-					},
-				});
-			});
-
-		gsap.to('#heart', {
-			scale: 1.3,
-			transformOrigin: 'center center',
-			duration: 0.5,
-			repeat: -1,
-			yoyo: true,
-			ease: 'power1.inOut',
-		});
-	});
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 	div {
@@ -428,30 +396,12 @@
 		svg {
 			display: block;
 			margin: auto;
-			transform-origin: center;
+			transform-origin: center center;
 
 			#heart {
 				transition: transform 0.3s ease-in-out;
-				transform-origin: center;
-			}
-			&:hover {
-				#heart {
-					transform: scale(1.12);
-					transform-origin: center;
-				}
+				transform-origin: center center;
 			}
 		}
 	}
-
-	// @media (min-width: 875px) {
-	// 	div {
-	// 		right: 7vmin;
-	// 	}
-	// }
-
-	// @media (min-width: 1000px) {
-	// 	div {
-	// 		right: 17vmin;
-	// 	}
-	// }
 </style>

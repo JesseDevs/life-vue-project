@@ -12,31 +12,9 @@
 </template>
 
 <script setup>
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-	gsap.registerPlugin(ScrollTrigger);
-
 	const dots = ref([]);
 	onMounted(() => {
-		dots.value = new Array(100).fill(null);
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#landing',
-				start: 'bottom+50px bottom',
-				end: 'bottom+50px center',
-			},
-		});
-
-		tl.to('.dot-grid-left', {
-			right: '0%',
-			ease: 'power3.inOut',
-			filter: 'blur(0)',
-			scale: 1,
-			opacity: 1,
-			duration: 1.2,
-			delay: 0.3,
-		});
+		dots.value = new Array(70).fill(null);
 	});
 </script>
 

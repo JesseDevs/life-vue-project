@@ -59,10 +59,6 @@
 	const ui = useInterfaceService();
 
 	const activeTab = ref(null);
-
-	onMounted(() => {
-		const tl = gsap.timeline();
-	});
 </script>
 
 <style lang="scss">
@@ -209,8 +205,8 @@
 				animation: shimmer 1.5s infinite;
 
 				.heart {
-					width: 2.5em;
-					height: 2.2em;
+					width: 2em;
+					height: 1.5em;
 				}
 
 				&:hover {

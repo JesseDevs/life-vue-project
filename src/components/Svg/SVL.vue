@@ -445,31 +445,6 @@
 	</div>
 </template>
 
-<script setup>
-	import { gsap } from 'gsap';
-	onMounted(() => {
-		gsap.set('#text', { transformOrigin: 'center center' });
-		const animation = gsap.to('#text', {
-			rotation: -360,
-			duration: 10,
-			repeat: -1,
-			ease: 'linear',
-		});
-
-		document
-			.querySelector('.svl-container svg')
-			.addEventListener('mouseenter', () => {
-				gsap.to(animation, {
-					timeScale: 5, // Speed up the animation
-					duration: 0.5, // How long it takes to speed up
-					onComplete: () => {
-						gsap.to(animation, { timeScale: 1, duration: 0.4 }); // Slow down the animation
-					},
-				});
-			});
-	});
-</script>
-
 <style lang="scss" scoped>
 	div {
 		max-width: 155px;

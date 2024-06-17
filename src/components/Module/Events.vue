@@ -1,14 +1,14 @@
 <template>
 	<module-events>
 		<SectionTitle text="Upcoming Events" />
-		<div v-if="events.length > 0" class="events-container">
+		<div v-if="events.length > 0" class="events-container" id="section-content">
 			<p>You can find <span class="brand">The Party</span> at these events.</p>
 			<div class="calendar">
 				<Event v-for="event in events" :key="event.id" :event="event" />
 			</div>
 		</div>
 
-		<div v-else class="events-container">
+		<div v-else class="events-container" id="section-content">
 			<p>Currently we are not attending any events.</p>
 			<div class="calendar no-events">
 				<p>No Upcoming Events.</p>
@@ -65,8 +65,8 @@
 			width: 100%;
 			padding: 20px 12px;
 			display: grid;
-			column-gap: 15px;
-			row-gap: 25px;
+			column-gap: 30px;
+			row-gap: 60px;
 			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 			place-items: center;
 			min-height: 350px;

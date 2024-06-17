@@ -36,43 +36,6 @@
 		{ src: '/gallery/3.webp', alt: 'placeholder' },
 		{ src: '/gallery/8.webp', alt: 'placeholder' },
 	]);
-	onMounted(() => {
-		// Left container animation
-		imagesLeft.value.forEach((image, index) => {
-			gsap.fromTo(
-				`.images-left .image-left:nth-child(${index + 1})`,
-				{ x: -100, opacity: 0 },
-				{
-					x: 0,
-					opacity: 1,
-					ease: 'power2.out',
-					scrollTrigger: {
-						trigger: '#gallery',
-						start: 'top-=100px center',
-						end: 'bottom-=200px center',
-					},
-				},
-			);
-		});
-
-		// Right container animation
-		imagesRight.value.forEach((image, index) => {
-			gsap.fromTo(
-				`.images-right .image-right:nth-child(${index + 1})`,
-				{ x: 100, opacity: 0 },
-				{
-					x: 0,
-					opacity: 1,
-					ease: 'power2.out',
-					scrollTrigger: {
-						trigger: '#gallery',
-						start: 'top-=100px center',
-						end: 'bottom-=200px center',
-					},
-				},
-			);
-		});
-	});
 </script>
 
 <style lang="scss" scoped>

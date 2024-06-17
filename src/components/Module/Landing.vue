@@ -15,7 +15,6 @@
 			<SVL />
 			<DYP />
 		</div>
-		<!-- <small-calendar> </small-calendar> -->
 	</module-landing>
 </template>
 
@@ -33,6 +32,7 @@
 		position: relative;
 		min-height: 50vh;
 
+		pointer-events: none;
 		.centered-content {
 			display: flex;
 			flex-direction: column;
@@ -43,6 +43,8 @@
 			height: 100%;
 			width: 100%;
 			position: relative;
+			pointer-events: none;
+			user-select: none;
 		}
 
 		.spacer {
@@ -97,8 +99,18 @@
 
 	div.landing-svg-holder {
 		position: absolute;
-		bottom: -10vmin;
+		bottom: -9vmin;
 		right: 0;
+	}
+
+	@media (min-width: 950px) {
+		module-landing {
+			padding-left: 80px;
+		}
+		div.landing-svg-holder {
+			bottom: -5vmin;
+			right: 20vw;
+		}
 	}
 
 	@keyframes pulse {

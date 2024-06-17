@@ -148,7 +148,7 @@ inner-column {
 
 *::selection {
 	background: var(--brand-two-color);
-	color: var(--background);
+
 }
 
 

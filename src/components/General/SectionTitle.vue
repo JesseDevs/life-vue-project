@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="section-heading">
 		<h3 class="step-3 stroke">
 			{{ text }}
 		</h3>
@@ -13,6 +13,9 @@
 </script>
 
 <style lang="scss" scoped>
+	div#section-heading {
+		opacity: 0;
+	}
 	h3 {
 		color: inherit;
 		font-family: 'Josefin Slab', serif;

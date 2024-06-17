@@ -6,16 +6,69 @@
 	</section>
 </template>
 
-<script setup></script>
+<script setup>
+	import { onMounted, nextTick } from 'vue';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-<style lang="scss" scoped>
-	section.team {
-		inner-column {
-			overflow: hidden;
-		}
+	gsap.registerPlugin(ScrollTrigger);
+
+	onMounted(async () => {
+		await nextTick();
+
+		const sections = document.querySelectorAll('section');
+
+		sections.forEach((section) => {
+			const heading = section.querySelector('#section-heading');
+			if (heading) {
+				gsap.fromTo(
+					heading,
+					{ opacity: 0, y: 20 },
+					{
+						opacity: 1,
+						y: 0,
+						duration: 0.5,
+						ease: 'power1.inOut',
+						scrollTrigger: {
+							trigger: section,
+							start: 'top center',
+							end: 'bottom center',
+						},
+					},
+				);
+			}
+
+			// Animate content with stagger
+			const contents = section.querySelectorAll('#section-content');
+			if (contents.length > 0) {
+				gsap.fromTo(
+					contents,
+					{ opacity: 0, y: 20 },
+					{
+						delay: 0.3,
+						opacity: 1,
+						y: 0,
+						duration: 0.5,
+						ease: 'power1.inOut',
+						scrollTrigger: {
+							trigger: section,
+							start: 'top center',
+							end: 'bottom center',
+						},
+						stagger: 0.1,
+					},
+				);
+			}
+		});
+	});
+</script>
+
+<style lang="scss">
+	#section-heading {
+		opacity: 0;
 	}
 
-	// .landing inner-column {
-	// 	padding-top: 6rem;
-	// }
+	#section-content {
+		opacity: 0;
+	}
 </style>

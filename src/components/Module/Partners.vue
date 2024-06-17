@@ -1,9 +1,8 @@
 <template>
 	<module-partners>
-		<FadeIn>
-			<SectionTitle class="black-text" text="Resources" />
-		</FadeIn>
-		<div class="partner-grid">
+		<SectionTitle class="black-text" text="Resources" />
+
+		<div class="partner-grid" id="section-content">
 			<Partner v-for="p in partners" :key="p.name" :p="p" />
 		</div>
 	</module-partners>
