@@ -27,7 +27,7 @@
 					{
 						opacity: 1,
 						y: 0,
-						duration: 0.5,
+						duration: 0.3,
 						ease: 'power1.inOut',
 						scrollTrigger: {
 							trigger: section,
@@ -45,10 +45,10 @@
 					contents,
 					{ opacity: 0, y: 20 },
 					{
-						delay: 0.3,
+						delay: 0.2,
 						opacity: 1,
 						y: 0,
-						duration: 0.5,
+						duration: 0.3,
 						ease: 'power1.inOut',
 						scrollTrigger: {
 							trigger: section,

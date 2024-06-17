@@ -71,5 +71,15 @@
 			// 	content: '';
 			// }
 		}
+
+		div#section-content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			justify-content: center;
+			position: relative;
+			gap: 20px;
+		}
 	}
 </style>

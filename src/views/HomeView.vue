@@ -67,7 +67,7 @@
 					start: 'top center',
 					end: 'bottom center',
 				},
-				stagger: 0.5, // Stagger value in seconds
+				stagger: 0.4, // Stagger value in seconds
 			},
 		);
 
@@ -84,7 +84,7 @@
 					start: 'top center',
 					end: 'bottom center',
 				},
-				stagger: 0.6, // Stagger value in seconds
+				stagger: 0.5, // Stagger value in seconds
 			},
 		);
 	});
