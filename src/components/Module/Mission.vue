@@ -38,6 +38,7 @@
 			<a class="donate" href="/">Donate Now</a>
 		</div>
 
+		<Savelivesnow />
 		<DotGridLeft />
 	</module-mission>
 </template>

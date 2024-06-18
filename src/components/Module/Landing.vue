@@ -99,8 +99,8 @@
 
 	div.landing-svg-holder {
 		position: absolute;
-		bottom: -11vmin;
-		right: 0;
+		bottom: -15vmin;
+		right: 3vmin;
 	}
 
 	@media (min-width: 950px) {

@@ -38,6 +38,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SaveLives: typeof import('./components/Svg/SaveLives.vue')['default']
+    Savelivesnow: typeof import('./components/Svg/Savelivesnow.vue')['default']
     SectionTitle: typeof import('./components/General/SectionTitle.vue')['default']
     SimpleLogo: typeof import('./components/Svg/SimpleLogo.vue')['default']
     Space: typeof import('./components/General/Space.vue')['default']
