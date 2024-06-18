@@ -35,7 +35,7 @@
 				communities unite to save lives.
 			</p>
 			<p>You too can make a difference.</p>
-			<a href="/">Donate button</a>
+			<a class="donate" href="/">Donate Now</a>
 		</div>
 
 		<DotGridLeft />
@@ -79,6 +79,12 @@
 			justify-content: center;
 			position: relative;
 			gap: 20px;
+		}
+
+		a.donate {
+			background-color: var(--brand-two-color);
+			padding: 10px 20px;
+			font-weight: 600;
 		}
 	}
 </style>

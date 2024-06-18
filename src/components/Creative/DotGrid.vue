@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
 	.dot-grid-reg {
 		right: 0;
-		top: -20px;
+		top: -80px;
 		z-index: -10;
 		opacity: 1;
 
