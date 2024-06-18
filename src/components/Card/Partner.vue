@@ -24,25 +24,19 @@
 </script>
 
 <style lang="scss">
-	#team {
-		background: linear-gradient(
-			180deg,
-			rgb(var(--background-rgb) / 0.3),
-			rgb(var(--brand-color-rgb) / 0.5),
-			rgb(var(--background-rgb) / 0.3)
-		);
-	}
 	partner-card {
+		scroll-snap-align: start;
 		opacity: 1;
 		width: 100%;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		padding: 10px;
 
 		column-gap: 10px;
-		row-gap: 15px;
+
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 
 		div.title {
 			display: flex;
@@ -52,42 +46,52 @@
 			h4 {
 				font-weight: 400;
 				font-style: italic;
-				border-bottom: 2px solid rgb(78 171 232 / 0.7);
-				padding-bottom: 5px;
+				// border-bottom: 2px solid rgb(78 171 232 / 0.7);
+				// padding-bottom: 5px;
 			}
 			p {
 				font-weight: 300;
 			}
 		}
 		picture {
-			max-width: 250px;
-			max-height: 250px;
-			min-width: 200px;
-			min-height: 200px;
+			aspect-ratio: 16 / 9;
 
-			overflow: hidden; /* Ensures that any part of the image outside the circle is hidden */
+			max-height: 120px;
+			width: 100%;
+
+			overflow: hidden;
 			padding: 10px;
-			display: flex; /* Centers the image within the container */
-			align-items: center; /* Centers the image vertically */
-			justify-content: center; /* Centers the image horizontally */
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			background-color: white;
 
 			img {
-				width: 100%; /* Ensures the image covers the entire container */
-				height: 100%; /* Ensures the image covers the entire container */
-				object-fit: contain; /* Ensures the image covers the container while maintaining aspect ratio */
+				object-fit: contain;
 			}
 		}
 
-		picture {
-			align-self: start;
-		}
-
 		text-content {
-			grid-column: 1/-1;
 			display: flex;
+			position: relative;
 			flex-direction: column;
 			gap: 15px;
+			padding-left: 10px;
+			padding-top: 20px;
+			align-self: flex-start;
+			flex-grow: 1;
+			border-left: 2px solid rgb(75 121 162);
+
+			&:before {
+				content: '';
+				position: absolute;
+				background-color: rgb(75 121 162);
+				height: 2px;
+				bottom: -2px;
+				left: -2px;
+				width: 20%;
+			}
+
 			p a {
 				display: inline-block;
 			}
@@ -106,11 +110,24 @@
 
 		text-content + a {
 			transition: 0.3s;
-			padding: 3px;
+			padding: 10px 20px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			gap: 4px;
+			background-color: rgb(75 121 162);
+			font-weight: 600;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				background-color: rgb(75 121 162);
+				height: 2px;
+				top: 0;
+				left: -100%;
+				width: 100%;
+			}
 
 			div.arrow {
 				transition: transform 0.3s ease-in-out;

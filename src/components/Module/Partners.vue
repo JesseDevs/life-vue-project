@@ -11,7 +11,6 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-	let observer;
 
 	const partners = ref([
 		{
@@ -52,7 +51,25 @@
 	]);
 
 	onMounted(() => {
-		const cards = document.querySelectorAll('.partner-card');
+		const cards = gsap.utils.toArray('.partner-card');
+
+		gsap.to(cards, {
+			xPercent: -100 * (cards.length - 1),
+			ease: 'none',
+			scrollTrigger: {
+				trigger: 'module-partners',
+				pin: true,
+				scrub: 1,
+				snap: {
+					snapTo: 1 / (cards.length - 1), // Adjusted the snapTo value
+					duration: 0.01,
+					ease: 'power1.inOut',
+				},
+				start: 'top top',
+				end: () =>
+					'+=' + (document.querySelector('module-partners').offsetWidth + 100),
+			},
+		});
 	});
 </script>
 
@@ -60,25 +77,24 @@
 	module-partners {
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
-		width: 100%;
+		gap: 20px;
+		width: 500%;
+
+		padding-top: 30px;
+		height: 100vh;
+
 		position: relative;
 
 		div.partner-grid {
 			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-			column-gap: 7vmin;
-			row-gap: 12vmin;
-			min-height: 550px;
+			height: 75%;
+			flex-wrap: nowrap;
 
-			position: relative;
-			// .partner-card {
-			// 	position: absolute;
-			// 	width: 100%;
-			// 	top: 0;
-			// }
+			scroll-snap-type: y mandatory;
+
+			partner-card {
+				scroll-snap-align: start;
+			}
 		}
 	}
 </style>

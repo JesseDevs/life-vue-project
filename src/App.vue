@@ -23,7 +23,7 @@
 		main {
 			min-height: 100vh;
 			overflow: hidden;
-			section {
+			section:not(.partners) {
 				overflow: hidden;
 				scroll-margin: 10px;
 			}
