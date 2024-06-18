@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import { useHead } from '@vueuse/head';
 
 export const useInterfaceService = defineStore('interface', () => {
 	const mainMenuOpen = ref(false);

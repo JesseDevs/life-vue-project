@@ -99,7 +99,7 @@
 
 	div.landing-svg-holder {
 		position: absolute;
-		bottom: -9vmin;
+		bottom: -11vmin;
 		right: 0;
 	}
 

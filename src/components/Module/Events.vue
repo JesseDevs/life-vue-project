@@ -1,16 +1,15 @@
 <template>
 	<module-events>
 		<SectionTitle text="Upcoming Events" />
-		<div v-if="events.length > 0" class="events-container" id="section-content">
-			<p>You can find <span class="brand">The Party</span> at these events.</p>
-			<div class="calendar">
+		<div class="events-container" id="section-content">
+			<p v-if="events.length > 0">
+				You can find <span class="brand">The Party</span> at these events.
+			</p>
+			<p v-else>Currently we are not attending any events.</p>
+			<div v-if="events.length > 0" class="calendar">
 				<Event v-for="event in events" :key="event.id" :event="event" />
 			</div>
-		</div>
-
-		<div v-else class="events-container" id="section-content">
-			<p>Currently we are not attending any events.</p>
-			<div class="calendar no-events">
+			<div v-else class="calendar no-events">
 				<p>No Upcoming Events.</p>
 			</div>
 		</div>
@@ -18,34 +17,10 @@
 </template>
 
 <script setup>
-	const events = ref([
-		{
-			id: 1,
-			title: 'Santa Monica - Title',
-			img: '/images/event.jpg',
-			dateDay: '22',
-			month: 'June',
-			detail: 'Join us in Santa Monica, CA. Explore our Event on display and meet our team.',
-			fullDate: '',
-			timeSpan: ['June 22, 2024', 'June 24, 2024'],
-			location: ['The Crypto Arena', '1111 S Figueroa St', 'Los Angeles', '90015'],
-			link: '/',
-			linkText: 'Link to Event',
-		},
-		{
-			id: 1,
-			title: '2nd event',
-			img: '/images/event.jpg',
-			dateDay: '22',
-			month: 'June',
-			detail: 'Join us in Santa Monica, CA. Explore our Event on display and meet our team.',
-			fullDate: '',
-			timeSpan: ['June 22, 2024', 'June 24, 2024'],
-			location: ['The Crypto Arena', '1111 S Figueroa St', 'Los Angeles', '90015'],
-			link: '/',
-			linkText: 'Link to Event',
-		},
-	]);
+	import { useEventService } from '~/services/EventsService';
+	const e = useEventService();
+
+	const events = computed(() => e.events);
 </script>
 
 <style lang="scss" scoped>

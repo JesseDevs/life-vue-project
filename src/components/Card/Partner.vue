@@ -33,7 +33,7 @@
 		);
 	}
 	partner-card {
-		opacity: 0;
+		opacity: 1;
 		width: 100%;
 		position: relative;
 		display: flex;

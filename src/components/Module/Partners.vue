@@ -3,7 +3,7 @@
 		<SectionTitle class="black-text" text="Resources" />
 
 		<div class="partner-grid" id="section-content">
-			<Partner v-for="p in partners" :key="p.name" :p="p" />
+			<Partner class="partner-card" v-for="p in partners" :key="p.name" :p="p" />
 		</div>
 	</module-partners>
 </template>
@@ -52,42 +52,7 @@
 	]);
 
 	onMounted(() => {
-		observer = new IntersectionObserver(inViewport, {
-			threshold: 0.5,
-		});
-
-		const cards = document.querySelectorAll('.partner-grid > partner-card');
-		cards.forEach((card) => {
-			observer.observe(card);
-		});
-
-		function inViewport(entries) {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const index = parseInt(entry.target.dataset.index);
-					const xDirection = index % 2 === 0 ? '-100%' : '100%';
-
-					gsap.fromTo(
-						entry.target,
-						{ opacity: 0, x: xDirection, filter: 'blur(10px)' },
-						{
-							opacity: 1,
-							x: '0%',
-							duration: 1,
-							ease: 'power3.out',
-							filter: 'blur(0px)',
-							delay: 0.3 * index,
-						},
-					);
-
-					observer.unobserve(entry.target);
-				}
-			});
-		}
-
-		onBeforeUnmount(() => {
-			observer.disconnect();
-		});
+		const cards = document.querySelectorAll('.partner-card');
 	});
 </script>
 
@@ -106,6 +71,14 @@
 			align-items: center;
 			column-gap: 7vmin;
 			row-gap: 12vmin;
+			min-height: 550px;
+
+			position: relative;
+			// .partner-card {
+			// 	position: absolute;
+			// 	width: 100%;
+			// 	top: 0;
+			// }
 		}
 	}
 </style>

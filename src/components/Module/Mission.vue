@@ -38,7 +38,6 @@
 			<a href="/">Donate button</a>
 		</div>
 
-		<Lives />
 		<DotGridLeft />
 	</module-mission>
 </template>
