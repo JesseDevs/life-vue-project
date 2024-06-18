@@ -61,7 +61,7 @@
 				pin: true,
 				scrub: 1,
 				snap: {
-					snapTo: 1 / (cards.length - 1), // Adjusted the snapTo value
+					snapTo: 0.8 / (cards.length - 1),
 					duration: 0.01,
 					ease: 'power1.inOut',
 				},
