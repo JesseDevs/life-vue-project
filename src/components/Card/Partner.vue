@@ -5,10 +5,8 @@
 		</picture>
 
 		<text-content>
-			<div class="title">
-				<h4 class="step-1">{{ p.name }}<span class="brand-color">.</span></h4>
-				<p v-html="p.context"></p>
-			</div>
+			<h4 class="step-1">{{ p.name }}<span class="brand-color">.</span></h4>
+			<p v-html="p.context"></p>
 		</text-content>
 		<a :href="p.link" target="_blank">More Information <Arrow class="arrow" /> </a>
 	</partner-card>
@@ -38,29 +36,14 @@
 		align-items: center;
 		justify-content: space-between;
 
-		div.title {
-			display: flex;
-			flex-direction: column;
-
-			gap: 15px;
-			h4 {
-				font-weight: 400;
-				font-style: italic;
-				// border-bottom: 2px solid rgb(78 171 232 / 0.7);
-				// padding-bottom: 5px;
-			}
-			p {
-				font-weight: 300;
-			}
-		}
 		picture {
 			aspect-ratio: 16 / 9;
 
-			max-height: 120px;
+			max-height: 165px;
 			width: 100%;
 
 			overflow: hidden;
-			padding: 10px;
+			padding: 10px 150px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -76,11 +59,19 @@
 			position: relative;
 			flex-direction: column;
 			gap: 15px;
-			padding-left: 10px;
-			padding-top: 20px;
+			padding: 20px;
 			align-self: flex-start;
+			justify-content: flex-start;
 			flex-grow: 1;
 			border-left: 2px solid rgb(75 121 162);
+
+			h4 {
+				font-weight: 400;
+				font-style: italic;
+			}
+			p {
+				font-weight: 300;
+			}
 
 			&:before {
 				content: '';
@@ -109,15 +100,25 @@
 		}
 
 		text-content + a {
-			transition: 0.3s;
-			padding: 10px 20px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			gap: 4px;
 			background-color: rgb(75 121 162);
+			color: white;
+
 			font-weight: 600;
+			outline: none;
+			appearance: none;
+			border: none;
+
+			padding: 12px 50px;
+			z-index: 2;
 			position: relative;
+			cursor: pointer;
+			transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+			letter-spacing: 0.8px;
 
 			&:before {
 				content: '';
@@ -137,6 +138,21 @@
 				div.arrow {
 					transform: scale(1.4);
 				}
+			}
+
+			transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+			letter-spacing: 0.8px;
+
+			box-shadow: 0 0 5px transparent, 0 10px 20px transparent, 0 0 20px transparent,
+				0 0 100px transparent;
+
+			&:hover {
+				background-color: rgb(var(--brand-color-rgb) / 0.5);
+				box-shadow: 0 0 5px rgba(var(--brand-color-rgb) / 0.5),
+					0 10px 20px rgba(var(--brand-color-rgb) / 0.5),
+					0 0 20px rgba(var(--brand-color-rgb) / 0.5),
+					0 0 100px rgba(var(--brand-color-rgb) / 0.5);
 			}
 		}
 	}

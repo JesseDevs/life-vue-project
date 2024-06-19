@@ -10,19 +10,68 @@
 				/>
 				<div class="pulsing-circle"></div>
 			</picture>
-		</div>
-		<div class="landing-svg-holder">
-			<SVL />
-			<DYP />
+			<div class="landing-svg-holder">
+				<SVL />
+				<DYP />
+			</div>
 		</div>
 	</module-landing>
 </template>
 
 <script setup>
 	import { gsap } from 'gsap';
+	onMounted(() => {
+		const tl = gsap.timeline();
+
+		tl.fromTo(
+			'.centered-content',
+			{
+				opacity: 0,
+				y: 100,
+			},
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.inOut',
+			},
+		);
+
+		const svgChildren = document.querySelectorAll(
+			'.landing-svg-holder .svg-container',
+		);
+
+		tl.fromTo(
+			svgChildren,
+			{
+				opacity: 0,
+				x: 100,
+				rotation: 0,
+			},
+			{
+				opacity: 1,
+				x: 0,
+				rotation: -360,
+				duration: 1,
+				ease: 'power1.out',
+				stagger: 0.2,
+			},
+		);
+	});
 </script>
 
 <style lang="scss" scoped>
+	@keyframes slideFromBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(50%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	module-landing {
 		display: flex;
 		flex-direction: column;
@@ -45,6 +94,9 @@
 			position: relative;
 			pointer-events: none;
 			user-select: none;
+			// animation-name: slideFromBottom;
+			// animation-duration: 2s;
+			// animation-fill-mode: forwards;
 		}
 
 		.spacer {
@@ -54,7 +106,6 @@
 		}
 
 		picture {
-			aspect-ratio: 3/2;
 			width: 100%;
 			max-width: 600px;
 
@@ -99,18 +150,19 @@
 
 	div.landing-svg-holder {
 		position: absolute;
-		bottom: -15vmin;
-		right: 3vmin;
+		bottom: clamp(-100px, -75%, -50px);
+		right: 5vmin;
+		z-index: 2;
 	}
 
 	@media (min-width: 950px) {
 		module-landing {
 			padding-left: 80px;
 		}
-		div.landing-svg-holder {
-			bottom: -5vmin;
-			right: 20vw;
-		}
+		// div.landing-svg-holder {
+		// 	bottom: -5vmin;
+		// 	right: 20vw;
+		// }
 	}
 
 	@keyframes pulse {

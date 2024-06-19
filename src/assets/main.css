@@ -134,6 +134,7 @@ text-content {
 inner-column {
 	display: block;
 	position: relative;
+	width: 100%;
 	max-width: 1240px;
 	margin: auto;
 	padding: 8.2rem 4.5rem;

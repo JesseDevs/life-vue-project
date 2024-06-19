@@ -61,8 +61,10 @@
 				pin: true,
 				scrub: 1,
 				snap: {
-					snapTo: 0.25,
-					duration: 0.01,
+					snapTo: 1 / (cards.length - 1),
+					directional: false,
+					duration: { min: 0.15, max: 0.75 },
+					delay: 0.04,
 					ease: 'power1.inOut',
 				},
 				start: 'top top',

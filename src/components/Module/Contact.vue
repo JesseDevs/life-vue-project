@@ -78,32 +78,31 @@
 			}
 			button.submit-btn {
 				margin-top: 10px;
-				background-color: rgb(var(--brand-color-rgb) / 0.8);
+				background-color: rgb(75 121 162);
 				color: white;
 
 				font-weight: 600;
 				outline: none;
 				appearance: none;
 				border: none;
-				box-sizing: border-box;
-				border: 2px solid rgb(var(--brand-color-rgb) / 0.8);
+
 				padding: 12px 50px;
 				z-index: 2;
 				position: relative;
 				cursor: pointer;
-				transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
-					border-color 0.3s ease-in-out;
+				transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
 				letter-spacing: 0.8px;
 
-				box-shadow: 0 0 5px rgba(var(--brand-color-rgb) / 0.5),
-					0 10px 20px rgba(var(--brand-color-rgb) / 0.5),
-					0 0 20px rgba(var(--brand-color-rgb) / 0.5),
-					0 0 100px rgba(var(--brand-color-rgb) / 0.5);
+				box-shadow: 0 0 5px transparent, 0 10px 20px transparent,
+					0 0 20px transparent, 0 0 100px transparent;
 
 				&:hover {
 					background-color: rgb(var(--brand-color-rgb) / 0.5);
 					box-shadow: 0 0 5px rgba(var(--brand-color-rgb) / 0.5),
-						0 10px 20px rgba(var(--brand-color-rgb) / 0.5);
+						0 10px 20px rgba(var(--brand-color-rgb) / 0.5),
+						0 0 20px rgba(var(--brand-color-rgb) / 0.5),
+						0 0 100px rgba(var(--brand-color-rgb) / 0.5);
 				}
 			}
 		}
@@ -215,29 +214,29 @@
 			margin-right: 3%;
 		}
 
-		form buttona {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background-color: var(--accent-color);
-			padding: 10px 20px;
-			border-radius: 7px;
-			font-weight: 600;
-			transition: background-color 0.3s ease-in-out;
-			max-width: 540px;
-			position: relative;
+		// form buttona {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// 	align-items: center;
+		// 	background-color: rgb(75 121 162);
+		// 	padding: 10px 20px;
+		// 	border-radius: 7px;
+		// 	font-weight: 600;
+		// 	transition: background-color 0.3s ease-in-out;
+		// 	max-width: 540px;
+		// 	position: relative;
 
-			&:hover {
-				background-color: var(--hover-color);
-			}
-			svg {
-				stroke: var(--text);
-				stroke-width: 2px;
-			}
-			span {
-				display: block;
-			}
-		}
+		// 	&:hover {
+		// 		// background-color: var(--hover-color);
+		// 	}
+		// 	svg {
+		// 		stroke: var(--text);
+		// 		stroke-width: 2px;
+		// 	}
+		// 	span {
+		// 		display: block;
+		// 	}
+		// }
 	}
 
 	@media (min-width: 600px) {

@@ -1,5 +1,5 @@
 <template>
-	<div class="svl-container">
+	<div class="svg-container">
 		<svg
 			width="100%"
 			height="100%"
@@ -386,21 +386,23 @@
 
 <style lang="scss" scoped>
 	div {
-		max-width: 160px;
-		max-height: 160px;
 		position: absolute;
-		bottom: 140px;
+		bottom: 130px;
 		right: -50px;
 		z-index: -5;
+		max-width: 150px;
+		max-height: 150px;
+		transform-origin: center center;
 
 		svg {
 			display: block;
 			margin: auto;
-			transform-origin: center center;
+
+			transform-origin: center;
 
 			#heart {
 				transition: transform 0.3s ease-in-out;
-				transform-origin: center center;
+				transform-origin: center;
 			}
 		}
 	}

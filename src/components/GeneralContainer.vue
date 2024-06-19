@@ -64,6 +64,9 @@
 </script>
 
 <style lang="scss">
+	section.landing inner-column {
+		padding-top: 3rem;
+	}
 	#section-heading {
 		opacity: 0;
 	}

@@ -2,11 +2,8 @@
 	<header :class="` ${ui.menuClass} main-tool-bar site-header `">
 		<inner-column class="has-big-width">
 			<nav class="main-menu animate-drop-in small-width">
-				<a href="/" class="shimmer">
-					<!-- <SimpleLogo /> -->
-					<div>
-						<p>Donate</p>
-					</div>
+				<a href="/" class="donate-btn">
+					<p>Donate</p>
 					<Heart class="heart flicker" />
 				</a>
 				<button
@@ -64,22 +61,12 @@
 <style lang="scss">
 	@keyframes slideFromTop {
 		0% {
+			opacity: 0;
 			transform: translateY(-100%);
 		}
 		100% {
+			opacity: 1;
 			transform: translateY(0);
-		}
-	}
-
-	header {
-		animation: slideFromTop 0.8s forwards;
-	}
-	@keyframes shimmer {
-		0% {
-			background-position: -100%;
-		}
-		100% {
-			background-position: 100%;
 		}
 	}
 
@@ -101,6 +88,7 @@
 	}
 
 	header {
+		animation: slideFromTop 0.8s forwards;
 		width: 100%;
 		z-index: 9999;
 		backdrop-filter: blur(7px);
@@ -176,47 +164,13 @@
 					}
 				}
 			}
-			.donate-button {
+			.donate-btn {
 				position: relative;
 				overflow: hidden;
-			}
-
-			.shimmer {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: 2px;
-				position: relative;
-				color: rgb(var(--white-rgb) / 0.8);
-				font-weight: bold;
-				text-align: center;
-				padding: 8px;
-				text-decoration: none;
-				background: linear-gradient(
-					100deg,
-					rgb(var(--brand-two-inner-color-rgb) / 0.5) 25%,
-					rgb(var(--brand-two-color-rgb) / 0.9) 50%,
-					rgb(var(--white-rgb) / 0.8) 85%
-				);
-				background-size: 200% auto;
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				animation: shimmer 1.5s infinite;
 
 				.heart {
 					width: 2em;
 					height: 1.5em;
-				}
-
-				&:hover {
-					animation: pause;
-					color: var(--brand-two-color);
-					-webkit-text-fill-color: var(--brand-two-color);
-
-					.heart {
-						animation: pause;
-					}
 				}
 			}
 		}
