@@ -61,7 +61,7 @@
 				pin: true,
 				scrub: 1,
 				snap: {
-					snapTo: 0.8 / (cards.length - 1),
+					snapTo: 0.25,
 					duration: 0.01,
 					ease: 'power1.inOut',
 				},
@@ -81,13 +81,13 @@
 		width: 500%;
 
 		padding-top: 30px;
-		height: 100vh;
+		min-height: 80vh;
 
 		position: relative;
 
 		div.partner-grid {
 			display: flex;
-			height: 75%;
+			height: 100%;
 			flex-wrap: nowrap;
 
 			scroll-snap-type: y mandatory;
