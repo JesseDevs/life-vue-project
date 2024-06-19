@@ -18,9 +18,9 @@
 	}
 	h3 {
 		color: inherit;
-		font-family: 'Josefin Slab', serif;
-		font-weight: 700;
-		font-style: italic;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 800;
+
 		font-optical-sizing: auto;
 		position: relative;
 		letter-spacing: 0.05em;

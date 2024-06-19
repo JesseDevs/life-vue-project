@@ -33,7 +33,7 @@
 		</div>
 		<text-content>
 			<p v-for="(text, index) in profile.text" :key="index">
-				<span>{{ text }}</span>
+				{{ text }}
 			</p>
 		</text-content>
 	</profile-card>
@@ -71,14 +71,14 @@
 			display: flex;
 			flex-direction: column;
 			padding-bottom: 10px;
-			gap: 2px;
+			gap: 3px;
 			h4 {
-				font-family: 'Josefin Slab', serif;
+				font-family: 'Barlow', serif;
 				font-weight: 500;
-				font-style: italic;
 			}
 			h5 {
 				font-weight: 400;
+				font-family: 'Barlow', serif;
 				text-transform: uppercase;
 				letter-spacing: 0.8px;
 				font-style: italic;

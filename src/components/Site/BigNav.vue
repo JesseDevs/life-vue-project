@@ -1,10 +1,10 @@
 <template>
 	<nav class="big-nav">
-		<a href="/" class="shimmer">
+		<a href="/">
 			<!-- <SimpleLogo /> -->
-			<div>
-				<p>Donate</p>
-			</div>
+
+			<p>Donate</p>
+
 			<Heart class="heart flicker" />
 		</a>
 		<ul>

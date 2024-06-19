@@ -24,9 +24,12 @@
 			min-height: 100vh;
 			overflow: hidden;
 
+			section {
+				scroll-margin: -3.5rem;
+			}
+
 			section:not(.partners) {
 				overflow: hidden;
-				scroll-margin: 10px;
 			}
 
 			section.landing {

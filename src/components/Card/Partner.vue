@@ -43,7 +43,8 @@
 			width: 100%;
 
 			overflow: hidden;
-			padding: 10px 150px;
+			padding: 10px 30px;
+
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -51,6 +52,16 @@
 
 			img {
 				object-fit: contain;
+			}
+
+			@media (min-width: 500px) {
+				padding: 10px 120px;
+			}
+			@media (min-width: 750px) {
+				padding: 10px 200px;
+			}
+			@media (min-width: 1000px) {
+				padding: 10px 300px;
 			}
 		}
 
@@ -66,12 +77,12 @@
 			border-left: 2px solid rgb(75 121 162);
 
 			h4 {
-				font-weight: 400;
-				font-style: italic;
+				font-family: 'Barlow', serif;
+				font-weight: 500;
 			}
-			p {
-				font-weight: 300;
-			}
+			// p {
+			// 	font-weight: 300;
+			// }
 
 			&:before {
 				content: '';

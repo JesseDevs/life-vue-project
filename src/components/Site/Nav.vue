@@ -20,29 +20,32 @@
 			</nav>
 
 			<nav class="big-width">
-				<a href="/" class="shimmer">
-					<!-- <SimpleLogo /> -->
-
+				<a href="/" class="donate-btn">
 					<p>Donate</p>
 
 					<Heart class="heart flicker" />
 				</a>
 				<ul>
 					<li :class="{ active: activeTab === 'mission' }">
-						<a href="#mission">Mission </a>
+						<a href="#mission" @click.prevent="scrollTo('mission')"
+							>Mission
+						</a>
 					</li>
 					<li :class="{ active: activeTab === 'gallery' }">
-						<a href="#gallery">Gallery </a>
+						<a href="#gallery" @click.prevent="scrollTo('gallery')"
+							>Gallery
+						</a>
 					</li>
 					<li :class="{ active: activeTab === 'team' }">
-						<a href="#team">Our Team </a>
+						<a href="#team" @click.prevent="scrollTo('team')">Our Team </a>
 					</li>
-
 					<li :class="{ active: activeTab === 'events' }">
-						<a href="#events">Events </a>
+						<a href="#events" @click.prevent="scrollTo('events')">Events </a>
 					</li>
 					<li :class="{ active: activeTab === 'contact' }">
-						<a href="#contact">Contact </a>
+						<a href="#contact" @click.prevent="scrollTo('contact')"
+							>Contact
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -51,11 +54,23 @@
 </template>
 
 <script setup>
-	import { gsap } from 'gsap';
 	import { useInterfaceService } from '~/services/InterfaceService';
 	const ui = useInterfaceService();
 
-	const activeTab = ref(null);
+	const activeTab = ref('');
+
+	const scrollTo = (section) => {
+		const element = document.getElementById(section);
+		const offset = 60;
+		if (element) {
+			window.scrollTo({
+				top: element.offsetTop + offset,
+				behavior: 'smooth',
+			});
+			// activeTab.value = section;
+			history.pushState(null, null, `#${section}`);
+		}
+	};
 </script>
 
 <style lang="scss">
@@ -79,7 +94,8 @@
 		100% {
 			opacity: 0.55;
 		}
-		50% {
+		50%,
+		60% {
 			opacity: 1;
 		}
 		75% {
@@ -96,20 +112,13 @@
 		background-color: rgb(var(--background-rgb) / 0.25);
 
 		inner-column {
-			padding: 1rem 1.2rem;
+			padding: 0.8rem 1.2rem;
 			height: 100%;
 
 			.main-menu {
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-between;
-
-				> a {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					gap: 2px;
-				}
 			}
 
 			.big-width {
@@ -167,10 +176,20 @@
 			.donate-btn {
 				position: relative;
 				overflow: hidden;
+				font-weight: 500;
+				color: var(--brand-two-color);
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 2px;
 
 				.heart {
 					width: 2em;
 					height: 1.5em;
+					path {
+						fill: var(--brand-two-color);
+					}
 				}
 			}
 		}
