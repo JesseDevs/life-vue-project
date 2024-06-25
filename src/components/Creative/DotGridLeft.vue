@@ -22,7 +22,7 @@
 	.dot-grid-left {
 		right: -100%;
 		top: -20px;
-		z-index: -10;
+		z-index: -99;
 		opacity: 0;
 		filter: blur(10px);
 		grid-template-columns: repeat(5, 1fr);

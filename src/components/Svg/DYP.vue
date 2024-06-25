@@ -387,16 +387,17 @@
 <style lang="scss" scoped>
 	div {
 		position: absolute;
-		bottom: 130px;
-		right: -50px;
-		z-index: -5;
-		max-width: 150px;
-		max-height: 150px;
-		transform-origin: center center;
+		bottom: 38%;
+		left: 28%;
+		width: 100%;
+		height: 100%;
+		z-index: -10;
 
 		svg {
+			width: 100%;
+			height: 100%;
+
 			display: block;
-			margin: auto;
 
 			transform-origin: center;
 

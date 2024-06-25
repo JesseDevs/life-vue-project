@@ -39,11 +39,11 @@
 		picture {
 			aspect-ratio: 16 / 9;
 
-			max-height: 165px;
+			max-height: 125px;
 			width: 100%;
 
 			overflow: hidden;
-			padding: 10px 30px;
+			padding: 5px 35px;
 
 			display: flex;
 			align-items: center;
@@ -69,8 +69,8 @@
 			display: flex;
 			position: relative;
 			flex-direction: column;
-			gap: 15px;
-			padding: 20px;
+			gap: 1.2em;
+			padding: 1em;
 			align-self: flex-start;
 			justify-content: flex-start;
 			flex-grow: 1;

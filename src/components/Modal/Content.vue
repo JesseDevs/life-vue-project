@@ -8,10 +8,6 @@
 					<a class="step-3" @click="ui.closeMenu" href="#mission">Mission </a>
 				</li>
 				<li>
-					<span class="step-3"> 02 </span>
-					<a class="step-3" href="#team" @click="ui.closeMenu"> Our Team </a>
-				</li>
-				<li>
 					<span class="step-3"> 03 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#gallery">Gallery </a>
 				</li>
@@ -19,6 +15,11 @@
 					<span class="step-3"> 04 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#events">Events </a>
 				</li>
+				<li>
+					<span class="step-3"> 02 </span>
+					<a class="step-3" href="#team" @click="ui.closeMenu"> Our Team </a>
+				</li>
+
 				<li>
 					<span class="step-3"> 05 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#contact">Contact </a>

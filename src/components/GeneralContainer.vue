@@ -45,7 +45,7 @@
 					contents,
 					{ opacity: 0, y: 20 },
 					{
-						delay: 0.2,
+						delay: 0.16,
 						opacity: 1,
 						y: 0,
 						duration: 0.3,
@@ -66,6 +66,11 @@
 <style lang="scss">
 	section.landing inner-column {
 		padding-top: 3rem;
+	}
+	@media (min-width: 800px) {
+		section.landing inner-column {
+			padding-top: 5rem;
+		}
 	}
 	#section-heading {
 		opacity: 0;

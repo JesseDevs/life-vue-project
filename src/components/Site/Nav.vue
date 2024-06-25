@@ -36,11 +36,12 @@
 							>Gallery
 						</a>
 					</li>
-					<li :class="{ active: activeTab === 'team' }">
-						<a href="#team" @click.prevent="scrollTo('team')">Our Team </a>
-					</li>
+
 					<li :class="{ active: activeTab === 'events' }">
 						<a href="#events" @click.prevent="scrollTo('events')">Events </a>
+					</li>
+					<li :class="{ active: activeTab === 'team' }">
+						<a href="#team" @click.prevent="scrollTo('team')">Our Team </a>
 					</li>
 					<li :class="{ active: activeTab === 'contact' }">
 						<a href="#contact" @click.prevent="scrollTo('contact')"

@@ -447,8 +447,9 @@
 
 <style lang="scss" scoped>
 	div {
-		max-width: 140px;
-		max-height: 140px;
+		width: 100%;
+		height: 100%;
+		transform-origin: center center;
 
 		svg {
 			display: block;
@@ -468,15 +469,15 @@
 		}
 	}
 
-	@media (min-width: 875px) {
-		div {
-			right: 7vmin;
-		}
-	}
+	// @media (min-width: 875px) {
+	// 	div {
+	// 		right: 7vmin;
+	// 	}
+	// }
 
-	@media (min-width: 1000px) {
-		div {
-			right: 17vmin;
-		}
-	}
+	// @media (min-width: 1000px) {
+	// 	div {
+	// 		right: 17vmin;
+	// 	}
+	// }
 </style>

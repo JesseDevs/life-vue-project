@@ -108,17 +108,16 @@
 		<GeneralContainer class="gallery" id="gallery">
 			<Gallery />
 		</GeneralContainer>
-
-		<GeneralContainer class="team" id="team">
-			<Team />
+		<GeneralContainer class="events" id="events">
+			<Events />
 		</GeneralContainer>
 
 		<GeneralContainer class="partners" id="partners">
 			<Partners />
 		</GeneralContainer>
 
-		<GeneralContainer class="events" id="events">
-			<Events />
+		<GeneralContainer class="team" id="team">
+			<Team />
 		</GeneralContainer>
 
 		<GeneralContainer class="contact" id="contact">

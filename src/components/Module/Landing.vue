@@ -14,6 +14,8 @@
 				<SVL />
 				<DYP />
 			</div>
+
+			<SmallCalendar />
 		</div>
 	</module-landing>
 </template>
@@ -42,7 +44,7 @@
 		);
 
 		tl.fromTo(
-			svgChildren,
+			svgChildren[0],
 			{
 				opacity: 0,
 				x: 100,
@@ -54,8 +56,41 @@
 				rotation: -360,
 				duration: 1,
 				ease: 'power1.out',
-				stagger: 0.2,
+				delay: 0.4,
 			},
+			'-=0.8',
+		);
+
+		if (svgChildren[1]) {
+			tl.fromTo(
+				svgChildren[1],
+				{
+					opacity: 0,
+					x: 100,
+				},
+				{
+					opacity: 1,
+					x: 0,
+					duration: 1,
+					ease: 'power1.out',
+					delay: 0.4,
+				},
+				'-=1',
+			);
+		}
+		tl.fromTo(
+			'.next-event',
+			{
+				opacity: 0,
+				x: 100,
+			},
+			{
+				opacity: 1,
+				x: 0,
+				duration: 1,
+				ease: 'power1.out',
+			},
+			'-=1',
 		);
 	});
 </script>
@@ -79,7 +114,7 @@
 		width: 100%;
 		justify-content: flex-start;
 		position: relative;
-		min-height: 50vh;
+		min-height: 30vh;
 
 		pointer-events: none;
 		.centered-content {
@@ -150,19 +185,28 @@
 
 	div.landing-svg-holder {
 		position: absolute;
-		bottom: clamp(-100px, -75%, -50px);
-		right: 5vmin;
-		z-index: 2;
+		bottom: -65%;
+
+		right: 0px;
+		width: 40%;
+		max-width: 225px;
+		height: 100%;
+		z-index: -10;
 	}
 
 	@media (min-width: 950px) {
-		module-landing {
-			padding-left: 80px;
+		module-landing picture {
+			margin-left: 75px;
 		}
-		// div.landing-svg-holder {
-		// 	bottom: -5vmin;
-		// 	right: 20vw;
-		// }
+		div.landing-svg-holder {
+			bottom: -57%;
+		}
+	}
+
+	@media (min-width: 1050px) {
+		div.landing-svg-holder {
+			right: 5%;
+		}
 	}
 
 	@keyframes pulse {
