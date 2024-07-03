@@ -30,7 +30,7 @@
 
 		setTimeout(() => {
 			startAnimations();
-		}, 1600);
+		}, 1800);
 
 		function startAnimations() {
 			tl.fromTo(

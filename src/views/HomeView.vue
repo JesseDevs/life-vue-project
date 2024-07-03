@@ -14,27 +14,29 @@
 		gsap.timeline()
 			.to('.loading-picture', {
 				opacity: 1,
-				duration: 1.7, // Duration for the opacity animation
+				duration: 1.7,
 			})
 			.to(
 				'.loading-picture',
 				{
 					filter: 'blur(0px)',
-					duration: 0.5, // Duration for the blur animation
+					duration: 0.5,
 				},
 				0,
-			) // Start the blur animation at the same time as the opacity animation
-			.add(() => {
-				// Animate the blur effect and fade out to reveal the main content
-				gsap.to('.launch', {
-					filter: 'blur(10px)',
-					opacity: 0,
-					duration: 1, // Duration for the blur and fade out animation
-					onComplete: () => {
-						// Set loading to false to hide the loading screen
-						ui.loading = false;
-					},
-				});
+			)
+			.to('.loading-picture', {
+				opacity: 0,
+				duration: 0.5,
+				onComplete: () => {
+					gsap.to('.launch', {
+						filter: 'blur(10px)',
+						opacity: 0,
+						duration: 1,
+						onComplete: () => {
+							ui.loading = false;
+						},
+					});
+				},
 			});
 
 		const tl = gsap.timeline({
