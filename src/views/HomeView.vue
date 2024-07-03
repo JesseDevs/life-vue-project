@@ -4,9 +4,39 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
+	const loading = ref(true);
+	const body = document.body;
+	body.classList.add('overflow-hidden');
+
+	watch(loading, (newValue) => {
+		const body = document.body;
+		if (newValue) {
+			body.classList.add('overflow-hidden');
+		} else {
+			body.classList.remove('overflow-hidden');
+		}
+	});
 
 	onMounted(async () => {
 		await nextTick();
+
+		gsap.to('.loading-picture', {
+			opacity: 1,
+			filter: 'blur(0px)',
+			duration: 2, // Adjust the duration as needed
+			onComplete: () => {
+				// Animate the blur effect and fade out to reveal the main content
+				gsap.to('.launch', {
+					filter: 'blur(10px)',
+					opacity: 0,
+					duration: 0.8, // Adjust the duration as needed
+					onComplete: () => {
+						// Set loading to false to hide the loading screen
+						loading.value = false;
+					},
+				});
+			},
+		});
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
@@ -91,6 +121,17 @@
 </script>
 
 <template>
+	<div class="launch" v-show="loading">
+		<picture class="loading-picture">
+			<img
+				src="/images/logo-png.png"
+				alt="logo-lotp"
+				format="png"
+				loading="eager"
+			/>
+			<div class="pulsing-circle"></div>
+		</picture>
+	</div>
 	<main>
 		<GeneralContainer class="landing" id="landing">
 			<Landing />
@@ -133,6 +174,60 @@
 			padding-top: 0;
 			padding-bottom: 0%;
 			max-width: 900px;
+		}
+	}
+
+	.launch {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: black; /* or any other background color */
+		color: black; /* or any other text color */
+		font-size: 2rem; /* adjust the size as needed */
+		z-index: 9999;
+
+		.loading-picture {
+			opacity: 0;
+			filter: blur(5px);
+		}
+
+		picture {
+			width: 100%;
+			max-width: 600px;
+			max-height: 600px;
+			position: relative;
+			img {
+				max-width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+
+		.pulsing-circle {
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			background: radial-gradient(
+				circle,
+				rgb(var(--brand-two-color-rgb) / 0.2) 30%,
+				transparent 80%
+			);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 1;
+			filter: blur(30px);
+			z-index: -1;
 		}
 	}
 </style>
