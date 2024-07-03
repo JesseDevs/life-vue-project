@@ -2,41 +2,40 @@
 	import { onMounted, nextTick } from 'vue';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { useInterfaceService } from '~/services/InterfaceService';
+
+	const ui = useInterfaceService();
 
 	gsap.registerPlugin(ScrollTrigger);
-	const loading = ref(true);
-	const body = document.body;
-	body.classList.add('overflow-hidden');
-
-	watch(loading, (newValue) => {
-		const body = document.body;
-		if (newValue) {
-			body.classList.add('overflow-hidden');
-		} else {
-			body.classList.remove('overflow-hidden');
-		}
-	});
 
 	onMounted(async () => {
 		await nextTick();
 
-		gsap.to('.loading-picture', {
-			opacity: 1,
-			filter: 'blur(0px)',
-			duration: 2, // Adjust the duration as needed
-			onComplete: () => {
+		gsap.timeline()
+			.to('.loading-picture', {
+				opacity: 1,
+				duration: 1.7, // Duration for the opacity animation
+			})
+			.to(
+				'.loading-picture',
+				{
+					filter: 'blur(0px)',
+					duration: 0.5, // Duration for the blur animation
+				},
+				0,
+			) // Start the blur animation at the same time as the opacity animation
+			.add(() => {
 				// Animate the blur effect and fade out to reveal the main content
 				gsap.to('.launch', {
 					filter: 'blur(10px)',
 					opacity: 0,
-					duration: 0.8, // Adjust the duration as needed
+					duration: 1, // Duration for the blur and fade out animation
 					onComplete: () => {
 						// Set loading to false to hide the loading screen
-						loading.value = false;
+						ui.loading = false;
 					},
 				});
-			},
-		});
+			});
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
@@ -121,7 +120,7 @@
 </script>
 
 <template>
-	<div class="launch" v-show="loading">
+	<div class="launch" v-show="ui.loading">
 		<picture class="loading-picture">
 			<img
 				src="/images/logo-png.png"
@@ -194,7 +193,7 @@
 
 		.loading-picture {
 			opacity: 0;
-			filter: blur(5px);
+			filter: blur(3px);
 		}
 
 		picture {

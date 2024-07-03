@@ -1,6 +1,21 @@
 import { defineStore } from 'pinia';
 
 export const useInterfaceService = defineStore('interface', () => {
+	const loading = ref(true);
+	if (loading.value) {
+		const body = document.body;
+		body.classList.add('overflow-hidden');
+	}
+
+	watch(loading, (newValue) => {
+		const body = document.body;
+		if (newValue) {
+			body.classList.add('overflow-hidden');
+		} else {
+			body.classList.remove('overflow-hidden');
+		}
+	});
+
 	const mainMenuOpen = ref(false);
 	const menuClass = computed(() => (mainMenuOpen.value ? 'menu-open' : 'menu-close'));
 
@@ -22,6 +37,7 @@ export const useInterfaceService = defineStore('interface', () => {
 	});
 
 	return {
+		loading,
 		mainMenuOpen,
 		menuClass,
 		toggleMainMenu,

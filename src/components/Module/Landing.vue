@@ -21,49 +21,73 @@
 </template>
 
 <script setup>
+	import { useInterfaceService } from '~/services/InterfaceService';
 	import { gsap } from 'gsap';
+
+	const ui = useInterfaceService();
 	onMounted(() => {
 		const tl = gsap.timeline();
 
-		tl.fromTo(
-			'.centered-content',
-			{
-				opacity: 0,
-				y: 100,
-			},
-			{
-				opacity: 1,
-				y: 0,
-				duration: 0.8,
-				ease: 'power3.inOut',
-			},
-		);
+		setTimeout(() => {
+			startAnimations();
+		}, 1600);
 
-		const svgChildren = document.querySelectorAll(
-			'.landing-svg-holder .svg-container',
-		);
-
-		tl.fromTo(
-			svgChildren[0],
-			{
-				opacity: 0,
-				x: 100,
-				rotation: 0,
-			},
-			{
-				opacity: 1,
-				x: 0,
-				rotation: -360,
-				duration: 1,
-				ease: 'power1.out',
-				delay: 0.4,
-			},
-			'-=0.8',
-		);
-
-		if (svgChildren[1]) {
+		function startAnimations() {
 			tl.fromTo(
-				svgChildren[1],
+				'.centered-content',
+				{
+					opacity: 0,
+					y: 100,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					ease: 'power3.inOut',
+				},
+			);
+
+			const svgChildren = document.querySelectorAll(
+				'.landing-svg-holder .svg-container',
+			);
+
+			tl.fromTo(
+				svgChildren[0],
+				{
+					opacity: 0,
+					x: 100,
+					rotation: 0,
+				},
+				{
+					opacity: 1,
+					x: 0,
+					rotation: -360,
+					duration: 1,
+					ease: 'power1.out',
+					delay: 0.4,
+				},
+				'-=0.8',
+			);
+
+			if (svgChildren[1]) {
+				tl.fromTo(
+					svgChildren[1],
+					{
+						opacity: 0,
+						x: 100,
+					},
+					{
+						opacity: 1,
+						x: 0,
+						duration: 1,
+						ease: 'power1.out',
+						delay: 0.4,
+					},
+					'-=1',
+				);
+			}
+			tl.fromTo(
+				'.next-event',
 				{
 					opacity: 0,
 					x: 100,
@@ -73,25 +97,10 @@
 					x: 0,
 					duration: 1,
 					ease: 'power1.out',
-					delay: 0.4,
 				},
 				'-=1',
 			);
 		}
-		tl.fromTo(
-			'.next-event',
-			{
-				opacity: 0,
-				x: 100,
-			},
-			{
-				opacity: 1,
-				x: 0,
-				duration: 1,
-				ease: 'power1.out',
-			},
-			'-=1',
-		);
 	});
 </script>
 
