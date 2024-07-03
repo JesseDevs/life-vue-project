@@ -202,6 +202,7 @@
 			max-width: 600px;
 			max-height: 600px;
 			position: relative;
+			margin-bottom: 200px;
 			img {
 				max-width: 100%;
 				height: 100%;
