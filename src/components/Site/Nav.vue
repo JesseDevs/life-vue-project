@@ -110,7 +110,7 @@
 		z-index: 9999;
 		backdrop-filter: blur(7px);
 		color: rgb(250 250 250);
-		background-color: rgb(var(--background-rgb) / 0.25);
+		background-color: var(--background);
 
 		inner-column {
 			padding: 0.8rem 1.2rem;

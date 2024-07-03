@@ -15,6 +15,7 @@
 <style lang="scss" scoped>
 	div#section-heading {
 		opacity: 0;
+		z-index: 1;
 	}
 	h3 {
 		color: inherit;

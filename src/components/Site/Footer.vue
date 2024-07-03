@@ -2,12 +2,81 @@
 	<footer class="site-footer small-voice">
 		<inner-column>
 			<footer-block>
-				<div class="flex">
-					<div class="quick-contact base-voice">
-						<!-- <p>LA, California</p>
-						<p>steadystudio6@gmail.com</p> -->
-					</div>
-				</div>
+				<footer-group>
+					<p class="group-head">Pages</p>
+					<ul>
+						<li>
+							<a href="/#mission">Mission</a>
+						</li>
+						<li>
+							<a href="/#partners">Resources</a>
+						</li>
+						<li>
+							<a href="/#events">Events</a>
+						</li>
+						<li>
+							<a href="/#gallery">Gallery</a>
+						</li>
+						<li>
+							<a href="/#team">Team</a>
+						</li>
+
+						<li>
+							<a href="/#contact">Contact</a>
+						</li>
+						<!-- <li>
+							<a href="/faq">FAQ</a>
+						</li> -->
+					</ul>
+				</footer-group>
+				<footer-group>
+					<p class="group-head">Resources</p>
+					<ul>
+						<li>
+							<a href="https://www.tacoinc.org/" target="_blank">TACO</a>
+						</li>
+						<li>
+							<a href="https://www.ocmecca.org/" target="_blank">MECCA</a>
+						</li>
+						<li>
+							<a href="https://endoverdose.net/" target="_blank"
+								>End Overdose</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://thepurposeofrecovery.org/index.html"
+								target="_blank"
+								>The Purpose of Recovery</a
+							>
+						</li>
+						<li>
+							<a href="https://www.clarematrix.org/" target="_blank"
+								>Clare Matrix</a
+							>
+						</li>
+					</ul>
+				</footer-group>
+				<footer-group>
+					<p class="group-head">Socials</p>
+					<ul>
+						<li>
+							<a href="https://twitter.com/" target="_blank"
+								>X/Twitter <PathArrow
+							/></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/ " target="_blank"
+								>Instagram <PathArrow
+							/></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/" target="_blank"
+								>Facebook <PathArrow
+							/></a>
+						</li>
+					</ul>
+				</footer-group>
 				<foot-note>
 					<p class="small-voice">© 2024 LIFE of the PARTY</p>
 				</foot-note>
@@ -19,41 +88,66 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-	.flex {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-
-		.steady {
-			flex-grow: 1;
-			flex-shrink: 0;
-		}
-
-		div.quick-contact {
-			p {
-				font-size: 1.5rem;
-				font-weight: 400;
-			}
-		}
-	}
 	footer {
 		inner-column {
 			padding-top: 2rem;
 			padding-bottom: 2rem;
 			height: 100%;
 		}
-		footer-block {
+		footer-group {
 			display: flex;
 			flex-direction: column;
+			gap: 22px;
+			width: 100%;
+			.group-head {
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 160%;
+				color: var(--Text-Loud, var(--Base-White, #fff));
+				letter-spacing: 0.2px;
+			}
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 18px;
+				li a {
+					display: inline-flex;
+					gap: 8px;
+					align-items: center;
+					align-self: flex-start;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					color: var(--Text-Default, var(--grey-200));
+					letter-spacing: 0.2px;
+					transition: color 0.3s ease;
+
+					&:hover {
+						color: var(--Base-White, #fff);
+						svg {
+							transform: translate(1px, -1px);
+						}
+					}
+				}
+			}
+		}
+		footer-block {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(144px, 1fr));
 			width: 100%;
 			position: relative;
+			gap: 32px;
 		}
+
 		foot-note {
 			// position: absolute;
 			// left: 1.5rem;
 			// bottom: 1.5rem;
 
 			display: block;
+			grid-column: 1/-1;
 			width: 100%;
 			padding-top: 50px;
 		}

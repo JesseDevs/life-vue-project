@@ -54,22 +54,22 @@
 		backdrop-filter: blur(17px);
 
 		overflow: hidden;
-		box-shadow: 0 4px 10px rgb(var(--brand-color-rgb) / 0.2);
+		box-shadow: 0px 0px 20px 20px rgb(var(--brand-color-rgb) / 0.2);
 		transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
 		&:hover {
-			box-shadow: 0 6px 20px rgb(var(--brand-color-rgb) / 0.4);
+			box-shadow: 0px 8px 15px 10px rgb(var(--brand-color-rgb) / 0.5);
 			background: rgba(255, 255, 255, 0.1);
 		}
 
-		@media (min-width: 1000px) {
+		@media (min-width: 1020px) {
 			display: flex;
 		}
 
 		> h3 {
 			width: 100%;
 			text-align: center;
-			background-color: var(--brand-color);
+			background-color: rgb(var(--brand-color-rgb) / 0.6);
 			font-weight: 600;
 			letter-spacing: 0.05em;
 		}

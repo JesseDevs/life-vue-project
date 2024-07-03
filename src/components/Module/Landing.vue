@@ -195,11 +195,16 @@
 	}
 
 	@media (min-width: 950px) {
-		module-landing picture {
-			margin-left: 75px;
-		}
+		// module-landing picture {
+		// 	margin-left: 75px;
+		// }
 		div.landing-svg-holder {
 			bottom: -57%;
+		}
+	}
+	@media (min-width: 1200px) {
+		module-landing {
+			margin: 35px 0;
 		}
 	}
 

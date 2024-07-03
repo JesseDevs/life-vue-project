@@ -35,6 +35,7 @@ declare module 'vue' {
     Nav: typeof import('./components/Site/Nav.vue')['default']
     Partner: typeof import('./components/Card/Partner.vue')['default']
     Partners: typeof import('./components/Module/Partners.vue')['default']
+    PathArrow: typeof import('./components/Svg/PathArrow.vue')['default']
     Profile: typeof import('./components/Card/Profile.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

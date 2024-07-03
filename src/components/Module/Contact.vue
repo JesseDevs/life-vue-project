@@ -151,7 +151,6 @@
 			background-color: rgba(255, 255, 255, 0.9);
 			padding: 0.75em 1rem;
 			margin-bottom: 1.5rem;
-			border-radius: 7px;
 		}
 		#fs-frm input:focus,
 		#fs-frm select:focus,
