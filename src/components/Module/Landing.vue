@@ -217,17 +217,17 @@
 		0% {
 			transform: scale(0.8);
 			opacity: 0.7;
-			box-shadow: 0 0 90px 40px var(--brand-two-color);
+			box-shadow: 0 0 60px 30px var(--brand-two-color);
 		}
 		50% {
 			transform: scale(1); /* Increased scale */
 			opacity: 1;
-			box-shadow: 0 0 80px 50px var(--brand-two-color); /* Adjusted shadow */
+			box-shadow: 0 0 40px 40px var(--brand-two-color); /* Adjusted shadow */
 		}
 		100% {
 			transform: scale(0.8);
 			opacity: 0.7;
-			box-shadow: 0 0 90px 40px var(--brand-two-color);
+			box-shadow: 0 0 60px 30px var(--brand-two-color);
 		}
 	}
 </style>
