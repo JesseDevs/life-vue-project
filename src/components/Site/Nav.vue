@@ -177,17 +177,20 @@
 			.donate-btn {
 				position: relative;
 				overflow: hidden;
-				font-weight: 500;
+				font-weight: 600;
 				color: var(--brand-two-color);
 
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				gap: 2px;
+				p {
+					font-size: 1.2em;
+				}
 
 				.heart {
 					width: 2em;
-					height: 1.5em;
+					height: 1.7em;
 					path {
 						fill: var(--brand-two-color);
 					}

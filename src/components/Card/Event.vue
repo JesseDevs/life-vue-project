@@ -1,32 +1,33 @@
 <template>
-	<event-card>
-		<picture>
-			<img :src="event.img" alt="Event-title" />
-			<div class="date-indicator">
-				<p class="day domine">{{ event.dateDay }}</p>
-				<p class="month domine">{{ event.month }}</p>
-			</div>
-		</picture>
-		<text-content>
-			<h2 class="step-1 domine">{{ event.title }}</h2>
-			<p class="small-voice">
-				{{ event.detail }}
-			</p>
-			<div class="line"></div>
-		</text-content>
-		<text-content>
-			<h3 class="step-0 uppercase">Time</h3>
-			<div class="date-block small-voice">
-				<p>{{ event.timeSpan[0] }}</p>
-				<p>-</p>
-				<p>{{ event.timeSpan[1] }}</p>
-			</div>
-			<div class="location-block small-voice">
-				<p v-for="(item, index) in event.location" :key="index">{{ item }}</p>
-			</div>
-		</text-content>
-		<a class="shimmer" :href="event.link" target="blank">{{ event.linkText }}</a>
-	</event-card>
+	<a :href="event.link" target="blank">
+		<event-card>
+			<picture>
+				<img :src="event.img" alt="Event-title" />
+				<div class="date-indicator">
+					<p class="day domine">{{ event.dateDay }}</p>
+					<p class="month domine">{{ event.month }}</p>
+				</div>
+			</picture>
+			<text-content>
+				<h2 class="step-1 domine">{{ event.title }}</h2>
+				<p class="small-voice">
+					{{ event.detail }}
+				</p>
+				<div class="line"></div>
+			</text-content>
+			<text-content>
+				<h3 class="step-0 uppercase">Time</h3>
+				<div class="date-block small-voice">
+					<p>{{ event.timeSpan[0] }}</p>
+					<p>-</p>
+					<p>{{ event.timeSpan[1] }}</p>
+				</div>
+				<div class="location-block small-voice">
+					<p v-for="(item, index) in event.location" :key="index">{{ item }}</p>
+				</div>
+			</text-content>
+		</event-card>
+	</a>
 </template>
 
 <script setup>
@@ -53,9 +54,10 @@
 		padding: 8px;
 		gap: 10px;
 
-		background-color: rgb(var(--brand-color-rgb) / 0.3);
+		background-color: rgb(var(--brand-color-rgb) / 0.4);
 		position: relative;
 		box-shadow: 0 5px 20px 0 rgba(var(--brand-color-rgb) / 0.2);
+		transition: background-color 0.3s ease-in-out;
 		img {
 			transition: transform 0.3s ease-in-out;
 		}
@@ -63,6 +65,7 @@
 			img {
 				transform: scale(1.1);
 			}
+			background-color: rgb(var(--brand-color-rgb) / 0.2);
 		}
 		.shimmer {
 			display: inline-block;

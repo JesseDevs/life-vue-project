@@ -14,7 +14,7 @@
 		gsap.timeline()
 			.to('.loading-picture', {
 				opacity: 1,
-				duration: 1.7,
+				duration: 1.3,
 			})
 			.to(
 				'.loading-picture',
@@ -47,6 +47,22 @@
 			},
 		});
 
+		gsap.fromTo(
+			'.dot-create',
+			{
+				opacity: 0,
+				y: 100,
+			},
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+
+				ease: 'power3.inOut',
+				delay: 2,
+			},
+		);
+
 		tl.to('.dot-create', {
 			scale: 2,
 			filter: 'blur(10px)',
@@ -54,37 +70,26 @@
 			onComplete: () => {
 				document.querySelector('.dot-create').style.display = 'none';
 			},
-		}).to(
+		});
+
+		gsap.fromTo(
 			'.dot-grid-left',
 			{
-				right: '0',
-				ease: 'power3.inOut',
-				filter: 'blur(0)',
-				scale: 1,
-				opacity: 1,
+				opacity: 0,
+				right: '-100%',
 			},
-			'-=0.5',
+			{
+				opacity: 1,
+				right: '0',
+
+				ease: 'power3.inOut',
+				scrollTrigger: {
+					trigger: '#mission',
+					start: 'top center',
+					end: 'bottom center',
+				},
+			},
 		);
-
-		// GSAP animation for rotating text
-		gsap.set('#text', { transformOrigin: 'center center' });
-		const textAnimation = gsap.to('#text', {
-			rotation: -360,
-			duration: 15,
-			repeat: -1,
-			ease: 'linear',
-		});
-
-		// GSAP animation for scaling heart
-		gsap.set('#heart', { scale: 0.8, transformOrigin: 'center center' });
-		gsap.to('#heart', {
-			scale: 1.19,
-			transformOrigin: 'center center',
-			duration: 0.8,
-			repeat: -1,
-			yoyo: true,
-			ease: 'power1.inOut',
-		});
 
 		gsap.fromTo(
 			'.images-left .image-left',
@@ -143,6 +148,10 @@
 			</inner-column>
 		</div>
 
+		<GeneralContainer>
+			<Info />
+		</GeneralContainer>
+
 		<GeneralContainer class="mission" id="mission">
 			<Mission />
 		</GeneralContainer>
@@ -200,6 +209,7 @@
 
 		picture {
 			width: 100%;
+			margin-top: 100px;
 			max-width: 600px;
 			max-height: 600px;
 			position: relative;

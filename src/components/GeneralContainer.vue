@@ -64,9 +64,6 @@
 </script>
 
 <style lang="scss">
-	section.landing inner-column {
-		padding-top: 3rem;
-	}
 	@media (min-width: 800px) {
 		section.landing inner-column {
 			padding-top: 5rem;

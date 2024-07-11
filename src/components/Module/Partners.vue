@@ -50,29 +50,29 @@
 		},
 	]);
 
-	onMounted(() => {
-		const cards = gsap.utils.toArray('.partner-card');
+	// onMounted(() => {
+	// 	const cards = gsap.utils.toArray('.partner-card');
 
-		gsap.to(cards, {
-			xPercent: -100 * (cards.length - 1),
-			ease: 'none',
-			scrollTrigger: {
-				trigger: 'module-partners',
-				pin: true,
-				scrub: 1,
-				snap: {
-					snapTo: 1 / (cards.length - 1),
-					directional: false,
-					duration: { min: 0.15, max: 0.75 },
-					delay: 0.04,
-					ease: 'power1.inOut',
-				},
-				start: 'top top',
-				end: () =>
-					'+=' + (document.querySelector('module-partners').offsetWidth + 100),
-			},
-		});
-	});
+	// 	gsap.to(cards, {
+	// 		xPercent: -100 * (cards.length - 1),
+	// 		ease: 'none',
+	// 		scrollTrigger: {
+	// 			trigger: 'module-partners',
+	// 			pin: true,
+	// 			scrub: 1,
+	// 			snap: {
+	// 				snapTo: 1 / (cards.length - 1),
+	// 				directional: false,
+	// 				duration: { min: 0.15, max: 0.75 },
+	// 				delay: 0.04,
+	// 				ease: 'power1.inOut',
+	// 			},
+	// 			start: 'top top',
+	// 			end: () =>
+	// 				'+=' + (document.querySelector('module-partners').offsetWidth + 100),
+	// 		},
+	// 	});
+	// });
 </script>
 
 <style lang="scss">

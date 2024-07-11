@@ -84,10 +84,10 @@
 
 		stroke: var(--brand-two-inner-color);
 
-		width: 900px;
+		width: 700px;
 
 		animation-name: animate;
-		animation-duration: 0.8s;
+		animation-duration: 1.8s;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 		z-index: 10;
@@ -98,14 +98,14 @@
 			filter: drop-shadow(0px 0px 1px #ffffffb4) drop-shadow(0px 0px 3px #ffffffb6)
 				drop-shadow(0px 0px 10px rgb(var(--brand-two-color-rgb) / 0.5))
 				drop-shadow(0px 0px 20px rgb(var(--brand-two-color-rgb) / 0.8))
-				drop-shadow(0px 0px 40px var(--brand-two-color));
+				drop-shadow(0px 0px 10px var(--brand-two-color));
 		}
 
 		100% {
 			filter: drop-shadow(0px 0px 3px #ffffffb5) drop-shadow(0px 0px 6px #ffffffc5)
 				drop-shadow(0px 0px 15px rgb(var(--brand-two-color-rgb) / 0.5))
 				drop-shadow(0px 0px 20px rgb(var(--brand-two-color-rgb) / 0.8))
-				drop-shadow(0px 0px 50px var(--brand-two-color));
+				drop-shadow(0px 0px 10px var(--brand-two-color));
 		}
 	}
 </style>

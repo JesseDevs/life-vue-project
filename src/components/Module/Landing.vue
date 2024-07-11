@@ -1,7 +1,8 @@
 <template>
 	<module-landing>
 		<div class="centered-content">
-			<picture>
+			<p class="title-display">Save Lives Now</p>
+			<picture class="landing-logo">
 				<img
 					src="/images/logo-png.png"
 					alt="logo-lotp"
@@ -10,12 +11,11 @@
 				/>
 				<div class="pulsing-circle"></div>
 			</picture>
-			<!-- <div class="landing-svg-holder">
-				<SVL />
-				<DYP />
-			</div>
-
-			<SmallCalendar /> -->
+			<!-- <p>Give the gift of saving lives from opioid overdose</p> -->
+			<a href="https://www.instagram.com/lifeofthepartyorg/" class="flex-holder">
+				<Insta />
+				<p>lifeofthepartyorg</p>
+			</a>
 		</div>
 	</module-landing>
 </template>
@@ -30,11 +30,11 @@
 
 		setTimeout(() => {
 			startAnimations();
-		}, 1800);
+		}, 1400);
 
 		function startAnimations() {
 			tl.fromTo(
-				'.centered-content',
+				'.title-display',
 				{
 					opacity: 0,
 					y: 100,
@@ -47,59 +47,34 @@
 				},
 			);
 
-			// const svgChildren = document.querySelectorAll(
-			// 	'.landing-svg-holder .svg-container',
-			// );
-
-			// tl.fromTo(
-			// 	svgChildren[0],
-			// 	{
-			// 		opacity: 0,
-			// 		x: 100,
-			// 		rotation: 0,
-			// 	},
-			// 	{
-			// 		opacity: 1,
-			// 		x: 0,
-			// 		rotation: -360,
-			// 		duration: 1,
-			// 		ease: 'power1.out',
-			// 		delay: 0.4,
-			// 	},
-			// 	'-=0.8',
-			// );
-
-			// 	if (svgChildren[1]) {
-			// 		tl.fromTo(
-			// 			svgChildren[1],
-			// 			{
-			// 				opacity: 0,
-			// 				x: 100,
-			// 			},
-			// 			{
-			// 				opacity: 1,
-			// 				x: 0,
-			// 				duration: 1,
-			// 				ease: 'power1.out',
-			// 				delay: 0.4,
-			// 			},
-			// 			'-=1',
-			// 		);
-			// 	}
-			// 	tl.fromTo(
-			// 		'.next-event',
-			// 		{
-			// 			opacity: 0,
-			// 			x: 100,
-			// 		},
-			// 		{
-			// 			opacity: 1,
-			// 			x: 0,
-			// 			duration: 1,
-			// 			ease: 'power1.out',
-			// 		},
-			// 		'-=1',
-			// 	);
+			tl.fromTo(
+				'.landing-logo',
+				{
+					opacity: 0,
+					y: 100,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					ease: 'power3.inOut',
+				},
+				'<', // This makes it start at the same time as the previous animation
+			);
+			tl.fromTo(
+				'.flex-holder',
+				{
+					opacity: 0,
+					y: 100,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					ease: 'power3.inOut',
+				},
+				'<.3', // This makes it start at the same time as the previous animation
+			);
 		}
 	});
 </script>
@@ -115,6 +90,15 @@
 			transform: translateY(0);
 		}
 	}
+	a.flex-holder {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		color: var(--brand-color);
+		margin-top: 10px;
+	}
 
 	module-landing {
 		display: flex;
@@ -125,22 +109,26 @@
 		position: relative;
 		min-height: 30vh;
 
-		pointer-events: none;
 		.centered-content {
 			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
+			align-items: center;
 			justify-content: center;
 			min-height: 200px;
 
 			height: 100%;
 			width: 100%;
 			position: relative;
-			pointer-events: none;
-			user-select: none;
-			// animation-name: slideFromBottom;
-			// animation-duration: 2s;
-			// animation-fill-mode: forwards;
+
+			p.title-display {
+				text-transform: uppercase;
+				font-size: 2em;
+				font-weight: 600;
+				color: var(--brand-color);
+				text-align: center;
+				margin-bottom: 0;
+				text-shadow: 0 0 8px var(--brand-color-light);
+			}
 		}
 
 		.spacer {
@@ -154,6 +142,8 @@
 			max-width: 600px;
 			margin: 0 auto;
 			position: relative;
+			pointer-events: none;
+			user-select: none;
 			img {
 				max-width: 100%;
 				height: auto;
@@ -189,7 +179,7 @@
 		border-radius: 70%;
 
 		box-shadow: 0 0 40px 20px rgb(var(--brand-two-color-rgb) / 0.2);
-		animation: pulse 1.5s infinite;
+		animation: pulse 2s infinite;
 	}
 
 	div.landing-svg-holder {
@@ -225,17 +215,17 @@
 
 	@keyframes pulse {
 		0% {
-			transform: scale(0.9);
+			transform: scale(0.8);
 			opacity: 0.7;
 			box-shadow: 0 0 90px 40px var(--brand-two-color);
 		}
 		50% {
-			transform: scale(1.1);
+			transform: scale(1); /* Increased scale */
 			opacity: 1;
-			box-shadow: 0 0 50px 30px var(--brand-two-color);
+			box-shadow: 0 0 80px 50px var(--brand-two-color); /* Adjusted shadow */
 		}
 		100% {
-			transform: scale(0.9);
+			transform: scale(0.8);
 			opacity: 0.7;
 			box-shadow: 0 0 90px 40px var(--brand-two-color);
 		}

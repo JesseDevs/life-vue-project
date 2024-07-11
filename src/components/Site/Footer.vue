@@ -77,6 +77,17 @@
 						</li>
 					</ul>
 				</footer-group>
+				<footer-group>
+					<p class="group-head">Join the Community</p>
+					<ul>
+						<li>
+							<a :href="mailToHref" target="_blank">
+								Help By Volunteering
+								<PathArrow />
+							</a>
+						</li>
+					</ul>
+				</footer-group>
 				<foot-note>
 					<p class="small-voice">© 2024 LIFE of the PARTY</p>
 				</foot-note>
@@ -85,7 +96,13 @@
 	</footer>
 </template>
 
-<script setup></script>
+<script setup>
+	const email = ref('contact@lifeoftheparty.org');
+
+	const mailToHref = computed(() => {
+		return `mailto:${email.value}?subject=Volunteer%20Opportunities%20-%20Life%20of%20The%20Party&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20volunteering%20for%20your%20organization.%20Please%20provide%20more%20information%20on%20how%20I%20can%20help.%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]`;
+	});
+</script>
 
 <style lang="scss" scoped>
 	footer {

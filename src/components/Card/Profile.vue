@@ -26,7 +26,7 @@
 			</social-block> -->
 			<div class="title">
 				<h4 class="step-2">
-					{{ profile.name }}<span class="brand-color">.</span>
+					{{ profile.name }}
 				</h4>
 				<h5>{{ profile.role }}</h5>
 			</div>

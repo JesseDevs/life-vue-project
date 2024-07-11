@@ -24,7 +24,7 @@
 		top: -20px;
 		z-index: -99;
 		opacity: 0;
-		filter: blur(10px);
+
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: repeat(5, 1fr);
 
@@ -33,7 +33,6 @@
 
 		height: fit-content;
 		overflow: hidden;
-		scale: 2;
 
 		transition: right 0.3s ease-in-out;
 

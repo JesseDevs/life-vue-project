@@ -2,9 +2,7 @@
 	<module-events>
 		<SectionTitle text="Upcoming Events" />
 		<div class="events-container" id="section-content">
-			<p v-if="events.length > 0">
-				You can find <span class="brand">The Party</span> at these events.
-			</p>
+			<p v-if="events.length > 0">Come join the community!</p>
 			<p v-else>Currently we are not attending any events.</p>
 			<div v-if="events.length > 0" class="calendar">
 				<Event v-for="event in events" :key="event.id" :event="event" />

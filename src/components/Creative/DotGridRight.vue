@@ -14,7 +14,7 @@
 <script setup>
 	const dots = ref([]);
 	onMounted(() => {
-		dots.value = new Array(50).fill(null);
+		dots.value = new Array(100).fill(null);
 	});
 </script>
 
@@ -39,7 +39,7 @@
 		position: absolute;
 		opacity: 1;
 		left: 0;
-		top: -18dvh;
+		top: 10%;
 
 		@media (min-width: 650px) {
 			top: -10dvh;

@@ -5,7 +5,7 @@
 		</picture>
 
 		<text-content>
-			<h4 class="step-1">{{ p.name }}<span class="brand-color">.</span></h4>
+			<h4 class="step-1">{{ p.name }}</h4>
 			<p v-html="p.context"></p>
 		</text-content>
 		<a :href="p.link" target="_blank">More Information <Arrow class="arrow" /> </a>
