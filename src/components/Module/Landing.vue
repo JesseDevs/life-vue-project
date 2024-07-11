@@ -10,12 +10,12 @@
 				/>
 				<div class="pulsing-circle"></div>
 			</picture>
-			<div class="landing-svg-holder">
+			<!-- <div class="landing-svg-holder">
 				<SVL />
 				<DYP />
 			</div>
 
-			<SmallCalendar />
+			<SmallCalendar /> -->
 		</div>
 	</module-landing>
 </template>
@@ -47,59 +47,59 @@
 				},
 			);
 
-			const svgChildren = document.querySelectorAll(
-				'.landing-svg-holder .svg-container',
-			);
+			// const svgChildren = document.querySelectorAll(
+			// 	'.landing-svg-holder .svg-container',
+			// );
 
-			tl.fromTo(
-				svgChildren[0],
-				{
-					opacity: 0,
-					x: 100,
-					rotation: 0,
-				},
-				{
-					opacity: 1,
-					x: 0,
-					rotation: -360,
-					duration: 1,
-					ease: 'power1.out',
-					delay: 0.4,
-				},
-				'-=0.8',
-			);
+			// tl.fromTo(
+			// 	svgChildren[0],
+			// 	{
+			// 		opacity: 0,
+			// 		x: 100,
+			// 		rotation: 0,
+			// 	},
+			// 	{
+			// 		opacity: 1,
+			// 		x: 0,
+			// 		rotation: -360,
+			// 		duration: 1,
+			// 		ease: 'power1.out',
+			// 		delay: 0.4,
+			// 	},
+			// 	'-=0.8',
+			// );
 
-			if (svgChildren[1]) {
-				tl.fromTo(
-					svgChildren[1],
-					{
-						opacity: 0,
-						x: 100,
-					},
-					{
-						opacity: 1,
-						x: 0,
-						duration: 1,
-						ease: 'power1.out',
-						delay: 0.4,
-					},
-					'-=1',
-				);
-			}
-			tl.fromTo(
-				'.next-event',
-				{
-					opacity: 0,
-					x: 100,
-				},
-				{
-					opacity: 1,
-					x: 0,
-					duration: 1,
-					ease: 'power1.out',
-				},
-				'-=1',
-			);
+			// 	if (svgChildren[1]) {
+			// 		tl.fromTo(
+			// 			svgChildren[1],
+			// 			{
+			// 				opacity: 0,
+			// 				x: 100,
+			// 			},
+			// 			{
+			// 				opacity: 1,
+			// 				x: 0,
+			// 				duration: 1,
+			// 				ease: 'power1.out',
+			// 				delay: 0.4,
+			// 			},
+			// 			'-=1',
+			// 		);
+			// 	}
+			// 	tl.fromTo(
+			// 		'.next-event',
+			// 		{
+			// 			opacity: 0,
+			// 			x: 100,
+			// 		},
+			// 		{
+			// 			opacity: 1,
+			// 			x: 0,
+			// 			duration: 1,
+			// 			ease: 'power1.out',
+			// 		},
+			// 		'-=1',
+			// 	);
 		}
 	});
 </script>
@@ -152,7 +152,7 @@
 		picture {
 			width: 100%;
 			max-width: 600px;
-
+			margin: 0 auto;
 			position: relative;
 			img {
 				max-width: 100%;
@@ -186,7 +186,7 @@
 		content: '';
 		width: 50%;
 		height: 50%;
-		border-radius: 50%;
+		border-radius: 70%;
 
 		box-shadow: 0 0 40px 20px rgb(var(--brand-two-color-rgb) / 0.2);
 		animation: pulse 1.5s infinite;
@@ -203,41 +203,41 @@
 		z-index: -10;
 	}
 
-	@media (min-width: 950px) {
-		// module-landing picture {
-		// 	margin-left: 75px;
-		// }
-		div.landing-svg-holder {
-			bottom: -57%;
-		}
-	}
-	@media (min-width: 1200px) {
-		module-landing {
-			margin: 35px 0;
-		}
-	}
+	// @media (min-width: 950px) {
+	// 	// module-landing picture {
+	// 	// 	margin-left: 75px;
+	// 	// }
+	// 	div.landing-svg-holder {
+	// 		bottom: -57%;
+	// 	}
+	// }
+	// @media (min-width: 1200px) {
+	// 	module-landing {
+	// 		margin: 35px 0;
+	// 	}
+	// }
 
-	@media (min-width: 1050px) {
-		div.landing-svg-holder {
-			right: 5%;
-		}
-	}
+	// @media (min-width: 1050px) {
+	// 	div.landing-svg-holder {
+	// 		right: 5%;
+	// 	}
+	// }
 
 	@keyframes pulse {
 		0% {
 			transform: scale(0.9);
 			opacity: 0.7;
-			box-shadow: 0 0 40px 20px var(--brand-two-color);
+			box-shadow: 0 0 90px 40px var(--brand-two-color);
 		}
 		50% {
 			transform: scale(1.1);
 			opacity: 1;
-			box-shadow: 0 0 60px 30px var(--brand-two-color);
+			box-shadow: 0 0 50px 30px var(--brand-two-color);
 		}
 		100% {
 			transform: scale(0.9);
 			opacity: 0.7;
-			box-shadow: 0 0 40px 20px var(--brand-two-color);
+			box-shadow: 0 0 90px 40px var(--brand-two-color);
 		}
 	}
 </style>
