@@ -19,21 +19,21 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 		min-height: 200px;
-		max-width: 550px;
+
 		margin: 0 auto;
 
 		h2 {
 			text-align: center;
-			font-size: 1.4em;
-			max-width: 500px;
-			margin: 0 auto;
+			font-size: clamp(1rem, 0.2727rem + 3.6364vw, 3rem);
 
+			margin: 0 auto;
+			min-height: 150px;
 			padding-left: 25px;
 			padding-right: 25px;
 
 			font-weight: 700;
 			text-transform: uppercase;
-			letter-spacing: 0.07em;
+			letter-spacing: 0.08em;
 		}
 
 		.qleft,
