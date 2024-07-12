@@ -24,7 +24,7 @@
 
 		h2 {
 			text-align: center;
-			font-size: clamp(1rem, 0.2727rem + 3.6364vw, 3rem);
+			font-size: clamp(1.125rem, 0.1705rem + 4.7727vw, 3.75rem);
 
 			margin: 0 auto;
 			min-height: 150px;
@@ -38,7 +38,7 @@
 
 		.qleft,
 		.qright {
-			font-size: 1.5em;
+			font-size: clamp(1.125rem, 0.1705rem + 4.7727vw, 3.75rem);
 			position: absolute;
 		}
 
