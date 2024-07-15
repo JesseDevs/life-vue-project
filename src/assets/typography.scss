@@ -12,7 +12,7 @@
 	--step--3: clamp(0.3979rem, 0.5517rem + -0.1984vi, 0.512rem);
 	--step--2: clamp(0.5627rem, 0.6669rem + -0.1345vi, 0.64rem);
 	--step--1: clamp(0.7956rem, 0.8015rem + -0.0076vi, 0.8rem);
-	--step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+	--step-0: clamp(0.9375rem, 0.8723rem + 0.3261vi, 1.125rem);
 	--step-1: clamp(1.25rem, 1.1315rem + 0.5926vi, 1.5908rem);
 	--step-2: clamp(1.5625rem, 1.3236rem + 1.1945vi, 2.2493rem);
 	--step-3: clamp(1.9531rem, 1.5262rem + 2.1346vi, 3.1805rem);
@@ -20,6 +20,7 @@
 	--step-5: clamp(3.0518rem, 1.9014rem + 5.752vi, 6.3592rem);
 
 }
+
 
 
 .step-5 {

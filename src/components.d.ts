@@ -41,6 +41,7 @@ declare module 'vue' {
     Profile: typeof import('./components/Card/Profile.vue')['default']
     Qleft: typeof import('./components/Svg/Qleft.vue')['default']
     Qright: typeof import('./components/Svg/Qright.vue')['default']
+    Quote: typeof import('./components/Svg/Quote.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SaveLives: typeof import('./components/Svg/SaveLives.vue')['default']

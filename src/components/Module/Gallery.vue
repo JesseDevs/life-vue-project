@@ -18,13 +18,6 @@
 </template>
 
 <script setup>
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-	gsap.registerPlugin(ScrollTrigger);
-
-	const galleryRef = ref(null);
-
 	const imagesLeft = ref([
 		{ src: '/gallery/2.webp', alt: 'placeholder' },
 		{ src: '/gallery/1.webp', alt: 'placeholder' },
@@ -60,7 +53,7 @@
 			}
 			&:hover {
 				img {
-					transform: scale(1.1);
+					transform: scale(1.24);
 				}
 			}
 		}

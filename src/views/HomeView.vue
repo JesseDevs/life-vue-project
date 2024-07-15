@@ -148,7 +148,7 @@
 			</inner-column>
 		</div>
 
-		<GeneralContainer>
+		<GeneralContainer class="info" id="info">
 			<Info />
 		</GeneralContainer>
 

@@ -51,9 +51,10 @@
 	event-card {
 		display: flex;
 		flex-direction: column;
-		padding: 8px;
+		padding: 15px 10px;
 		gap: 10px;
 
+		align-items: center;
 		background-color: rgb(var(--brand-color-rgb) / 0.4);
 		position: relative;
 		box-shadow: 0 5px 20px 0 rgba(var(--brand-color-rgb) / 0.2);

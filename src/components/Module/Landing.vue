@@ -126,6 +126,7 @@
 				font-weight: 600;
 				color: var(--brand-color);
 				text-align: center;
+				width: 100%;
 				margin-bottom: 0;
 				text-shadow: 0 0 8px var(--brand-color-light);
 			}

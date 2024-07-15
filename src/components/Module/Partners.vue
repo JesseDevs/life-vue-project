@@ -2,15 +2,34 @@
 	<module-partners>
 		<SectionTitle class="black-text" text="Resources" />
 
-		<div class="partner-grid" id="section-content">
-			<Partner class="partner-card" v-for="p in partners" :key="p.name" :p="p" />
-		</div>
+		<Swiper
+			:slidesPerView="1"
+			:spaceBetween="30"
+			:keyboard="{
+				enabled: true,
+			}"
+			:pagination="{
+				clickable: true,
+			}"
+			:navigation="true"
+			:modules="modules"
+			class="mySwiper"
+		>
+			<SwiperSlide v-for="partner in partners" :key="partner.name">
+				<Partner class="partner-card" :p="partner" />
+			</SwiperSlide>
+		</Swiper>
 	</module-partners>
 </template>
 
 <script setup>
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { Swiper, SwiperSlide } from 'swiper/vue';
+	import 'swiper/css';
+
+	import 'swiper/css/pagination';
+	import 'swiper/css/navigation';
+	import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+	const modules = [Keyboard, Pagination, Navigation];
 
 	const partners = ref([
 		{
@@ -49,54 +68,54 @@
 			logo: '/partners/matrix.png',
 		},
 	]);
-
-	// onMounted(() => {
-	// 	const cards = gsap.utils.toArray('.partner-card');
-
-	// 	gsap.to(cards, {
-	// 		xPercent: -100 * (cards.length - 1),
-	// 		ease: 'none',
-	// 		scrollTrigger: {
-	// 			trigger: 'module-partners',
-	// 			pin: true,
-	// 			scrub: 1,
-	// 			snap: {
-	// 				snapTo: 1 / (cards.length - 1),
-	// 				directional: false,
-	// 				duration: { min: 0.15, max: 0.75 },
-	// 				delay: 0.04,
-	// 				ease: 'power1.inOut',
-	// 			},
-	// 			start: 'top top',
-	// 			end: () =>
-	// 				'+=' + (document.querySelector('module-partners').offsetWidth + 100),
-	// 		},
-	// 	});
-	// });
 </script>
 
 <style lang="scss">
+	:root {
+		--swiper-theme-color: rgb(var(--brand-color-rgb));
+		--swiper-pagination-color: rgb(var(--brand-color-rgb));
+		--swiper-wrapper-transition-timing-function: ease-in-out;
+		--swiper-pagination-bullet-inactive-color: white;
+	}
+	.swiper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide {
+		/* Center slide text vertically */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		top: -20px;
+		bottom: auto;
+	}
+
 	module-partners {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		width: 500%;
+		width: 100%;
 
 		padding-top: 30px;
 		min-height: 80vh;
 
 		position: relative;
 
-		div.partner-grid {
-			display: flex;
-			height: 100%;
-			flex-wrap: nowrap;
+		// div.partner-grid {
+		// 	display: flex;
+		// 	height: 100%;
+		// 	flex-wrap: nowrap;
 
-			scroll-snap-type: y mandatory;
+		// 	scroll-snap-type: y mandatory;
 
-			partner-card {
-				scroll-snap-align: start;
-			}
-		}
+		// 	partner-card {
+		// 		scroll-snap-align: start;
+		// 	}
+		// }
 	}
 </style>

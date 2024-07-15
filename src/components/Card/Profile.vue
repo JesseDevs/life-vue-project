@@ -108,37 +108,37 @@
 			gap: 20px;
 		}
 
-		social-block {
-			align-self: flex-start;
-			margin-right: auto;
+		// social-block {
+		// 	align-self: flex-start;
+		// 	margin-right: auto;
 
-			ul {
-				display: flex;
-				flex-direction: column;
-				gap: 10px;
-				align-self: flex-end;
-				svg {
-					width: 30px;
-					height: 30px;
-					transition: scale 0.3s ease-in-out;
+		// 	ul {
+		// 		display: flex;
+		// 		flex-direction: column;
+		// 		gap: 10px;
+		// 		align-self: flex-end;
+		// 		svg {
+		// 			width: 30px;
+		// 			height: 30px;
+		// 			transition: scale 0.3s ease-in-out;
 
-					filter: drop-shadow(2px 2px 3px rgb(var(--brand-color-rgb) / 0.5));
+		// 			filter: drop-shadow(2px 2px 3px rgb(var(--brand-color-rgb) / 0.5));
 
-					path {
-						transition: fill 0.3s ease-in-out;
-					}
+		// 			path {
+		// 				transition: fill 0.3s ease-in-out;
+		// 			}
 
-					&:hover {
-						scale: 1.08;
-						path {
-							fill: rgb(var(--brand-inner-color-rgb) / 0.9);
-						}
-					}
-				}
-			}
-		}
+		// 			&:hover {
+		// 				scale: 1.08;
+		// 				path {
+		// 					fill: rgb(var(--brand-inner-color-rgb) / 0.9);
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 
-		@media (min-width: 700px) {
+		@media (min-width: 775px) {
 			display: flex;
 			flex-direction: row;
 			column-gap: 40px;
