@@ -42,7 +42,7 @@
 		},
 		{
 			link: 'https://www.ocmecca.org/',
-			name: 'MECCA: Multi-Ethnic Collaborative of COmmunity Agencies',
+			name: 'MECCA: Multi-Ethnic Collaborative of Community Agencies',
 			context:
 				'MECCA Services specialize in accessing and serving underserved or hard-to-reach individuals and communities and, as a collaborative, MECCA relies on the credibility and strength of its member agencies who have been serving communities across the county for decades. The power of the collaborative is evidenced by the ability to reach underserved populations on a scale that has never been done before.',
 			logo: '/partners/mecca.png',

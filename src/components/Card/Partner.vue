@@ -32,6 +32,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 10px;
+		min-height: 550px;
 
 		column-gap: 10px;
 

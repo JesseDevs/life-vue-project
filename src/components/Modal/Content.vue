@@ -11,9 +11,12 @@
 					<span class="step-3"> 02 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#mission">Mission </a>
 				</li>
+
 				<li>
 					<span class="step-3"> 03 </span>
-					<a class="step-3" @click="ui.closeMenu" href="#gallery">Gallery </a>
+					<a class="step-3" href="/team" @click="ui.closeMenu">
+						Our Team <PathArrow
+					/></a>
 				</li>
 				<li>
 					<span class="step-3"> 04 </span>
@@ -21,9 +24,13 @@
 				</li>
 				<li>
 					<span class="step-3"> 05 </span>
-					<a class="step-3" href="/team" @click="ui.closeMenu">
-						Our Team <PathArrow
-					/></a>
+					<a class="step-3" @click="ui.closeMenu" href="#gallery">Gallery </a>
+				</li>
+				<li>
+					<span class="step-3"> 06 </span>
+					<a class="step-3" @click="ui.closeMenu" href="#resources"
+						>Resources
+					</a>
 				</li>
 
 				<li>
@@ -146,7 +153,9 @@
 				position: relative;
 			}
 			a {
-				display: block;
+				display: flex;
+				align-items: center;
+				gap: 5px;
 				padding: 10px;
 				padding-left: 50px;
 				line-height: 1.2;
@@ -154,6 +163,17 @@
 				text-transform: uppercase;
 				transition: rotate 0.3s ease-in-out;
 				width: 100%;
+
+				&:hover {
+					svg {
+						transform: translate(2px, -2px);
+					}
+				}
+
+				svg {
+					height: 0.56em;
+					width: 0.56em;
+				}
 			}
 			span {
 				display: flex;

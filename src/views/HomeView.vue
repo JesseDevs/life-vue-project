@@ -156,19 +156,24 @@
 			<Mission />
 		</GeneralContainer>
 
-		<GeneralContainer class="gallery" id="gallery">
-			<Gallery />
-		</GeneralContainer>
-		<GeneralContainer class="events" id="events">
-			<Events />
-		</GeneralContainer>
-
-		<GeneralContainer class="partners" id="partners">
-			<Partners />
+		<GeneralContainer class="naloxone" id="naloxone">
+			<Naloxone />
 		</GeneralContainer>
 
 		<GeneralContainer class="team" id="team">
 			<Team />
+		</GeneralContainer>
+
+		<GeneralContainer class="events" id="events">
+			<Events />
+		</GeneralContainer>
+
+		<GeneralContainer class="gallery" id="gallery">
+			<Gallery />
+		</GeneralContainer>
+
+		<GeneralContainer class="resources" id="resources">
+			<Partners />
 		</GeneralContainer>
 
 		<GeneralContainer class="contact" id="contact">

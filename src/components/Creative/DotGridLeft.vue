@@ -14,7 +14,7 @@
 <script setup>
 	const dots = ref([]);
 	onMounted(() => {
-		dots.value = new Array(70).fill(null);
+		dots.value = new Array(60).fill(null);
 	});
 </script>
 

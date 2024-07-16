@@ -2,6 +2,7 @@
 @import 'themes.scss';
 @import 'typography.scss';
 @import 'component.scss';
+@import 'styles.scss';
 
 :root {
 	--background: rgb(11, 6, 11);

@@ -4,31 +4,14 @@
 			<picture class="profile-pic">
 				<img :src="profile.imgsrc" alt="profile picture" />
 			</picture>
-			<!--
-			<social-block>
-				<ul>
-					<li>
-						<a href="twitter.com" target="_blank">
-							<Icon name="entypo-social:twitter" />
-						</a>
-					</li>
-					<li>
-						<a href="twitter.com" target="_blank">
-							<Icon name="ph:instagram-logo-fill"
-						/></a>
-					</li>
-					<li>
-						<a href="twitter.com" target="_blank">
-							<Icon name="mdi:gmail" />
-						</a>
-					</li>
-				</ul>
-			</social-block> -->
+
 			<div class="title">
 				<h4 class="step-2">
 					{{ profile.name }}
 				</h4>
-				<h5>{{ profile.role }}</h5>
+				<h5 v-for="(text, index) in profile.role" :key="index">
+					<span>{{ text }}</span>
+				</h5>
 			</div>
 		</div>
 		<text-content>
@@ -72,6 +55,7 @@
 			flex-direction: column;
 			padding-bottom: 10px;
 			gap: 3px;
+
 			h4 {
 				font-family: 'Barlow', serif;
 				font-weight: 500;
@@ -83,13 +67,18 @@
 				letter-spacing: 0.8px;
 				font-style: italic;
 			}
+
+			h5 + h5 {
+				padding-top: 3px;
+			}
 		}
 		.profile-title {
 			width: 100%;
-			max-width: 300px;
+
+			grid-column: 1/-1;
 		}
 		picture {
-			max-width: 325px;
+			max-width: 220px;
 			aspect-ratio: 4/5;
 			margin-bottom: 20px;
 			align-self: start;
@@ -108,46 +97,17 @@
 			gap: 20px;
 		}
 
-		// social-block {
-		// 	align-self: flex-start;
-		// 	margin-right: auto;
-
-		// 	ul {
-		// 		display: flex;
-		// 		flex-direction: column;
-		// 		gap: 10px;
-		// 		align-self: flex-end;
-		// 		svg {
-		// 			width: 30px;
-		// 			height: 30px;
-		// 			transition: scale 0.3s ease-in-out;
-
-		// 			filter: drop-shadow(2px 2px 3px rgb(var(--brand-color-rgb) / 0.5));
-
-		// 			path {
-		// 				transition: fill 0.3s ease-in-out;
-		// 			}
-
-		// 			&:hover {
-		// 				scale: 1.08;
-		// 				path {
-		// 					fill: rgb(var(--brand-inner-color-rgb) / 0.9);
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// }
-
-		@media (min-width: 825px) {
+		@media (min-width: 900px) {
 			display: flex;
 			flex-direction: row;
 			column-gap: 40px;
 			row-gap: 8px;
+			align-items: flex-start;
 
 			.profile-title {
-				margin-top: 20px;
 				display: flex;
 				flex-direction: column-reverse;
+				max-width: 30%;
 			}
 
 			social-block {

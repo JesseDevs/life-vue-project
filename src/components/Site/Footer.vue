@@ -6,6 +6,9 @@
 					<p class="group-head">Sections</p>
 					<ul>
 						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
 							<a href="/#mission">Mission</a>
 						</li>
 						<li>
@@ -83,6 +86,12 @@
 						<li>
 							<a :href="mailToHref" target="_blank">
 								Help By Volunteering
+								<PathArrow />
+							</a>
+						</li>
+						<li>
+							<a href="/team">
+								Meet The Team
 								<PathArrow />
 							</a>
 						</li>

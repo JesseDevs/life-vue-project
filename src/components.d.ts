@@ -34,6 +34,7 @@ declare module 'vue' {
     Location: typeof import('./components/Svg/Location.vue')['default']
     Logo: typeof import('./components/Svg/Logo.vue')['default']
     Mission: typeof import('./components/Module/Mission.vue')['default']
+    Naloxone: typeof import('./components/Module/Naloxone.vue')['default']
     Nav: typeof import('./components/Site/Nav.vue')['default']
     Partner: typeof import('./components/Card/Partner.vue')['default']
     Partners: typeof import('./components/Module/Partners.vue')['default']

@@ -34,24 +34,32 @@
 					<Heart class="heart flicker" />
 				</a>
 				<ul>
-					<li :class="{ active: activeTab === 'mission' }">
+					<li>
+						<a href="/">Home </a>
+					</li>
+					<li>
 						<a href="#mission" @click.prevent="scrollTo('mission')"
 							>Mission
 						</a>
 					</li>
-					<li :class="{ active: activeTab === 'gallery' }">
+
+					<li>
+						<a href="/team">Team </a>
+					</li>
+					<li>
+						<a href="#events" @click.prevent="scrollTo('events')">Events </a>
+					</li>
+					<li>
 						<a href="#gallery" @click.prevent="scrollTo('gallery')"
 							>Gallery
 						</a>
 					</li>
-
-					<li :class="{ active: activeTab === 'events' }">
-						<a href="#events" @click.prevent="scrollTo('events')">Events </a>
+					<li>
+						<a href="#resources" @click.prevent="scrollTo('resources')"
+							>Resources
+						</a>
 					</li>
-					<li :class="{ active: activeTab === 'team' }">
-						<a href="#team" @click.prevent="scrollTo('team')">Our Team </a>
-					</li>
-					<li :class="{ active: activeTab === 'contact' }">
+					<li>
 						<a href="#contact" @click.prevent="scrollTo('contact')"
 							>Contact
 						</a>
