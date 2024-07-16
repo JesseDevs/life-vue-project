@@ -38,31 +38,23 @@
 						<a href="/">Home </a>
 					</li>
 					<li>
-						<a href="/#mission" @click.prevent="scrollTo('mission')"
-							>Mission
-						</a>
+						<a href="/#mission">Mission </a>
 					</li>
 
 					<li>
 						<a href="/team">Team </a>
 					</li>
 					<li>
-						<a href="/#events" @click.prevent="scrollTo('events')">Events </a>
+						<a href="/#events">Events </a>
 					</li>
 					<li>
-						<a href="/#gallery" @click.prevent="scrollTo('gallery')"
-							>Gallery
-						</a>
+						<a href="/#gallery">Gallery </a>
 					</li>
 					<li>
-						<a href="/#resources" @click.prevent="scrollTo('resources')"
-							>Resources
-						</a>
+						<a href="/#resources">Resources </a>
 					</li>
 					<li>
-						<a href="/#contact" @click.prevent="scrollTo('contact')"
-							>Contact
-						</a>
+						<a href="/#contact">Contact </a>
 					</li>
 				</ul>
 			</nav>
@@ -149,7 +141,7 @@
 					width: 100%;
 					align-items: center;
 					justify-content: flex-end;
-					gap: 2.5vmin;
+					gap: 1.2vmin;
 					position: relative;
 
 					::before {
@@ -200,9 +192,14 @@
 				justify-content: center;
 				align-items: center;
 				gap: 2px;
+
 				p {
 					// font-size: 1.2em;
 					text-transform: uppercase;
+					&::selection {
+						background-color: var(--brand-two-color); /* Yellow */
+						color: white; /* Dark gray */
+					}
 				}
 
 				.heart {

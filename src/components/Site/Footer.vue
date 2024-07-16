@@ -6,26 +6,26 @@
 					<p class="group-head">Sections</p>
 					<ul>
 						<li>
-							<a href="/">Home</a>
+							<a href="/">Home </a>
 						</li>
 						<li>
-							<a href="/#mission">Mission</a>
-						</li>
-						<li>
-							<a href="/#partners">Resources</a>
-						</li>
-						<li>
-							<a href="/#events">Events</a>
-						</li>
-						<li>
-							<a href="/#gallery">Gallery</a>
-						</li>
-						<li>
-							<a href="/#team">Team</a>
+							<a href="/#mission">Mission </a>
 						</li>
 
 						<li>
-							<a href="/#contact">Contact</a>
+							<a href="/team">Team </a>
+						</li>
+						<li>
+							<a href="/#events">Events </a>
+						</li>
+						<li>
+							<a href="/#gallery">Gallery </a>
+						</li>
+						<li>
+							<a href="/#resources">Resources </a>
+						</li>
+						<li>
+							<a href="/#contact">Contact </a>
 						</li>
 						<!-- <li>
 							<a href="/faq">FAQ</a>

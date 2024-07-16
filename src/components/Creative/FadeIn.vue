@@ -12,7 +12,7 @@
 
 	onMounted(() => {
 		observer = new IntersectionObserver(inViewport, {
-			threshold: 0.205,
+			threshold: 0.18,
 		});
 		const ELs_inViewport = fadein.value;
 		observer.observe(ELs_inViewport);
