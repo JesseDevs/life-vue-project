@@ -14,6 +14,7 @@
 			:navigation="true"
 			:modules="modules"
 			class="mySwiper"
+			id="section-content"
 		>
 			<SwiperSlide v-for="partner in partners" :key="partner.name">
 				<Partner class="partner-card" :p="partner" />
@@ -36,7 +37,7 @@
 			link: 'https://www.tacoinc.org/',
 			name: 'TACO: Team Awareness Combatting Overdose',
 			context:
-				'TACO Inc. is a 100% volunteer non-profit created by students FOR students to combat accidental overdose deaths among young adults through data-backed education & accessible harm reduction supplies. Navigate to our <a href="www.tacoinc.org" target="blank" >website</a>, <a href="https://www.instagram.com/tacoinc_/" target="blank" >Instagram</a>, and <a href="https://www.tiktok.com/@tacoinc?lang=en" target="blank" >TikTok</a> for accessible, non-judgemental knowledge on different drugs, drug combinations, and harm reduction resources to help YOU make your own informed decisions.',
+				'TACO Inc. is a 100% volunteer non-profit created by students FOR students to combat accidental overdose deaths among young adults through data-backed education & accessible harm reduction supplies. Navigate to our <a href="https://www.tacoinc.org/" target="blank" >website</a>, <a href="https://www.instagram.com/tacoinc_/" target="blank" >Instagram</a>, and <a href="https://www.tiktok.com/@tacoinc?lang=en" target="blank" >TikTok</a> for accessible, non-judgemental knowledge on different drugs, drug combinations, and harm reduction resources to help YOU make your own informed decisions.',
 			logo: '/partners/taco.png',
 		},
 		{
@@ -76,10 +77,25 @@
 		--swiper-pagination-color: rgb(var(--brand-color-rgb));
 		--swiper-wrapper-transition-timing-function: ease-in-out;
 		--swiper-pagination-bullet-inactive-color: white;
+		--swiper-navigation-sides-offset: -2vw;
+	}
+
+	@media (min-width: 768px) {
+		:root {
+			--swiper-navigation-sides-offset: -2vw;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-rtl .swiper-button-prev {
+		right: var(--swiper-navigation-sides-offset, -13px);
+		left: auto;
 	}
 	.swiper {
+		padding-top: 25px;
 		width: 100%;
 		height: 100%;
+		overflow: visible;
 	}
 
 	.swiper-slide {
@@ -91,7 +107,7 @@
 
 	.swiper-horizontal > .swiper-pagination-bullets,
 	.swiper-pagination-bullets.swiper-pagination-horizontal {
-		top: -20px;
+		top: 0;
 		bottom: auto;
 	}
 

@@ -29,44 +29,44 @@
 </template>
 
 <script setup>
-	const activeTab = ref(null);
+	// const activeTab = ref(null);
 
-	let observer;
+	// let observer;
 
-	onMounted(() => {
-		const sections = document.querySelectorAll('section');
-		const sectionIds = Array.from(sections).map((section) => section.id);
+	// onMounted(() => {
+	// 	const sections = document.querySelectorAll('section');
+	// 	const sectionIds = Array.from(sections).map((section) => section.id);
 
-		observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						const id = entry.target.id;
-						if (id === 'partners') {
-							// Don't change activeTab for partners section
-							const index = sectionIds.indexOf(id);
-							if (index > 0) {
-								activeTab.value = sectionIds[index - 1];
-							}
-						} else {
-							activeTab.value = id;
-						}
-					}
-				});
-			},
-			{ threshold: 0.3 },
-		);
+	// 	observer = new IntersectionObserver(
+	// 		(entries) => {
+	// 			entries.forEach((entry) => {
+	// 				if (entry.isIntersecting) {
+	// 					const id = entry.target.id;
+	// 					if (id === 'partners') {
+	// 						// Don't change activeTab for partners section
+	// 						const index = sectionIds.indexOf(id);
+	// 						if (index > 0) {
+	// 							activeTab.value = sectionIds[index - 1];
+	// 						}
+	// 					} else {
+	// 						activeTab.value = id;
+	// 					}
+	// 				}
+	// 			});
+	// 		},
+	// 		{ threshold: 0.3 },
+	// 	);
 
-		sections.forEach((section) => {
-			observer.observe(section);
-		});
-	});
+	// 	sections.forEach((section) => {
+	// 		observer.observe(section);
+	// 	});
+	// });
 
-	onUnmounted(() => {
-		if (observer) {
-			observer.disconnect();
-		}
-	});
+	// onUnmounted(() => {
+	// 	if (observer) {
+	// 		observer.disconnect();
+	// 	}
+	// });
 </script>
 
 <style lang="scss" scoped>

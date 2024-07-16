@@ -5,29 +5,30 @@
 			<ul class="modal-btns">
 				<li>
 					<span class="step-3"> 01 </span>
-					<a class="step-3" @click="ui.closeMenu" href="#mission">Mission </a>
+					<a class="step-3" @click="ui.closeMenu" href="/">Home </a>
 				</li>
 				<li>
 					<span class="step-3"> 02 </span>
-					<a class="step-3" @click="ui.closeMenu" href="#gallery">Gallery </a>
+					<a class="step-3" @click="ui.closeMenu" href="#mission">Mission </a>
 				</li>
 				<li>
 					<span class="step-3"> 03 </span>
-					<a class="step-3" @click="ui.closeMenu" href="#events">Events </a>
+					<a class="step-3" @click="ui.closeMenu" href="#gallery">Gallery </a>
 				</li>
 				<li>
 					<span class="step-3"> 04 </span>
+					<a class="step-3" @click="ui.closeMenu" href="#events">Events </a>
+				</li>
+				<li>
+					<span class="step-3"> 05 </span>
 					<a class="step-3" href="#team" @click="ui.closeMenu"> Our Team </a>
 				</li>
 
 				<li>
-					<span class="step-3"> 05 </span>
+					<span class="step-3"> 06 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#contact">Contact </a>
 				</li>
 			</ul>
-			<div class="btn-container">
-				<button class="btn-bordered">DONATE</button>
-			</div>
 		</nav>
 	</modal-content>
 </template>
@@ -164,6 +165,7 @@
 				font-weight: 200;
 				bottom: 5px;
 				left: 0;
+				letter-spacing: 0.1em;
 				transition: scale 0.4s ease-in-out;
 			}
 

@@ -138,7 +138,7 @@
 		// 	}
 		// }
 
-		@media (min-width: 775px) {
+		@media (min-width: 825px) {
 			display: flex;
 			flex-direction: row;
 			column-gap: 40px;

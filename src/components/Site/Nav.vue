@@ -2,7 +2,11 @@
 	<header :class="` ${ui.menuClass} main-tool-bar site-header `">
 		<inner-column class="has-big-width">
 			<nav class="main-menu animate-drop-in small-width">
-				<a href="/" class="donate-btn">
+				<a
+					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+					target="_blank"
+					class="donate-btn"
+				>
 					<p>Donate</p>
 					<Heart class="heart flicker" />
 				</a>
@@ -20,7 +24,11 @@
 			</nav>
 
 			<nav class="big-width">
-				<a href="/" class="donate-btn">
+				<a
+					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+					target="_blank"
+					class="donate-btn"
+				>
 					<p>Donate</p>
 
 					<Heart class="heart flicker" />
@@ -177,19 +185,20 @@
 			.donate-btn {
 				position: relative;
 				overflow: hidden;
-				font-weight: 600;
+				font-weight: 400;
 				color: var(--brand-two-color);
-
+				letter-spacing: 0.1em;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				gap: 2px;
 				p {
-					font-size: 1.2em;
+					// font-size: 1.2em;
+					text-transform: uppercase;
 				}
 
 				.heart {
-					width: 2em;
+					width: 2.3em;
 					height: 1.7em;
 					path {
 						fill: var(--brand-two-color);

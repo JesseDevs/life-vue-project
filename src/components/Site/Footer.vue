@@ -3,7 +3,7 @@
 		<inner-column>
 			<footer-block>
 				<footer-group>
-					<p class="group-head">Pages</p>
+					<p class="group-head">Sections</p>
 					<ul>
 						<li>
 							<a href="/#mission">Mission</a>

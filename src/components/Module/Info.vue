@@ -5,7 +5,12 @@
 		</div>
 		<div class="main-content">
 			<h2>Give the gift of saving lives from opioid overdose</h2>
-			<a class="donate" href="/">Donate</a>
+			<a
+				class="general-btn"
+				href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+				target="_blank"
+				>Donate <Arrow class="arrow"
+			/></a>
 		</div>
 	</module-info>
 </template>
@@ -61,14 +66,17 @@
 		width: 100%;
 		justify-content: center;
 		position: relative;
-		padding-top: 50px;
-		padding-bottom: 50px;
+
 		min-height: 200px;
 		row-gap: 5vh;
 		margin: 0 auto;
 
+		@media (min-width: 768px) {
+			grid-template-columns: 15vw 1fr;
+		}
+
 		h2 {
-			font-size: clamp(1.425rem, 0.1705rem + 3.5727vw, 3rem);
+			font-size: clamp(1.425rem, 0.1705rem + 3.5727vw, 2.8rem);
 
 			padding-top: 10vh;
 			margin: 0 auto;
@@ -90,37 +98,6 @@
 		.icon-container {
 			svg {
 				width: 100%;
-			}
-		}
-
-		a.donate {
-			background-color: rgb(75 121 162);
-			color: white;
-
-			font-weight: 600;
-			outline: none;
-			appearance: none;
-			border: none;
-			grid-column: 2/-1;
-			text-align: center;
-
-			margin: 0 auto;
-
-			max-width: 165px;
-			padding: 12px 50px;
-			z-index: 2;
-			position: relative;
-			cursor: pointer;
-			transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
-			letter-spacing: 0.8px;
-
-			&:hover {
-				background-color: rgb(var(--brand-color-rgb) / 0.5);
-				box-shadow: 0 0 5px rgba(var(--brand-color-rgb) / 0.5),
-					0 10px 20px rgba(var(--brand-color-rgb) / 0.5),
-					0 0 20px rgba(var(--brand-color-rgb) / 0.5),
-					0 0 100px rgba(var(--brand-color-rgb) / 0.5);
 			}
 		}
 	}
