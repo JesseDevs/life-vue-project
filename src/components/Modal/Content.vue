@@ -21,7 +21,9 @@
 				</li>
 				<li>
 					<span class="step-3"> 05 </span>
-					<a class="step-3" href="#team" @click="ui.closeMenu"> Our Team </a>
+					<a class="step-3" href="/team" @click="ui.closeMenu">
+						Our Team <PathArrow
+					/></a>
 				</li>
 
 				<li>
