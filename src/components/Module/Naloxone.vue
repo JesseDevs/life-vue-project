@@ -40,6 +40,7 @@
 				</p>
 			</section-footer>
 		</div>
+		<img src="/images/narcan.png" alt="Narcan" />
 	</module-naloxone>
 </template>
 
