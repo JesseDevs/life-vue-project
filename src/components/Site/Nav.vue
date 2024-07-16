@@ -38,7 +38,7 @@
 						<a href="/">Home </a>
 					</li>
 					<li>
-						<a href="#mission" @click.prevent="scrollTo('mission')"
+						<a href="/#mission" @click.prevent="scrollTo('mission')"
 							>Mission
 						</a>
 					</li>
@@ -47,20 +47,20 @@
 						<a href="/team">Team </a>
 					</li>
 					<li>
-						<a href="#events" @click.prevent="scrollTo('events')">Events </a>
+						<a href="/#events" @click.prevent="scrollTo('events')">Events </a>
 					</li>
 					<li>
-						<a href="#gallery" @click.prevent="scrollTo('gallery')"
+						<a href="/#gallery" @click.prevent="scrollTo('gallery')"
 							>Gallery
 						</a>
 					</li>
 					<li>
-						<a href="#resources" @click.prevent="scrollTo('resources')"
+						<a href="/#resources" @click.prevent="scrollTo('resources')"
 							>Resources
 						</a>
 					</li>
 					<li>
-						<a href="#contact" @click.prevent="scrollTo('contact')"
+						<a href="/#contact" @click.prevent="scrollTo('contact')"
 							>Contact
 						</a>
 					</li>

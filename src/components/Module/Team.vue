@@ -43,7 +43,7 @@
 			width: 100%;
 			position: relative;
 			flex-direction: column;
-			gap: clamp(70px, 12vh, 1500px);
+			gap: clamp(90px, 12vh, 1500px);
 		}
 	}
 </style>
