@@ -95,10 +95,21 @@
 								<PathArrow />
 							</a>
 						</li>
+						<li>
+							<a
+								href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+								target="_blank"
+								class="donate-btn"
+							>
+								Donate<PathArrow />
+							</a>
+						</li>
 					</ul>
 				</footer-group>
 				<foot-note>
-					<p class="small-voice">© 2024 LIFE of the PARTY</p>
+					<p class="small-voice">
+						© 2024 <span>LIFE</span> of the <span>PARTY</span>
+					</p>
 				</foot-note>
 			</footer-block>
 		</inner-column>
@@ -176,6 +187,10 @@
 			grid-column: 1/-1;
 			width: 100%;
 			padding-top: 50px;
+
+			p span {
+				letter-spacing: 0.1em;
+			}
 		}
 	}
 </style>
