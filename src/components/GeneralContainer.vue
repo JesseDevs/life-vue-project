@@ -74,6 +74,6 @@
 	}
 
 	#section-content {
-		opacity: 0;
+		opacity: 1;
 	}
 </style>

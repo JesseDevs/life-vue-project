@@ -11,11 +11,13 @@
 			</p>
 
 			<ul>
-				<li class="list-header">
-					<p>Signs of an overdose:</p>
-				</li>
+				<p>Signs of an overdose:</p>
+
 				<li>
-					<p>Unconscious, not breathing, shallow breathing, faint heartbeat</p>
+					<p>
+						Unconscious, not&nbsp;breathing, shallow&nbsp;breathing,
+						faint&nbsp;heartbeat
+					</p>
 				</li>
 				<li>
 					<p>Gurgling sounds, loud snoring, vomiting</p>
@@ -33,14 +35,17 @@
 			</ul>
 
 			<section-footer>
-				<p>
-					Naloxone can ONLY reverse an opioid overdose. There is NO EFFECT on
-					someone who does NOT have opioids in the body. For that reason, it is
-					safe to use on anybody.
+				<p class="small-voice">
+					Naloxone can <strong>ONLY</strong> reverse an opioid overdose.
+					<br />There is <strong>NO EFFECT</strong> on someone who does
+					<strong>NOT</strong> have opioids in the body. <br />For that reason,
+					it is safe to use on anybody.
 				</p>
 			</section-footer>
 		</div>
-		<img src="/images/narcan.png" alt="Narcan" />
+		<picture class="nar-container">
+			<img src="/images/narcan.png" alt="Narcan" />
+		</picture>
 	</module-naloxone>
 </template>
 
@@ -52,18 +57,73 @@
 </script>
 
 <style lang="scss">
+	.nar-container {
+		display: inline-block;
+		aspect-ratio: 2/4;
+		max-width: 40vw;
+		height: 40vh;
+		position: absolute;
+		right: -24vw;
+		bottom: 30px;
+		z-index: -1;
+		opacity: 0.7;
+
+		img {
+			object-fit: contain;
+			mask-image: radial-gradient(
+				circle,
+				rgb(255, 255, 255),
+				rgba(255, 255, 255, 40%)
+			);
+		}
+	}
+
+	@media (min-width: 900px) {
+		.nar-container {
+			right: -10vw;
+			bottom: 60px;
+		}
+	}
+
 	module-naloxone {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
-		justify-content: center;
 		position: relative;
+		justify-content: center;
+
 		gap: 20px;
+
+		div#section-content {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: 100%;
+
+			ul {
+				padding-top: 20px;
+				> p {
+					text-transform: uppercase;
+					letter-spacing: 0.08em;
+					font-weight: 500;
+				}
+				li {
+					list-style-type: disc;
+					margin-left: 20px;
+				}
+			}
+		}
 
 		section-footer {
 			display: block;
 			width: 100%;
+			padding-top: 50px;
+			p {
+				text-align: center;
+				max-width: 67ch;
+				margin: 0 auto;
+			}
 		}
 
 		@media (min-width: 768px) {

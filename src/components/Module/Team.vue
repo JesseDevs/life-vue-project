@@ -45,5 +45,9 @@
 			flex-direction: column;
 			gap: clamp(90px, 12vh, 1500px);
 		}
+
+		.general-btn {
+			margin-top: 50px;
+		}
 	}
 </style>

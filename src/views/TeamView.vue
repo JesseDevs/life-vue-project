@@ -35,15 +35,6 @@
 				],
 			},
 			{
-				imgsrc: '/images/profile/jed.webp',
-				name: 'Conrad Jackson',
-				role: ['Board Member'],
-				text: [
-					'Conrad Jackson has been dedicated to emergency medical services (EMS) since 2012, starting as a firefighter and becoming a certified paramedic in 2016. As the Senior Supervising Paramedic for a nonprofit ambulance company in Mendocino County, he oversees a team of paramedics to ensure the highest standard of care. His extensive experience in firefighting and paramedicine, combined with mentoring new paramedics, makes him a crucial asset to his organization and community.',
-					'Conrad is passionate about naloxone, an opioid overdose reversal drug, and advocates for its widespread availability and training. He regularly conducts workshops and training sessions for professionals and the public. Outside of his professional life, he volunteers for local events and initiatives, demonstrating his commitment to public health and safety.',
-				],
-			},
-			{
 				imgsrc: '/images/profile/regina.webp',
 				name: 'Regina Rezex',
 				role: [
@@ -53,6 +44,15 @@
 				text: [
 					'Regina is a mission-driven and collaborative fundraising executive at the University of Southern California. With a proven track record in building programs and securing major gifts, she excels in patient and academic fundraising, community relations, program development, parent and alumni engagement, volunteer and board management, communications, strategic planning, and business operations. Previously, as a key development leader at the Keck School of Medicine of USC, Regina led fundraising initiatives supporting crucial medical research and advancements. Now, as the Assistant Dean of Development & External Relations at the USC Iovine & Young Academy, she leverages her extensive experience to enhance the Academy’s industry outreach and development efforts.',
 					'Regina also brings her nonprofit experience to Life of the Party. As an active board member, she is dedicated to developing a strategic plan to broaden the organization’s community outreach by promoting Narcan use, educating about overdose risks, and collaborating with local organizations on effective prevention strategies. Her efforts aim to reduce overdose incidents and save lives through education and advocacy.',
+				],
+			},
+			{
+				imgsrc: '/images/profile/jed.webp',
+				name: 'Conrad Jackson',
+				role: ['Board Member'],
+				text: [
+					'Conrad Jackson has been dedicated to emergency medical services (EMS) since 2012, starting as a firefighter and becoming a certified paramedic in 2016. As the Senior Supervising Paramedic for a nonprofit ambulance company in Mendocino County, he oversees a team of paramedics to ensure the highest standard of care. His extensive experience in firefighting and paramedicine, combined with mentoring new paramedics, makes him a crucial asset to his organization and community.',
+					'Conrad is passionate about naloxone, an opioid overdose reversal drug, and advocates for its widespread availability and training. He regularly conducts workshops and training sessions for professionals and the public. Outside of his professional life, he volunteers for local events and initiatives, demonstrating his commitment to public health and safety.',
 				],
 			},
 		];

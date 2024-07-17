@@ -47,9 +47,9 @@
 					<li>
 						<a href="/#events">Events </a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="/#gallery">Gallery </a>
-					</li>
+					</li> -->
 					<li>
 						<a href="/#resources">Resources </a>
 					</li>
