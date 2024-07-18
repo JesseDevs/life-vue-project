@@ -163,6 +163,17 @@
 						&:hover {
 							opacity: 1;
 						}
+
+						a {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							padding: 1rem 5px;
+							gap: 4px;
+							svg {
+								scale: 1.5;
+							}
+						}
 						&.active {
 							opacity: 1;
 							&::before {
@@ -174,10 +185,6 @@
 								height: 3px;
 								background-color: var(--brand-color);
 							}
-						}
-						a {
-							padding: 1rem 5px;
-							display: block;
 						}
 					}
 				}
@@ -194,8 +201,8 @@
 				gap: 2px;
 
 				p {
-					// font-size: 1.2em;
 					text-transform: uppercase;
+					font-size: calc(var(--step-0) * 1.25);
 					&::selection {
 						background-color: var(--brand-two-color); /* Yellow */
 						color: white; /* Dark gray */

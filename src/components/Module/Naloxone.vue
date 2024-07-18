@@ -120,9 +120,16 @@
 			width: 100%;
 			padding-top: 50px;
 			p {
-				text-align: center;
+				// text-align: center;
 				max-width: 67ch;
 				margin: 0 auto;
+				// padding: 0 30px;
+			}
+
+			@media (min-width: 600px) {
+				p {
+					text-align: center;
+				}
 			}
 		}
 
