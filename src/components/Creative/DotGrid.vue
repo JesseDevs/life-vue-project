@@ -26,7 +26,7 @@
 		opacity: 1;
 
 		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(5, 1fr);
+		grid-row: repeat(auto-fill, minmax(40px, 1fr));
 
 		display: grid;
 		position: absolute;

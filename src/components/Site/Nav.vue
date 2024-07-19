@@ -124,6 +124,10 @@
 			padding: 0.8rem 1.2rem;
 			height: 100%;
 
+			@media (min-width: 1000px) {
+				padding: 0.8rem 2.2rem;
+			}
+
 			.main-menu {
 				flex-direction: row;
 				align-items: center;
