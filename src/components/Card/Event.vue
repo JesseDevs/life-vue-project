@@ -4,19 +4,18 @@
 			<picture>
 				<img :src="event.img" alt="Event-title" />
 				<div class="date-indicator">
-					<p class="day domine">{{ event.dateDay }}</p>
-					<p class="month domine">{{ event.month }}</p>
+					<p class="day">{{ event.dateDay }}</p>
+					<p class="month">{{ event.month }}</p>
 				</div>
 			</picture>
 			<text-content>
-				<h2 class="step-1 domine">{{ event.title }}</h2>
+				<h2 class="step-1">{{ event.title }}</h2>
 				<p class="small-voice">
 					{{ event.detail }}
 				</p>
 				<div class="line"></div>
 			</text-content>
 			<text-content>
-				<h3 class="step-0 uppercase">Time</h3>
 				<div class="date-block small-voice">
 					<p>{{ event.timeSpan[0] }}</p>
 					<p>-</p>
@@ -117,8 +116,11 @@
 
 		text-content {
 			gap: 8px;
+
 			h2 {
-				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				font-weight: 500;
 			}
 			div.line {
 				height: 1px;
