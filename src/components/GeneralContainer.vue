@@ -33,7 +33,6 @@
 							trigger: section,
 							start: 'top center+=200',
 							end: 'bottom center',
-							markers: true,
 						},
 					},
 				);
