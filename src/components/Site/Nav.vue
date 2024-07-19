@@ -143,6 +143,7 @@
 					justify-content: flex-end;
 					gap: 1.2vmin;
 					position: relative;
+					flex: 1;
 
 					::before {
 						content: '';

@@ -78,7 +78,7 @@
 			grid-column: 1/-1;
 		}
 		picture {
-			max-width: 220px;
+			max-width: 300px;
 			aspect-ratio: 4/5;
 			margin-bottom: 20px;
 			align-self: start;

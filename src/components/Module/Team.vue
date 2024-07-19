@@ -11,7 +11,7 @@
 <script setup>
 	const profiles = ref([
 		{
-			imgsrc: '/images/profile/megan.jpg',
+			imgsrc: '/images/profile/megan.webp',
 			name: 'Megan Holiday',
 			role: ['Founder'],
 			text: [

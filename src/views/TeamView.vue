@@ -1,10 +1,13 @@
 <template>
 	<GeneralContainer class="min-space">
 		<module-team>
-			<SectionTitle text="Our Team" />
+			<SectionTitle text="Meet The Team" />
 			<div class="card-grid" id="section-content">
 				<Profile v-for="profile in team" :key="profile.name" :profile="profile" />
 			</div>
+			<a class="general-btn" :href="mailToHref" target="_blank"
+				>Volunteer<Arrow class="arrow"
+			/></a>
 		</module-team>
 	</GeneralContainer>
 </template>
@@ -13,6 +16,12 @@
 
 	const ui = useInterfaceService();
 	const team = ref([]);
+
+	const email = ref('contact@lifeoftheparty.org');
+
+	const mailToHref = computed(() => {
+		return `mailto:${email.value}?subject=Volunteer%20Opportunities%20-%20Life%20of%20The%20Party&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20volunteering%20for%20your%20organization.%20Please%20provide%20more%20information%20on%20how%20I%20can%20help.%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]`;
+	});
 
 	onMounted(() => {
 		team.value = [
