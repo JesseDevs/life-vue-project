@@ -33,6 +33,7 @@
 	}
 	.dot-grid-right {
 		grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+		grid-row: repeat(auto-fill, minmax(40px, 1fr));
 
 		pointer-events: none;
 		display: grid;

@@ -31,8 +31,9 @@
 						ease: 'power1.inOut',
 						scrollTrigger: {
 							trigger: section,
-							start: 'top center',
+							start: 'top center+=200',
 							end: 'bottom center',
+							markers: true,
 						},
 					},
 				);
@@ -52,7 +53,7 @@
 						ease: 'power1.inOut',
 						scrollTrigger: {
 							trigger: section,
-							start: 'top center',
+							start: 'top center+=200',
 							end: 'bottom center',
 						},
 						stagger: 0.1,
