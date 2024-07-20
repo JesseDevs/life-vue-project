@@ -60,8 +60,8 @@
 				name: 'Conrad Jackson',
 				role: ['Board Member'],
 				text: [
-					'Conrad Jackson has been dedicated to emergency medical services (EMS) since 2012, starting as a firefighter and becoming a certified paramedic in 2016. As the Senior Supervising Paramedic for a nonprofit ambulance company in Mendocino County, he oversees a team of paramedics to ensure the highest standard of care. His extensive experience in firefighting and paramedicine, combined with mentoring new paramedics, makes him a crucial asset to his organization and community.',
-					'Conrad is passionate about naloxone, an opioid overdose reversal drug, and advocates for its widespread availability and training. He regularly conducts workshops and training sessions for professionals and the public. Outside of his professional life, he volunteers for local events and initiatives, demonstrating his commitment to public health and safety.',
+					'Conrad Jackson has been a dedicated professional in emergency medical services (EMS) since 2012, starting his career as a firefighter and becoming a licensed  paramedic in 2016. As the Senior Supervising Paramedic for a nonprofit ambulance company in Mendocino County, he oversees a team of paramedics to ensure the highest standard of care. His extensive experience in firefighting and paramedicine, combined with his role as a preceptor mentoring new paramedics, makes him a crucial asset to his organization and community.',
+					'Conrad is passionate about addressing the current opioid crisis. His work in the field constantly reinforces the importance of Naloxone, his top choice in emergency overdose situations. He is a vocal advocate for its widespread availability and regularly conducts workshops and training sessions to educate both professionals and the public on its use and significance. Outside of his professional life, he actively volunteers for local events and initiatives, demonstrating his commitment to public health and safety.',
 				],
 			},
 		];

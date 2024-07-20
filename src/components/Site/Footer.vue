@@ -3,7 +3,7 @@
 		<inner-column>
 			<footer-block>
 				<footer-group>
-					<p class="group-head">Sections</p>
+					<p class="group-head">Navigation</p>
 					<ul>
 						<li>
 							<a href="/">Home </a>

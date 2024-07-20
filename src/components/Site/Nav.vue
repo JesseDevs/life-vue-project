@@ -129,7 +129,7 @@
 			}
 
 			.main-menu {
-				flex-direction: row;
+				flex-direction: row-reverse;
 				align-items: center;
 				justify-content: space-between;
 			}
@@ -139,12 +139,14 @@
 
 				justify-content: center;
 				align-items: center;
+				flex-direction: row-reverse;
 
 				ul {
 					display: flex;
+
 					width: 100%;
 					align-items: center;
-					justify-content: flex-end;
+					justify-content: flex-start;
 					gap: 1.2vmin;
 					position: relative;
 					flex: 1;
@@ -176,6 +178,7 @@
 							padding: 1rem 5px;
 							gap: 4px;
 							svg {
+								opacity: 1;
 								scale: 1.5;
 							}
 						}
@@ -238,7 +241,7 @@
 			position: relative;
 			opacity: 1;
 
-			margin-left: auto;
+			// margin-left: auto;
 
 			div.mbykw {
 				opacity: 0.9;
