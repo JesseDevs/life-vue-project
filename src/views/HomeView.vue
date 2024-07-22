@@ -48,31 +48,6 @@
 		});
 
 		gsap.fromTo(
-			'.dot-create',
-			{
-				opacity: 0,
-				y: 100,
-			},
-			{
-				opacity: 1,
-				y: 0,
-				duration: 0.8,
-
-				ease: 'power3.inOut',
-				delay: 2,
-			},
-		);
-
-		tl.to('.dot-create', {
-			scale: 2,
-			filter: 'blur(10px)',
-			opacity: 0,
-			onComplete: () => {
-				document.querySelector('.dot-create').style.display = 'none';
-			},
-		});
-
-		gsap.fromTo(
 			'.dot-grid-left',
 			{
 				opacity: 0,
@@ -85,8 +60,7 @@
 				ease: 'power3.inOut',
 				scrollTrigger: {
 					trigger: '#mission',
-					start: 'top center',
-					end: 'bottom center',
+					start: 'top-=200px center',
 				},
 			},
 		);
@@ -142,11 +116,11 @@
 		<GeneralContainer class="landing" id="landing">
 			<Landing />
 		</GeneralContainer>
-		<div class="dot-create">
+		<!-- <div class="dot-create">
 			<inner-column>
 				<DotGridRight />
 			</inner-column>
-		</div>
+		</div> -->
 
 		<GeneralContainer class="info" id="info">
 			<Info />

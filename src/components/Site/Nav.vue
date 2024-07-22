@@ -121,7 +121,7 @@
 		background-color: var(--background);
 
 		inner-column {
-			padding: 0.8rem 1.2rem;
+			padding: 0.8rem 1.05rem;
 			height: 100%;
 
 			@media (min-width: 1000px) {

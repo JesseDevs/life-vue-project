@@ -28,7 +28,7 @@
 				scroll-margin: -3.5rem;
 			}
 
-			section:not(.partners) {
+			section:not(.partners):not(.info) {
 				overflow: hidden;
 			}
 

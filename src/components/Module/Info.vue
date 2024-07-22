@@ -1,17 +1,20 @@
 <template>
-	<module-info>
-		<div class="icon-container">
+	<module-info id="section-content">
+		<!-- <div class="icon-container">
 			<Quote class="quote" />
-		</div>
-		<div class="main-content">
-			<h2>Give the gift of saving lives from opioid overdose</h2>
-			<a
-				class="general-btn"
-				href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
-				target="_blank"
-				>Donate <Arrow class="arrow"
-			/></a>
-		</div>
+		</div> -->
+
+		<h2>Give the gift of saving lives from opioid overdose</h2>
+		<a
+			class="general-btn"
+			href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+			target="_blank"
+			>Donate <Arrow class="arrow"
+		/></a>
+
+		<div class="purple"></div>
+		<div class="blue c-one"></div>
+		<div class="blue c-two"></div>
 	</module-info>
 </template>
 
@@ -31,18 +34,6 @@
 		});
 
 		tl.fromTo(
-			'.quote',
-			{
-				opacity: 0,
-				y: -100,
-			},
-			{
-				opacity: 1,
-				y: 0,
-				duration: 1.2,
-				ease: 'power3.inOut',
-			},
-		).fromTo(
 			'.main-content',
 			{
 				opacity: 0,
@@ -61,44 +52,93 @@
 
 <style lang="scss">
 	module-info {
-		display: grid;
-		grid-template-columns: 20vw 1fr;
-		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
-		position: relative;
+		gap: 30px;
 
+		width: 100%;
 		min-height: 200px;
-		row-gap: 5vh;
 		margin: 0 auto;
-
-		@media (min-width: 768px) {
-			grid-template-columns: 15vw 1fr;
-		}
+		padding: 30px 0;
 
 		h2 {
-			font-size: clamp(1.425rem, 0.1705rem + 3.5727vw, 2.8rem);
-
-			padding-top: 10vh;
-			margin: 0 auto;
+			font-size: 1.75rem;
+			line-height: 2.2rem;
 
 			margin: 0 auto;
-			font-weight: 700;
+
+			margin: 0 auto;
+			font-weight: 600;
 			text-transform: uppercase;
 			letter-spacing: 0.08em;
-		}
+			text-align: center;
 
-		.main-content {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: 30px;
-		}
-
-		.icon-container {
-			svg {
-				width: 100%;
+			@media (min-width: 800px) {
+				font-size: 3rem;
+				line-height: 3.5rem;
 			}
 		}
+
+		@media (min-width: 800px) {
+			gap: 70px;
+			h2 {
+				font-size: 3rem;
+				line-height: 3.5rem;
+			}
+		}
+
+		// .icon-container {
+		// 	position: absolute;
+		// 	top: -40px;
+		// 	left: -1rem;
+		// 	max-width: 20%;
+		// 	svg {
+		// 		width: 100%;
+		// 	}
+		// }
+	}
+
+	div.purple {
+		width: 70%;
+		height: 50%;
+		background-color: rgb(255, 0, 212);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		border-radius: 9999px;
+		transform: translate(-50%, -50%) skew(30deg); /* Center the div and apply skew */
+		filter: blur(200px);
+		opacity: 0.9;
+	}
+
+	div.blue {
+		width: 40%;
+		height: 30%;
+		background-color: var(--brand-color);
+		position: absolute;
+
+		// z-index: -1;
+		// border-radius: 9999px;
+		/* Center the div and apply skew */
+		filter: blur(130px);
+	}
+
+	div.c-one {
+		bottom: 10px;
+		left: -40px;
+		z-index: -3;
+		opacity: 0.8;
+		transform: skewY(40deg);
+	}
+
+	div.c-two {
+		top: 0;
+		right: 0;
+		opacity: 0.8;
+		z-index: -1;
+		transform: skewY(20deg);
 	}
 </style>
