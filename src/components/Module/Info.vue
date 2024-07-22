@@ -101,16 +101,16 @@
 	}
 
 	div.purple {
-		width: 70%;
-		height: 50%;
-		background-color: rgb(255, 0, 212);
+		width: 50%;
+		height: 60%;
+		background-color: rgb(255, 36, 218);
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		z-index: -1;
 		border-radius: 9999px;
 		transform: translate(-50%, -50%) skew(30deg); /* Center the div and apply skew */
-		filter: blur(200px);
+		filter: blur(130px);
 		opacity: 0.9;
 	}
 
@@ -123,20 +123,21 @@
 		// z-index: -1;
 		// border-radius: 9999px;
 		/* Center the div and apply skew */
-		filter: blur(130px);
+		filter: blur(100px);
 	}
 
 	div.c-one {
+		width: 60%;
 		bottom: 10px;
 		left: -40px;
 		z-index: -3;
 		opacity: 0.8;
-		transform: skewY(40deg);
+		transform: skewY(3.5727vw);
 	}
 
 	div.c-two {
 		top: 0;
-		right: 0;
+		right: -20px;
 		opacity: 0.8;
 		z-index: -1;
 		transform: skewY(20deg);

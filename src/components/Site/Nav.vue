@@ -200,7 +200,7 @@
 			.donate-btn {
 				position: relative;
 				overflow: hidden;
-				font-weight: 400;
+				font-weight: 500;
 				color: var(--brand-two-color);
 				letter-spacing: 0.1em;
 				display: flex;
