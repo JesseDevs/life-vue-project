@@ -1,5 +1,5 @@
 <template>
-	<module-info id="section-content">
+	<module-info>
 		<!-- <div class="icon-container">
 			<Quote class="quote" />
 		</div> -->
@@ -34,7 +34,7 @@
 		});
 
 		tl.fromTo(
-			'.main-content',
+			'module-info',
 			{
 				opacity: 0,
 				y: 100,
@@ -62,6 +62,16 @@
 		min-height: 200px;
 		margin: 0 auto;
 		padding: 30px 0;
+
+		> div {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 30px;
+		}
 
 		h2 {
 			font-size: 1.75rem;
