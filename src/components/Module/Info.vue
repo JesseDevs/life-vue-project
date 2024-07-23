@@ -55,6 +55,10 @@
 <style lang="scss">
 	div-container {
 		width: 100%;
+		overflow: visible;
+		inner-column {
+			overflow: visible;
+		}
 	}
 	module-info {
 		display: flex;
