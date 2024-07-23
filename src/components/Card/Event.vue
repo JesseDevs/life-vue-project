@@ -47,6 +47,10 @@
 			background-position: 100%;
 		}
 	}
+	a {
+		height: 100%;
+		display: block;
+	}
 	event-card {
 		display: flex;
 		flex-direction: column;

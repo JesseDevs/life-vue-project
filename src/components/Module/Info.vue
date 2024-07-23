@@ -1,21 +1,23 @@
 <template>
-	<module-info>
-		<!-- <div class="icon-container">
-			<Quote class="quote" />
-		</div> -->
-
-		<h2>Give the gift of saving lives from opioid overdose</h2>
-		<a
-			class="general-btn"
-			href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
-			target="_blank"
-			>Donate <Arrow class="arrow"
-		/></a>
-
-		<div class="purple"></div>
-		<div class="blue c-one"></div>
-		<div class="blue c-two"></div>
-	</module-info>
+	<div class="info div-container" id="info">
+		<inner-column>
+			<module-info>
+				<!-- <div class="icon-container">
+					<Quote class="quote" />
+				</div> -->
+				<h2>Give the gift of saving lives from opioid overdose</h2>
+				<a
+					class="general-btn"
+					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+					target="_blank"
+					>Donate <Arrow class="arrow"
+				/></a>
+				<div class="purple"></div>
+				<div class="blue c-one"></div>
+				<div class="blue c-two"></div>
+			</module-info>
+		</inner-column>
+	</div>
 </template>
 
 <script setup>
@@ -28,7 +30,7 @@
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#info',
-				start: 'top-=50px center',
+				start: 'top center',
 				end: 'top center',
 			},
 		});
@@ -51,6 +53,9 @@
 </script>
 
 <style lang="scss">
+	div-container {
+		width: 100%;
+	}
 	module-info {
 		display: flex;
 		flex-direction: column;
