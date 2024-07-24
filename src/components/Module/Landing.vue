@@ -34,20 +34,6 @@
 
 		function startAnimations() {
 			tl.fromTo(
-				'.title-display',
-				{
-					opacity: 0,
-					y: 100,
-				},
-				{
-					opacity: 1,
-					y: 0,
-					duration: 0.8,
-					ease: 'power3.inOut',
-				},
-			);
-
-			tl.fromTo(
 				'.landing-logo',
 				{
 					opacity: 0,
