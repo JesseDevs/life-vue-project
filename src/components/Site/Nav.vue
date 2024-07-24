@@ -47,11 +47,12 @@
 					<li>
 						<a href="/#events">Events </a>
 					</li>
-					<!-- <li>
-						<a href="/#gallery">Gallery </a>
-					</li> -->
+
 					<li>
 						<a href="/#resources">Resources </a>
+					</li>
+					<li>
+						<a href="/#gallery">Volunteer <PathArrow /></a>
 					</li>
 					<li>
 						<a href="/#contact">Contact </a>

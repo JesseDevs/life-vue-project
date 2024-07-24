@@ -1,6 +1,6 @@
 <template>
 	<module-partners>
-		<SectionTitle class="black-text" text="Resources" />
+		<SectionTitle class="black-text" text="Community Partners" />
 
 		<Swiper
 			:slidesPerView="1"

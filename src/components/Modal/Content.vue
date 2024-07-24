@@ -34,7 +34,14 @@
 				</li>
 
 				<li>
-					<span class="step-3"> 06 </span>
+					<span class="step-3"> 07 </span>
+					<a class="step-3" :href="mailToHref" @click="ui.closeMenu">
+						Volunteer<PathArrow
+					/></a>
+				</li>
+
+				<li>
+					<span class="step-3"> 08 </span>
 					<a class="step-3" @click="ui.closeMenu" href="#contact">Contact </a>
 				</li>
 			</ul>
@@ -72,6 +79,12 @@
 		modal.value = true;
 		completeAnimation();
 	}
+
+	const email = ref('contact@lifeoftheparty.org');
+
+	const mailToHref = computed(() => {
+		return `mailto:${email.value}?subject=Volunteer%20Opportunities%20-%20Life%20of%20The%20Party&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20volunteering%20for%20your%20organization.%20Please%20provide%20more%20information%20on%20how%20I%20can%20help.%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]`;
+	});
 
 	watch(
 		() => ui.mainMenuOpen,

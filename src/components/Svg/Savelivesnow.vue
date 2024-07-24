@@ -82,12 +82,12 @@
 		transform: translate(-50%);
 		filter: brightness(0.2);
 
-		stroke: var(--brand-two-inner-color);
+		stroke: var(--brand-inner-color);
 
 		width: 700px;
 
 		animation-name: animate;
-		animation-duration: 1.8s;
+		animation-duration: 2s;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 		z-index: 10;
@@ -95,17 +95,19 @@
 
 	@keyframes animate {
 		0% {
-			filter: drop-shadow(0px 0px 1px #ffffffb4) drop-shadow(0px 0px 3px #ffffffb6)
-				drop-shadow(0px 0px 10px rgb(var(--brand-two-color-rgb) / 0.5))
-				drop-shadow(0px 0px 20px rgb(var(--brand-two-color-rgb) / 0.8))
-				drop-shadow(0px 0px 10px var(--brand-two-color));
+			filter: drop-shadow(0px 0px 1px rgb(var(--brand-color-rgb) / 0.3))
+				drop-shadow(0px 0px 3px rgb(var(--brand-color-rgb) / 0.3))
+				drop-shadow(0px 0px 5px rgb(var(--brand-color-rgb) / 0.7))
+				drop-shadow(0px 0px 1px rgb(var(--brand-color-rgb) / 0.9))
+				drop-shadow(0px 0px 5px var(--brand-color));
 		}
 
 		100% {
-			filter: drop-shadow(0px 0px 3px #ffffffb5) drop-shadow(0px 0px 6px #ffffffc5)
-				drop-shadow(0px 0px 15px rgb(var(--brand-two-color-rgb) / 0.5))
-				drop-shadow(0px 0px 20px rgb(var(--brand-two-color-rgb) / 0.8))
-				drop-shadow(0px 0px 10px var(--brand-two-color));
+			filter: drop-shadow(0px 0px 3px rgb(var(--brand-color-rgb) / 0.3))
+				drop-shadow(0px 0px 6px rgb(var(--brand-color-rgb) / 0.3))
+				drop-shadow(0px 0px 10px rgb(var(--brand-color-rgb) / 0.7))
+				drop-shadow(0px 0px 15px rgb(var(--brand-color-rgb) / 0.9))
+				drop-shadow(0px 0px 10px var(--brand-color));
 		}
 	}
 </style>

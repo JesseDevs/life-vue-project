@@ -13,8 +13,8 @@
 				<p class="small-voice">
 					{{ event.detail }}
 				</p>
-				<div class="line"></div>
 			</text-content>
+			<div class="line"></div>
 			<text-content>
 				<div class="date-block small-voice">
 					<p>{{ event.timeSpan[0] }}</p>
@@ -56,6 +56,7 @@
 		flex-direction: column;
 		padding: 15px 10px;
 		gap: 10px;
+		height: 100%;
 
 		align-items: center;
 		background-color: rgb(var(--brand-color-rgb) / 0.4);
@@ -71,29 +72,11 @@
 			}
 			background-color: rgb(var(--brand-color-rgb) / 0.2);
 		}
-		.shimmer {
-			display: inline-block;
-			position: relative;
-			color: rgb(var(--white-rgb) / 0.8);
-			font-weight: bold;
-			text-align: center;
-			padding: 8px;
-			text-decoration: none;
-			background: linear-gradient(
-				90deg,
-				rgba(255, 255, 255, 0.5) 25%,
-				rgba(255, 255, 255, 0.9) 50%,
-				rgba(255, 255, 255, 0.5) 75%
-			);
-			background-size: 200% auto;
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			animation: shimmer 1.5s infinite;
-		}
+
 		picture {
 			overflow: hidden;
-			max-width: 400px;
+			max-width: 350px;
+			height: fit-content;
 
 			.date-indicator {
 				position: absolute;
@@ -118,18 +101,24 @@
 			}
 		}
 
+		div.line {
+			height: 1px;
+			width: 100%;
+			background-color: var(--brand-color);
+		}
+
+		text-content:first-of-type {
+			flex-grow: 1;
+		}
 		text-content {
 			gap: 8px;
+			justify-content: space-between;
+			// flex-grow: 1;
 
 			h2 {
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
 				font-weight: 500;
-			}
-			div.line {
-				height: 1px;
-				width: 100%;
-				background-color: var(--brand-color);
 			}
 
 			.uppercase {

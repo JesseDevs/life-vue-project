@@ -9,8 +9,8 @@
 			</p>
 			<p>
 				At events like music festivals and community gatherings, we aim to empower
-				people with the knowledge and tools to recognize overdoses and administer
-				naloxone.
+				people with the knowledge and tools to recognize an overdose and
+				administer naloxone.
 			</p>
 			<p>
 				By normalizing naloxone use, we believe we can save lives. Together, we
@@ -20,7 +20,6 @@
 			<p>You too can make a difference.</p>
 		</div>
 
-		<Savelivesnow />
 		<DotGridLeft />
 	</module-mission>
 </template>

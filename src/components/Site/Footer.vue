@@ -33,7 +33,7 @@
 					</ul>
 				</footer-group>
 				<footer-group>
-					<p class="group-head">Resources</p>
+					<p class="group-head">Community Resources</p>
 					<ul>
 						<li>
 							<a href="https://www.tacoinc.org/" target="_blank">TACO</a>

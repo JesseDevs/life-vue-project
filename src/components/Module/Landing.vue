@@ -1,7 +1,7 @@
 <template>
 	<module-landing>
 		<div class="centered-content">
-			<p class="title-display">Save Lives Now</p>
+			<Savelivesnow />
 			<picture class="landing-logo">
 				<img
 					src="/images/logo-png.png"
