@@ -5,7 +5,12 @@
 				<!-- <div class="icon-container">
 					<Quote class="quote" />
 				</div> -->
-				<h2>Give the gift of saving lives from opioid overdose</h2>
+				<h2>
+					<Lquote class="quote left" />
+					<!-- “Give the gift of saving lives from opioid overdose” -->
+					Give the gift of saving lives from opioid overdose
+					<Rquote class="quote right" />
+				</h2>
 				<a
 					class="general-btn"
 					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
@@ -31,7 +36,7 @@
 			scrollTrigger: {
 				trigger: '#info',
 				start: 'top center',
-				end: 'top center',
+				end: 'bottom center',
 			},
 		});
 
@@ -53,9 +58,28 @@
 </script>
 
 <style lang="scss">
-	div-container {
+	h2 {
+		position: relative;
+	}
+	.quote {
+		position: absolute;
+		top: -1em;
+
+		path {
+			fill: var(--brand-color);
+		}
+	}
+
+	.left {
+		left: -0.4em;
+	}
+	.right {
+		right: -0.4em;
+	}
+	.div-container {
 		width: 100%;
 		overflow: visible;
+
 		inner-column {
 			overflow: visible;
 		}
@@ -66,6 +90,8 @@
 		align-items: center;
 		justify-content: center;
 		gap: 30px;
+		opacity: 0;
+		position: relative;
 
 		width: 100%;
 		min-height: 200px;
