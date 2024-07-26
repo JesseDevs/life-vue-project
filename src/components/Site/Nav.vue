@@ -52,7 +52,7 @@
 						<a href="/#resources">Resources </a>
 					</li>
 					<li>
-						<a href="/#gallery">Volunteer <PathArrow /></a>
+						<a :href="mailToHref" target="_blank">Volunteer <PathArrow /></a>
 					</li>
 					<li>
 						<a href="/#contact">Contact </a>
@@ -67,20 +67,11 @@
 	import { useInterfaceService } from '~/services/InterfaceService';
 	const ui = useInterfaceService();
 
-	const activeTab = ref('');
+	const email = ref('contact@lifeoftheparty.org');
 
-	const scrollTo = (section) => {
-		const element = document.getElementById(section);
-		const offset = 60;
-		if (element) {
-			window.scrollTo({
-				top: element.offsetTop + offset,
-				behavior: 'smooth',
-			});
-			// activeTab.value = section;
-			history.pushState(null, null, `#${section}`);
-		}
-	};
+	const mailToHref = computed(() => {
+		return `mailto:${email.value}?subject=Volunteer%20Opportunities%20-%20Life%20of%20The%20Party&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20volunteering%20for%20your%20organization.%20Please%20provide%20more%20information%20on%20how%20I%20can%20help.%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]`;
+	});
 </script>
 
 <style lang="scss">
@@ -302,7 +293,7 @@
 		display: none;
 	}
 
-	@media (min-width: 700px) {
+	@media (min-width: 900px) {
 		inner-column.has-big-width {
 			padding-top: 0;
 			padding-bottom: 0;
