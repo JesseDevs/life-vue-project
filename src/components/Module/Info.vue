@@ -7,7 +7,8 @@
 				</div> -->
 				<h2>
 					<Lquote class="quote left" />
-					<!-- “Give the gift of saving lives from opioid overdose” -->
+					<!-- <span class="brna">“</span>Give the gift of saving lives from opioid
+					overdose<span class="brna">”</span> -->
 					Give the gift of saving lives from opioid overdose
 					<Rquote class="quote right" />
 				</h2>
@@ -60,6 +61,11 @@
 <style lang="scss">
 	h2 {
 		position: relative;
+		padding: 0 10px;
+
+		.brna {
+			color: var(--brand-color);
+		}
 	}
 	.quote {
 		position: absolute;
