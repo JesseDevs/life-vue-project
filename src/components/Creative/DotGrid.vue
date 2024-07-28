@@ -53,7 +53,7 @@
 				var(--background),
 				var(--brand-two-color)
 			);
-			opacity: 0.35;
+			opacity: 0.45;
 			animation: flicker 1.75s infinite;
 			box-shadow: 0 2px 4px rgb(var(--brand-two-color-rgb) / 0.5);
 		}
@@ -61,13 +61,13 @@
 		@keyframes flicker {
 			0%,
 			100% {
-				opacity: 0.35;
+				opacity: 0.45;
 			}
 			50% {
 				opacity: 1;
 			}
 			75% {
-				opacity: 0.5;
+				opacity: 0.8;
 			}
 		}
 	}
