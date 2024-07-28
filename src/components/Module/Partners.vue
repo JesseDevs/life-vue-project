@@ -68,6 +68,20 @@
 				'Clare Matrix saves lives by providing compassionate, evidence-based treatment for those who struggle with drugs, alcohol and related behavioral health challenges. We strive to enhance the field of treatment worldwide through education, research and training. They also have a youth drop in center to look into opioid and stimulant use, the spike in fentanyl-related overdoses and death among teens, harm reduction, and overdose prevention.',
 			logo: '/partners/matrix.png',
 		},
+		{
+			link: 'https://www.impacthouse.com/',
+			name: 'IMPACT',
+			context:
+				'Impact Drug & Alcohol Treatment Center has been offering no nonsense addiction treatment for men and women for the last 54 years.  Our goal is to redirect clients from a dysfunctional lifestyle to becoming productive and responsible members of the community.',
+			logo: '/partners/impact.png',
+		},
+		{
+			link: 'https://didihirsch.org/',
+			name: 'Didi Hirsch',
+			context:
+				'Didi Hirsch is a leading provider of mental health, substance use and crisis care services and is home to the nation’s first and largest Suicide Prevention Center. ',
+			logo: '/partners/didi.png',
+		},
 	]);
 </script>
 
