@@ -166,7 +166,7 @@
 		border-radius: 70%;
 
 		box-shadow: 0 0 40px 20px rgb(var(--brand-two-color-rgb) / 0.2);
-		animation: pulse 2s infinite;
+		animation: pulse 2s infinite alternate;
 	}
 
 	div.landing-svg-holder {
@@ -179,26 +179,6 @@
 		height: 100%;
 		z-index: -10;
 	}
-
-	// @media (min-width: 950px) {
-	// 	// module-landing picture {
-	// 	// 	margin-left: 75px;
-	// 	// }
-	// 	div.landing-svg-holder {
-	// 		bottom: -57%;
-	// 	}
-	// }
-	// @media (min-width: 1200px) {
-	// 	module-landing {
-	// 		margin: 35px 0;
-	// 	}
-	// }
-
-	// @media (min-width: 1050px) {
-	// 	div.landing-svg-holder {
-	// 		right: 5%;
-	// 	}
-	// }
 
 	@keyframes pulse {
 		0% {

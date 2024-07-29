@@ -87,7 +87,7 @@
 	}
 
 	.flicker {
-		animation: flicker 1.75s infinite;
+		animation: flicker 2s infinite;
 	}
 
 	@keyframes flicker {

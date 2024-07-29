@@ -86,14 +86,12 @@
 
 		width: 700px;
 
-		animation-name: animate;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		animation-direction: alternate;
+		animation: bg-pulse 2s infinite alternate;
+
 		z-index: 10;
 	}
 
-	@keyframes animate {
+	@keyframes bg-pulse {
 		0% {
 			filter: drop-shadow(0px 0px 1px rgb(var(--brand-color-rgb) / 0.3))
 				drop-shadow(0px 0px 3px rgb(var(--brand-color-rgb) / 0.3))

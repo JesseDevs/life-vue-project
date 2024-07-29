@@ -107,8 +107,9 @@
 					</ul>
 				</footer-group>
 				<foot-note>
+					<p class="small-voice">© 2024 LIFE OF THE PARTY</p>
 					<p class="small-voice">
-						© 2024 <span>LIFE</span> of the <span>PARTY</span>
+						LIFE OF THE PARTY is a 501(c)(3) nonprofit organization.
 					</p>
 				</foot-note>
 			</footer-block>
@@ -183,6 +184,7 @@
 			// left: 1.5rem;
 			// bottom: 1.5rem;
 
+			opacity: 0.9;
 			display: block;
 			grid-column: 1/-1;
 			width: 100%;

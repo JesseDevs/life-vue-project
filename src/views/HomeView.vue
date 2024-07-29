@@ -64,37 +64,6 @@
 				},
 			},
 		);
-		gsap.fromTo(
-			'.images-left .image-left',
-			{ x: -100, opacity: 0 },
-			{
-				x: 0,
-				opacity: 1,
-				ease: 'power2.out',
-				scrollTrigger: {
-					trigger: '#gallery',
-					start: 'top center',
-					end: 'bottom center',
-				},
-				stagger: 0.4, // Stagger value in seconds
-			},
-		);
-		// Right container animation with stagger
-		gsap.fromTo(
-			'.images-right .image-right',
-			{ x: 100, opacity: 0 },
-			{
-				x: 0,
-				opacity: 1,
-				ease: 'power2.out',
-				scrollTrigger: {
-					trigger: '#gallery',
-					start: 'top center',
-					end: 'bottom center',
-				},
-				stagger: 0.5, // Stagger value in seconds
-			},
-		);
 	});
 </script>
 

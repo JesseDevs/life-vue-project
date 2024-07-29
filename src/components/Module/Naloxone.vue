@@ -101,7 +101,7 @@
 		height: 50vh;
 		position: absolute;
 		right: -28vw;
-		bottom: 80px;
+		bottom: 350px;
 		z-index: -1;
 		opacity: 0.7;
 
@@ -146,6 +146,7 @@
 
 			@media (min-width: 1000px) {
 				flex-direction: row;
+				gap: 30px;
 			}
 		}
 
@@ -229,6 +230,19 @@
 		.icon-container {
 			svg {
 				width: 100%;
+			}
+		}
+
+		@media (min-width: 1000px) {
+			section-footer {
+				position: absolute;
+				left: 0;
+				bottom: 20px;
+				width: fit-content;
+				p {
+					text-align: left;
+					max-width: 47ch;
+				}
 			}
 		}
 	}
