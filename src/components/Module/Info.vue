@@ -36,7 +36,7 @@
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#info',
-				start: 'top center',
+				start: 'top 70%',
 				end: 'bottom center',
 			},
 		});
@@ -69,7 +69,7 @@
 	}
 	.quote {
 		position: absolute;
-		top: -1em;
+		top: -1.3em;
 
 		path {
 			fill: var(--brand-color);
@@ -77,10 +77,10 @@
 	}
 
 	.left {
-		left: -0.4em;
+		left: -0.5em;
 	}
 	.right {
-		right: -0.4em;
+		right: -0.5em;
 	}
 	.div-container {
 		width: 100%;
