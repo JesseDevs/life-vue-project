@@ -56,7 +56,7 @@
 				],
 			},
 			{
-				imgsrc: '/images/profile/jed.webp',
+				imgsrc: '/images/profile/conrad.webp',
 				name: 'Conrad Jackson',
 				role: ['Board Member'],
 				text: [

@@ -193,6 +193,10 @@
 			p span {
 				letter-spacing: 0.1em;
 			}
+
+			p + p {
+				font-style: italic;
+			}
 		}
 	}
 </style>

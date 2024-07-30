@@ -1,9 +1,12 @@
 <template>
 	<photo-gallery id="section-content">
-		<!-- <SectionTitle text="Gallery Showcase" /> -->
-		<!-- <TransitionGroup name="fade" tag="div" mode="in-out"> -->
 		<div class="gallery">
-			<picture v-for="image in set1" :key="image" class="gallery-item">
+			<picture
+				v-for="(image, index) in currentSet"
+				:key="image"
+				:class="{ active: currentSet.includes(image) }"
+				:style="{ animationDelay: `${index * 0.1}s` }"
+			>
 				<img :src="`${image}`" alt="Gallery Image" />
 			</picture>
 		</div>
@@ -11,19 +14,18 @@
 </template>
 
 <script setup>
-	const set1 = ref([
+	const set1 = [
 		'/gallery/2.webp',
 		'/gallery/4.webp',
 		'/gallery/1.webp',
-
 		'/gallery/5.webp',
 		'/gallery/3.webp',
 		'/gallery/8.webp',
 		'/gallery/lotp-1.jpg',
 		'/gallery/lotp-2.jpg',
-	]);
+	];
 
-	const set2 = ref([
+	const set2 = [
 		'/gallery/lotp-3.jpg',
 		'/gallery/lotp-4.jpg',
 		'/gallery/lotp-5.jpg',
@@ -32,9 +34,9 @@
 		'/gallery/lotp-8.jpg',
 		'/gallery/lotp-9.jpg',
 		'/gallery/lotp-10.jpg',
-	]);
+	];
 
-	const set3 = ref([
+	const set3 = [
 		'/gallery/lotp-11.jpg',
 		'/gallery/lotp-12.jpg',
 		'/gallery/lotp-13.jpg',
@@ -43,9 +45,40 @@
 		'/gallery/lotp-16.jpg',
 		'/gallery/lotp-17.jpg',
 		'/gallery/lotp-18.jpg',
-		// '/gallery/lotp-19.jpg',
-		// '/gallery/lotp-20.jpg',
-	]);
+	];
+
+	const getRandomDelay = (index) => {
+		const minDelay = 0.1; // Minimum delay
+		const maxDelay = 2; // Maximum delay
+		const range = maxDelay - minDelay;
+		return `${(Math.random() * range + minDelay).toFixed(2)}s`;
+	};
+
+	const sets = [set1, set2, set3];
+	const currentSetIndex = ref(0);
+	const currentSet = computed(() => sets[currentSetIndex.value]);
+
+	const updateSet = () => {
+		currentSetIndex.value = (currentSetIndex.value + 1) % sets.length;
+	};
+
+	let intervalId = null;
+
+	watch(
+		currentSetIndex,
+		(newIndex) => {
+			// Update the gallery when the currentSetIndex changes
+		},
+		{ immediate: true },
+	);
+
+	onMounted(() => {
+		intervalId = setInterval(updateSet, 4000);
+	});
+
+	onUnmounted(() => {
+		clearInterval(intervalId);
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -55,6 +88,20 @@
 		gap: 30px;
 		width: 100%;
 		position: relative;
+	}
+
+	.gallery picture.active {
+		opacity: 0;
+		animation: fadeout 1s forwards;
+	}
+
+	@keyframes fadeout {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 
 	.gallery {
@@ -67,8 +114,10 @@
 		picture {
 			max-width: 260px;
 			height: auto;
-			aspect-ratio: 3/4;
+			aspect-ratio: 3/3;
 			overflow: hidden;
+
+			transition: opacity 1s ease-in-out;
 
 			&:nth-of-type(odd) {
 				justify-self: flex-end;
