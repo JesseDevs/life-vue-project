@@ -2,16 +2,7 @@
 	<div class="info div-container" id="info">
 		<inner-column>
 			<module-info>
-				<!-- <div class="icon-container">
-					<Quote class="quote" />
-				</div> -->
-				<h2>
-					<Lquote class="quote left" />
-					<!-- <span class="brna">“</span>Give the gift of saving lives from opioid
-					overdose<span class="brna">”</span> -->
-					Give the gift of saving lives from opioid overdose
-					<Rquote class="quote right" />
-				</h2>
+				<InfoSVG />
 				<a
 					class="general-btn"
 					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
@@ -36,7 +27,7 @@
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#info',
-				start: 'top 70%',
+				start: 'top center+=5%',
 				end: 'bottom center',
 			},
 		});
@@ -69,7 +60,7 @@
 	}
 	.quote {
 		position: absolute;
-		top: -1.3em;
+		top: -0.5em;
 
 		path {
 			fill: var(--brand-color);
@@ -77,10 +68,10 @@
 	}
 
 	.left {
-		left: -0.5em;
+		left: -0.2em;
 	}
 	.right {
-		right: -0.5em;
+		right: -0.2em;
 	}
 	.div-container {
 		width: 100%;
@@ -117,6 +108,7 @@
 		h2 {
 			font-size: 1.75rem;
 			line-height: 2.2rem;
+			padding: 0 70px;
 
 			margin: 0 auto;
 
