@@ -85,14 +85,37 @@
 		</picture>
 	</module-naloxone>
 </template>
-
 <script setup>
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
-</script>
 
+	onMounted(() => {
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: 'module-naloxone',
+				start: 'top center',
+				end: 'bottom center',
+			},
+		});
+
+		tl.fromTo(
+			'.nar-container',
+			{
+				opacity: 0,
+				x: 100,
+			},
+			{
+				x: 0,
+				opacity: 1,
+				duration: 1,
+				ease: 'power3.inOut',
+			},
+			'<',
+		);
+	});
+</script>
 <style lang="scss">
 	.nar-container {
 		display: inline-block;
