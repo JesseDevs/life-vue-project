@@ -3,7 +3,7 @@
 		<SectionTitle text="Contact Us" />
 		<div id="section-content">
 			<form
-				action="https://formspree.io/f/mnqeoyvq"
+				action="https://formspree.io/f/xldrbwbe"
 				method="POST"
 				id="fs-frm"
 				name="message-form"
