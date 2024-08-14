@@ -38,7 +38,11 @@
 
 		align-items: center;
 		justify-content: space-between;
-
+		@media (max-width: 500px) {
+			.general-btn {
+				padding: 12px 19px;
+			}
+		}
 		picture {
 			aspect-ratio: 16 / 9;
 

@@ -36,23 +36,6 @@
 		position: relative;
 		gap: 20px;
 
-		h3 {
-			color: inherit;
-			font-weight: 700;
-			font-family: 'League Spartan', sans-serif;
-			font-optical-sizing: auto;
-			position: relative;
-			// &:after {
-			// 	position: absolute;
-			// 	height: 2px;
-			// 	width: 100%;
-			// 	background-color: var(--brand-color);
-			// 	bottom: 0px;
-			// 	left: 0;
-			// 	content: '';
-			// }
-		}
-
 		div#section-content {
 			display: flex;
 			flex-direction: column;

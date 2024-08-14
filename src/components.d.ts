@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Arrow: typeof import('./components/Svg/Arrow.vue')['default']
+    BGDots: typeof import('./components/Svg/BGDots.vue')['default']
     BigNav: typeof import('./components/Site/BigNav.vue')['default']
     BlurredCircle: typeof import('./components/Creative/BlurredCircle.vue')['default']
     BubbleGrid: typeof import('./components/Creative/BubbleGrid.vue')['default']
@@ -58,6 +59,7 @@ declare module 'vue' {
     Space: typeof import('./components/General/Space.vue')['default']
     STC: typeof import('./components/Svg/STC.vue')['default']
     SVL: typeof import('./components/Svg/SVL.vue')['default']
+    Svlbigtext: typeof import('./components/Svg/Svlbigtext.vue')['default']
     SVLCircle: typeof import('./components/Svg/SVLCircle.vue')['default']
     SVLCIRCLE: typeof import('./components/Svg/SVLCIRCLE.vue')['default']
     SVLOld: typeof import('./components/Svg/SVL-old.vue')['default']

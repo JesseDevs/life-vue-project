@@ -66,7 +66,7 @@
 <style lang="scss">
 	@media (min-width: 800px) {
 		section.landing inner-column {
-			padding-top: 5rem;
+			padding-top: 3rem;
 		}
 	}
 	#section-heading {

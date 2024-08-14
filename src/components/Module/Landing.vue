@@ -1,7 +1,6 @@
 <template>
 	<module-landing>
 		<div class="centered-content">
-			<Savelivesnow />
 			<picture class="landing-logo">
 				<img
 					src="/images/logo-png.png"
@@ -11,7 +10,11 @@
 				/>
 				<div class="pulsing-circle"></div>
 			</picture>
-			<!-- <p>Give the gift of saving lives from opioid overdose</p> -->
+
+			<p class="landing-sup">
+				Give the gift of saving lives<br />
+				from opioid overdose
+			</p>
 			<a href="https://www.instagram.com/lifeofthepartyorg/" class="flex-holder">
 				<Insta />
 				<p>lifeofthepartyorg</p>
@@ -45,7 +48,7 @@
 					duration: 0.8,
 					ease: 'power3.inOut',
 				},
-				'<', // This makes it start at the same time as the previous animation
+				'<',
 			);
 			tl.fromTo(
 				'.flex-holder',
@@ -59,13 +62,21 @@
 					duration: 0.8,
 					ease: 'power3.inOut',
 				},
-				'<.3', // This makes it start at the same time as the previous animation
+				'<.3',
 			);
 		}
 	});
 </script>
 
 <style lang="scss" scoped>
+	.landing-sup {
+		font-weight: 400;
+		letter-spacing: 0.12em;
+
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 auto;
+	}
 	@keyframes slideFromBottom {
 		0% {
 			opacity: 0;
@@ -98,24 +109,13 @@
 		.centered-content {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: center;
 			min-height: 200px;
 
 			height: 100%;
 			width: 100%;
 			position: relative;
-
-			p.title-display {
-				text-transform: uppercase;
-				font-size: 2em;
-				font-weight: 600;
-				color: var(--brand-color);
-				text-align: center;
-				width: 100%;
-				margin-bottom: 0;
-				text-shadow: 0 0 8px var(--brand-color-light);
-			}
 		}
 
 		.spacer {

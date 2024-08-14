@@ -108,6 +108,10 @@
 		animation: slideFromTop 0.8s forwards;
 		width: 100%;
 		z-index: 9999;
+
+		position: sticky;
+		top: 0;
+
 		backdrop-filter: blur(7px);
 		color: rgb(250 250 250);
 		background-color: var(--background);

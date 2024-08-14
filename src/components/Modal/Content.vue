@@ -151,7 +151,7 @@
 	.modal-btns {
 		display: flex;
 		flex-direction: column;
-
+		padding-left: 1rem;
 		padding-top: 40px;
 
 		li {

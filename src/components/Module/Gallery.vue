@@ -5,9 +5,12 @@
 				v-for="(image, index) in currentSet"
 				:key="image"
 				:class="{ active: currentSet.includes(image) }"
-				:style="{ animationDelay: `${index * 0.1}s` }"
 			>
-				<img :src="`${image}`" alt="Gallery Image" />
+				<img
+					:style="{ animationDelay: `${index * 0.1}s` }"
+					:src="`${image}`"
+					alt="Gallery Image"
+				/>
 			</picture>
 		</div>
 	</photo-gallery>
@@ -90,7 +93,7 @@
 		position: relative;
 	}
 
-	.gallery picture.active {
+	.gallery picture.active img {
 		opacity: 0;
 		animation: fadeout 1s forwards;
 	}
@@ -116,6 +119,7 @@
 			height: auto;
 			aspect-ratio: 3/3;
 			overflow: hidden;
+			background-color: rgb(var(--brand-two-color-rgb) / 0.2);
 
 			transition: opacity 1s ease-in-out;
 
@@ -130,6 +134,7 @@
 
 			img {
 				object-fit: cover;
+				transition: opacity 1s ease-in-out;
 				transition: transform 0.3s ease-in-out;
 
 				&:hover {

@@ -1,20 +1,25 @@
 <template>
-	<div class="info div-container" id="info">
+	<section id="info">
+		<!-- <BGDots class="bg-dots" /> -->
 		<inner-column>
 			<module-info>
-				<InfoSVG />
+				<h2 class="step-4">Saves Lives Now</h2>
+
 				<a
 					class="general-btn"
 					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
 					target="_blank"
-					>Donate <Arrow class="arrow"
-				/></a>
-				<div class="purple"></div>
-				<div class="blue c-one"></div>
-				<div class="blue c-two"></div>
+					>Donate
+					<Arrow class="arrow" />
+				</a>
+				<div class="spinner-wrap">
+					<div class="spinner-item"></div>
+					<div class="spinner-item spinner-item--2"></div>
+					<div class="spinner-item spinner-item--3"></div>
+				</div>
 			</module-info>
 		</inner-column>
-	</div>
+	</section>
 </template>
 
 <script setup>
@@ -27,7 +32,7 @@
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#info',
-				start: 'top center+=5%',
+				start: 'top center',
 				end: 'bottom center',
 			},
 		});
@@ -46,41 +51,82 @@
 			},
 			'<',
 		);
+
+		tl.from(
+			'.bg-dots circle',
+			{
+				opacity: 0,
+				duration: 0.5,
+				stagger: {
+					amount: 0.5,
+					from: 'random',
+				},
+			},
+			'<',
+		);
 	});
 </script>
 
 <style lang="scss">
-	h2 {
-		position: relative;
-		padding: 0 10px;
+	.spinner {
+		&-wrap {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 100%;
+			z-index: -2;
+		}
 
-		.brna {
-			color: var(--brand-color);
+		&-item {
+			//background: red;
+			border: 5px solid var(--brand-two-color);
+			border-radius: 50%;
+			height: 500px;
+			width: 500px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			animation: zoom 4s linear 0.75s infinite;
+			box-shadow: 4px 4px 20px 1px rgb(var(--brand-two-color-rgb) / 0.7);
+
+			&--2 {
+				animation-delay: 2.25s;
+			}
+
+			&--3 {
+				animation-delay: 3.75s;
+			}
 		}
 	}
-	.quote {
+
+	@keyframes zoom {
+		0% {
+			transform: translate(-50%, -50%) scale(0.2);
+			opacity: 0;
+		}
+		50% {
+			opacity: 0.9;
+		}
+		100% {
+			transform: translate(-50%, -50%) scale(1);
+			opacity: 0;
+		}
+	}
+
+	.bg-dots {
 		position: absolute;
-		top: -0.5em;
-
-		path {
-			fill: var(--brand-color);
-		}
-	}
-
-	.left {
-		left: -0.2em;
-	}
-	.right {
-		right: -0.2em;
-	}
-	.div-container {
 		width: 100%;
-		overflow: visible;
-
-		inner-column {
-			overflow: visible;
-		}
+		height: 100%;
 	}
+	section {
+		position: relative;
+		min-height: 500px;
+	}
+
 	module-info {
 		display: flex;
 		flex-direction: column;
@@ -88,27 +134,37 @@
 		justify-content: center;
 		gap: 30px;
 		opacity: 0;
-		position: relative;
 
 		width: 100%;
-		min-height: 200px;
+		min-height: 350px;
 		margin: 0 auto;
 		padding: 30px 0;
 
-		> div {
+		.vol-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				svg {
+					transform: translate(1px, -1px);
+				}
+			}
+		}
+
+		div {
 			width: 100%;
 			height: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			gap: 30px;
+			gap: 5px;
 		}
 
 		h2 {
-			font-size: 1.75rem;
-			line-height: 2.2rem;
-			padding: 0 70px;
+			font-weight: 800 !important;
+			font-style: normal;
 
 			margin: 0 auto;
 
@@ -118,18 +174,14 @@
 			letter-spacing: 0.08em;
 			text-align: center;
 
-			@media (min-width: 800px) {
-				font-size: 3rem;
-				line-height: 3.5rem;
-			}
+			// @media (min-width: 800px) {
+			// 	font-size: 3rem;
+			// 	line-height: 3.5rem;
+			// }
 		}
 
 		@media (min-width: 800px) {
-			gap: 70px;
-			h2 {
-				font-size: 3rem;
-				line-height: 3.5rem;
-			}
+			// gap: 70px;
 		}
 
 		// .icon-container {
@@ -141,48 +193,5 @@
 		// 		width: 100%;
 		// 	}
 		// }
-	}
-
-	div.purple {
-		width: 50%;
-		height: 60%;
-		background-color: rgb(255, 36, 218);
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: -1;
-		border-radius: 9999px;
-		transform: translate(-50%, -50%) skew(30deg); /* Center the div and apply skew */
-		filter: blur(130px);
-		opacity: 0.9;
-	}
-
-	div.blue {
-		width: 40%;
-		height: 30%;
-		background-color: var(--brand-color);
-		position: absolute;
-
-		// z-index: -1;
-		// border-radius: 9999px;
-		/* Center the div and apply skew */
-		filter: blur(100px);
-	}
-
-	div.c-one {
-		width: 60%;
-		bottom: 10px;
-		left: -40px;
-		z-index: -3;
-		opacity: 0.8;
-		transform: skewY(3.5727vw);
-	}
-
-	div.c-two {
-		top: 0;
-		right: -20px;
-		opacity: 0.8;
-		z-index: -1;
-		transform: skewY(20deg);
 	}
 </style>

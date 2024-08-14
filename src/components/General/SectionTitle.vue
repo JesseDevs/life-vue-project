@@ -19,11 +19,11 @@
 	}
 	h3 {
 		color: inherit;
-		font-family: 'Open Sans', sans-serif;
+
 		font-weight: 800;
 
 		font-optical-sizing: auto;
 		position: relative;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.08em;
 	}
 </style>
