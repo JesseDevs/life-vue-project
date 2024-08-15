@@ -4,9 +4,9 @@
 		<div class="events-container" id="section-content">
 			<p v-if="events.length > 0">Come join the community!</p>
 			<p v-else>Currently we are not attending any events.</p>
-			<div v-if="events.length > 0" class="calendar">
+			<!-- <div v-if="events.length > 0" class="calendar">
 				<Event v-for="event in events" :key="event.id" :event="event" />
-			</div>
+			</div> -->
 			<div v-else class="calendar no-events">
 				<p>No Upcoming Events.</p>
 			</div>

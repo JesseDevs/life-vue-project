@@ -3,7 +3,7 @@
 		<!-- <BGDots class="bg-dots" /> -->
 		<inner-column>
 			<module-info>
-				<h2 class="step-4">Saves Lives Now</h2>
+				<h2 class="step-4">Save Lives Now</h2>
 
 				<a
 					class="general-btn"
