@@ -31,7 +31,7 @@
 		color: rgb(10, 5, 7);
 		padding: 1em;
 		min-height: 500px;
-		gap: 0.9em;
+		column-gap: 0.9em;
 
 		picture {
 			padding: 0.8em;
@@ -55,7 +55,7 @@
 			align-items: center;
 
 			picture {
-				min-width: 400px;
+				min-width: 280px;
 			}
 
 			p,

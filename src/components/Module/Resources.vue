@@ -127,6 +127,10 @@
 		bottom: auto;
 	}
 
+	.swiper-pagination-bullet {
+		opacity: 0.8 !important;
+	}
+
 	module-partners {
 		display: flex;
 		flex-direction: column;
