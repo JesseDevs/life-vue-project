@@ -37,6 +37,11 @@
 	--gray: rgb(164 163 164);
 	--light-gray: rgb(240, 240, 240);
 
+	/* --card-height: 40vw; */
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--outline-width: 0px;
+
 	--c: #1dd3b01a;
 
 	--color-primary-hsl: 145, 63%, 42%;

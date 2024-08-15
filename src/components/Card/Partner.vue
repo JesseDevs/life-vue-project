@@ -4,10 +4,9 @@
 			<img :src="p.logo" alt="brand logo" />
 		</picture>
 
-		<text-content>
-			<h4 class="step-1">{{ p.name }}</h4>
-			<p v-html="p.context"></p>
-		</text-content>
+		<h4 class="step-1">{{ p.name }}</h4>
+		<p v-html="p.context"></p>
+
 		<a :href="p.link" class="general-btn" target="_blank"
 			>More Information <Arrow class="arrow" />
 		</a>
@@ -25,97 +24,43 @@
 
 <style lang="scss">
 	partner-card {
-		scroll-snap-align: start;
-		opacity: 1;
-		width: 100%;
-		position: relative;
 		display: flex;
 		flex-direction: column;
-		padding: 10px;
-		min-height: 550px;
+		width: 100%;
+		background: rgb(221, 219, 219);
+		color: rgb(10, 5, 7);
+		padding: 1em;
+		min-height: 500px;
+		gap: 0.9em;
 
-		column-gap: 10px;
-
-		align-items: center;
-		justify-content: space-between;
-		@media (max-width: 500px) {
-			.general-btn {
-				padding: 12px 19px;
-			}
-		}
 		picture {
-			aspect-ratio: 16 / 9;
-
-			max-height: 125px;
-			width: 100%;
-
-			overflow: hidden;
-			padding: 5px 35px;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: rgb(254, 254, 254);
-			max-width: calc(100% - 2em);
+			padding: 0.8em;
+			max-width: 200px;
+			margin: 0 auto;
 
 			img {
 				object-fit: contain;
 			}
-
-			@media (min-width: 500px) {
-				padding: 10px 120px;
-			}
-			@media (min-width: 750px) {
-				padding: 10px 200px;
-			}
-			@media (min-width: 1000px) {
-				padding: 10px 300px;
-			}
 		}
 
-		text-content {
-			display: flex;
-			position: relative;
-			flex-direction: column;
-			gap: 1.2em;
-			padding: 1em;
-			align-self: flex-start;
-			justify-content: flex-start;
-			flex-grow: 1;
-
-			h4 {
-				font-family: 'Barlow', serif;
-				font-weight: 500;
-			}
-
-			p a {
-				display: inline-block;
-				text-decoration: underline;
-
-				&:hover {
-					background-color: var(--brand-color);
-				}
-			}
-
-			a {
-				transition: 0.3s;
-			}
+		a {
+			margin-top: auto;
 		}
+	}
 
-		text-content + a {
-			display: flex;
-			justify-content: center;
+	@media (min-width: 768px) {
+		partner-card {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			align-items: center;
-			gap: 4px;
 
-			div.arrow {
-				transition: transform 0.3s ease-in-out;
+			picture {
+				min-width: 400px;
 			}
 
-			&:hover {
-				div.arrow {
-					transform: scale(1.4);
-				}
+			p,
+			a {
+				grid-column: 1/-1;
 			}
 		}
 	}

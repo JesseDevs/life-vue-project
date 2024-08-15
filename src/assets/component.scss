@@ -1,6 +1,6 @@
 .general-btn {
 
-	background-color: rgb(48, 109, 163);
+	background-color: rgb(26 85 139);
 	color: white;
 
 	outline: none;
@@ -42,10 +42,10 @@
 		height: 100%;
 		width: 100%;
 
-		z-index: -10;
+		z-index: -300;
 		left: 0;
 		bottom: 0;
-		background-color: rgb(48, 109, 163);
+		background-color: rgb(10, 107, 192);
 		filter: blur(20px);
 
 		transition: background-color 0.3s ease-in-out;
@@ -54,6 +54,6 @@
 	}
 
 	&:hover::after {
-		background-color: rgba(var(--brand-color-rgb) / 0.5);
+		background-color: rgba(20, 58, 92, 0.739);
 	}
 }

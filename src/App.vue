@@ -22,18 +22,10 @@
 
 		main {
 			min-height: 100vh;
-			overflow: hidden;
+			// overflow: hidden;
 
 			section {
 				scroll-margin: -3.5rem;
-			}
-
-			section:not(.partners):not(.info) {
-				overflow: hidden;
-			}
-
-			section.landing {
-				overflow: visible;
 			}
 		}
 	}

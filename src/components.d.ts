@@ -43,6 +43,7 @@ declare module 'vue' {
     Nav: typeof import('./components/Site/Nav.vue')['default']
     Partner: typeof import('./components/Card/Partner.vue')['default']
     Partners: typeof import('./components/Module/Partners.vue')['default']
+    PartnersOG: typeof import('./components/Module/PartnersOG.vue')['default']
     PathArrow: typeof import('./components/Svg/PathArrow.vue')['default']
     Profile: typeof import('./components/Card/Profile.vue')['default']
     Qleft: typeof import('./components/Svg/Qleft.vue')['default']

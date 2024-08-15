@@ -7,16 +7,42 @@
 				v-for="(partner, index) in partners"
 				:key="partner.name"
 				class="card"
-				:id="'card-' + (index + 1)"
-				:style="{ '--index': index + 1 }"
+				:id="'card_' + (index + 1)"
 			>
-				<Partner class="partner-card card-content" :p="partner" />
+				<Partner class="partner-card card__content" :p="partner" />
 			</li>
 		</ul>
+		<!--
+		<Swiper
+			:slidesPerView="1"
+			:spaceBetween="30"
+			:keyboard="{
+				enabled: true,
+			}"
+			:pagination="{
+				clickable: true,
+			}"
+			:navigation="true"
+			:modules="modules"
+			class="mySwiper"
+			id="section-content"
+		>
+			<SwiperSlide v-for="partner in partners" :key="partner.name">
+				<Partner class="partner-card" :p="partner" />
+			</SwiperSlide>
+		</Swiper> -->
 	</module-partners>
 </template>
 
 <script setup>
+	import { Swiper, SwiperSlide } from 'swiper/vue';
+	import 'swiper/css';
+
+	import 'swiper/css/pagination';
+	import 'swiper/css/navigation';
+	import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+	const modules = [Keyboard, Pagination, Navigation];
+
 	const partners = ref([
 		{
 			link: 'https://www.tacoinc.org/',
@@ -72,47 +98,67 @@
 	]);
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+	:root {
+		--swiper-theme-color: rgb(var(--brand-color-rgb));
+		--swiper-pagination-color: rgb(var(--brand-color-rgb));
+		--swiper-wrapper-transition-timing-function: ease-in-out;
+		--swiper-pagination-bullet-inactive-color: white;
+		--swiper-navigation-sides-offset: -2vw;
+	}
+
+	@media (min-width: 768px) {
+		:root {
+			--swiper-navigation-sides-offset: -2vw;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-rtl .swiper-button-prev {
+		right: var(--swiper-navigation-sides-offset, -13px);
+		left: auto;
+	}
+	.swiper {
+		padding-top: 25px;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+	}
+
+	.swiper-slide {
+		/* Center slide text vertically */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		top: 0;
+		bottom: auto;
+	}
+
 	module-partners {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 		width: 100%;
 
+		padding-top: 30px;
+		min-height: 80vh;
+
 		position: relative;
-	}
-	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-		position: sticky;
-		top: 70px;
-		margin-bottom: 90px;
-	}
 
-	@keyframes scale {
-		to {
-			transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
-		}
-	}
+		// div.partner-grid {
+		// 	display: flex;
+		// 	height: 100%;
+		// 	flex-wrap: nowrap;
 
-	#cards {
-		--numcards: 7;
-		view-timeline-name: --cards-element-scrolls-in-body;
-	}
+		// 	scroll-snap-type: y mandatory;
 
-	.card-content {
-		--start-range: calc(var(--index0) / var(--numcards) * 120%);
-		--end-range: calc((var(--index)) / var(--numcards) * 100%);
-
-		animation: linear scale forwards;
-		animation-timeline: --cards-element-scrolls-in-body;
-		animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
-	}
-
-	@media (min-width: 768px) {
-		.card {
-			margin-bottom: 50px;
-		}
+		// 	partner-card {
+		// 		scroll-snap-align: start;
+		// 	}
+		// }
 	}
 </style>
