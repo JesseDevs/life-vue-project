@@ -112,7 +112,7 @@
 		</GeneralContainer>
 
 		<GeneralContainer class="resources" id="resources">
-			<Partners />
+			<Resources />
 		</GeneralContainer>
 
 		<GeneralContainer class="contact" id="contact">

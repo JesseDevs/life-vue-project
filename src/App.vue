@@ -28,6 +28,14 @@
 				scroll-margin: -3.5rem;
 			}
 		}
+
+		section:not(.partners):not(.info) {
+			overflow: hidden;
+		}
+
+		section.landing {
+			overflow: visible;
+		}
 	}
 
 	@media (min-width: 850px) {

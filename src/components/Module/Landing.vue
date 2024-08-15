@@ -64,12 +64,27 @@
 				},
 				'<.3',
 			);
+			tl.fromTo(
+				'.flex-holder',
+				{
+					opacity: 0,
+					y: 100,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					ease: 'power3.inOut',
+				},
+				'<.3',
+			);
 		}
 	});
 </script>
 
 <style lang="scss" scoped>
 	.landing-sup {
+		padding-top: 10px;
 		font-weight: 400;
 		letter-spacing: 0.12em;
 
