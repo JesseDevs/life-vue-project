@@ -1,6 +1,5 @@
 <template>
 	<section id="info">
-		<!-- <BGDots class="bg-dots" /> -->
 		<inner-column>
 			<module-info>
 				<h2 class="step-4">Save Lives Now</h2>
@@ -48,19 +47,6 @@
 				opacity: 1,
 				duration: 1,
 				ease: 'power3.inOut',
-			},
-			'<',
-		);
-
-		tl.from(
-			'.bg-dots circle',
-			{
-				opacity: 0,
-				duration: 0.5,
-				stagger: {
-					amount: 0.5,
-					from: 'random',
-				},
 			},
 			'<',
 		);
