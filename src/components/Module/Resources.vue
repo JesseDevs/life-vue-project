@@ -2,17 +2,6 @@
 	<module-partners>
 		<SectionTitle class="black-text" text="Community Partners" />
 
-		<ul id="cards">
-			<li
-				v-for="(partner, index) in partners"
-				:key="partner.name"
-				class="card"
-				:id="'card_' + (index + 1)"
-			>
-				<Partner class="partner-card card__content" :p="partner" />
-			</li>
-		</ul>
-		<!--
 		<Swiper
 			:slidesPerView="1"
 			:spaceBetween="30"
@@ -30,7 +19,7 @@
 			<SwiperSlide v-for="partner in partners" :key="partner.name">
 				<Partner class="partner-card" :p="partner" />
 			</SwiperSlide>
-		</Swiper> -->
+		</Swiper>
 	</module-partners>
 </template>
 
