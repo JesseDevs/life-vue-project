@@ -53,6 +53,8 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			align-items: center;
+			row-gap: 0.5em;
+			width: 92%;
 
 			picture {
 				min-width: 280px;
