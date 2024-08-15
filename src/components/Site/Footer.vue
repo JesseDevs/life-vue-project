@@ -58,6 +58,16 @@
 								>Clare Matrix</a
 							>
 						</li>
+						<li>
+							<a href="https://www.impacthouse.com/" target="_blank"
+								>IMPACT</a
+							>
+						</li>
+						<li>
+							<a href="https://didihirsch.org/" target="_blank"
+								>Didi Hirsch</a
+							>
+						</li>
 					</ul>
 				</footer-group>
 				<footer-group>
