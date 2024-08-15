@@ -7,7 +7,11 @@
 			<!-- <div v-if="events.length > 0" class="calendar">
 				<Event v-for="event in events" :key="event.id" :event="event" />
 			</div> -->
-			<div v-else class="calendar no-events">
+			<!-- <div v-else class="calendar no-events">
+				<p>No Upcoming Events.</p>
+			</div> -->
+
+			<div class="calendar no-events">
 				<p>No Upcoming Events.</p>
 			</div>
 		</div>
