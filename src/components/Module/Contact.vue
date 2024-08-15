@@ -23,7 +23,7 @@
 						type="email"
 						name="_replyto"
 						id="email-address"
-						placeholder="email@domain"
+						placeholder="Email"
 						required=""
 					/>
 					<!-- <label for="telephone">Telephone Number (Optional)</label>
