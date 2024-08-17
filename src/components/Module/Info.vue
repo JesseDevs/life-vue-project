@@ -33,7 +33,6 @@
 				trigger: '#info',
 				start: 'top+=60px center',
 				end: 'bottom center',
-				markers: true,
 			},
 		});
 
