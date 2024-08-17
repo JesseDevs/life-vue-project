@@ -51,7 +51,7 @@
 				'<',
 			);
 			tl.fromTo(
-				'.flex-holder',
+				'.landing-sup',
 				{
 					opacity: 0,
 					y: 100,
@@ -76,7 +76,7 @@
 					duration: 0.8,
 					ease: 'power3.inOut',
 				},
-				'<.3',
+				'<',
 			);
 		}
 	});

@@ -183,7 +183,7 @@
 		}
 		footer-block {
 			display: grid;
-			grid-template-columns: repeat(2, minmax(144px, 1fr));
+			grid-template-columns: repeat(2, minmax(104px, 1fr));
 			width: 100%;
 			position: relative;
 			gap: 32px;

@@ -30,7 +30,7 @@
 		flex-direction: column;
 		width: 100%;
 
-		min-height: 560px;
+		height: 560px;
 		column-gap: 0.9em;
 		row-gap: 1rem;
 
@@ -40,6 +40,7 @@
 			background-color: white;
 			margin-left: 2rem;
 			margin-right: 2rem;
+			height: fit-content;
 		}
 
 		picture {

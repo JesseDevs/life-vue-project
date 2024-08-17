@@ -4,7 +4,7 @@
 
 		<Swiper
 			:slidesPerView="1"
-			:spaceBetween="30"
+			:spaceBetween="20"
 			:keyboard="{
 				enabled: true,
 			}"
@@ -124,6 +124,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		height: auto;
 	}
 
 	.swiper-horizontal > .swiper-pagination-bullets,

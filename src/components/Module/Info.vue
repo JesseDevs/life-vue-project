@@ -31,7 +31,7 @@
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#info',
-				start: 'top+=60px center',
+				start: 'top+=70px center',
 				end: 'bottom center',
 			},
 		});
