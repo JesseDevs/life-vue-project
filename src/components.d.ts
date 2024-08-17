@@ -49,6 +49,7 @@ declare module 'vue' {
     Qleft: typeof import('./components/Svg/Qleft.vue')['default']
     Qright: typeof import('./components/Svg/Qright.vue')['default']
     Quote: typeof import('./components/Svg/Quote.vue')['default']
+    Resources: typeof import('./components/Module/Resources.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Rquote: typeof import('./components/Svg/Rquote.vue')['default']

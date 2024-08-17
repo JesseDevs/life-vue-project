@@ -1,8 +1,10 @@
 <template>
 	<partner-card>
-		<picture class="profile-pic">
-			<img :src="p.logo" alt="brand logo" />
-		</picture>
+		<div class="picture-holder">
+			<picture class="profile-pic">
+				<img :src="p.logo" alt="brand logo" />
+			</picture>
+		</div>
 
 		<h4 class="step-1">{{ p.name }}</h4>
 		<p v-html="p.context"></p>
@@ -27,42 +29,82 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		background: rgb(221, 219, 219);
-		color: rgb(10, 5, 7);
-		padding: 1em;
-		min-height: 500px;
+
+		min-height: 560px;
 		column-gap: 0.9em;
+		row-gap: 1rem;
+
+		cursor: grab;
+
+		.picture-holder {
+			background-color: white;
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
 
 		picture {
-			padding: 0.8em;
+			padding: 0.5em;
 			max-width: 200px;
 			margin: 0 auto;
+			aspect-ratio: 5/3;
 
 			img {
 				object-fit: contain;
 			}
 		}
 
-		a {
+		h4,
+		p {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
+		h4 {
+			font-weight: 500;
+		}
+		p {
+			flex-grow: 1;
+		}
+
+		a.general-btn {
 			margin-top: auto;
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
+
+		&:active {
+			cursor: grabbing;
 		}
 	}
 
 	@media (min-width: 768px) {
 		partner-card {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			// display: grid;
+			// grid-template-columns: 1fr 1fr;
 			align-items: center;
-			row-gap: 0.5em;
-			width: 92%;
+
+			width: 89%;
 
 			picture {
 				min-width: 280px;
 			}
 
-			p,
-			a {
-				grid-column: 1/-1;
+			div.picture-holder {
+				width: 96%;
+			}
+
+			h4 {
+				width: 100%;
+				text-align: center;
+			}
+
+			p {
+				max-width: 63ch;
+			}
+
+			.general-btn {
+				width: 94%;
+				margin-top: auto;
 			}
 		}
 	}

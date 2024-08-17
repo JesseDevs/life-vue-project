@@ -94,6 +94,7 @@
 		--swiper-wrapper-transition-timing-function: ease-in-out;
 		--swiper-pagination-bullet-inactive-color: white;
 		--swiper-navigation-sides-offset: -2vw;
+		--swiper-navigation-size: 30px;
 	}
 
 	@media (min-width: 768px) {
@@ -108,10 +109,14 @@
 		left: auto;
 	}
 	.swiper {
-		padding-top: 25px;
+		padding-top: 35px;
 		width: 100%;
 		height: 100%;
 		overflow: visible;
+	}
+
+	.swiper-wrapper {
+		align-items: center;
 	}
 
 	.swiper-slide {
@@ -153,5 +158,8 @@
 		// 		scroll-snap-align: start;
 		// 	}
 		// }
+	}
+
+	@media (min-width: 768px) {
 	}
 </style>
