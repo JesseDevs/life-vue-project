@@ -112,12 +112,13 @@
 		position: sticky;
 		top: 0;
 
-		backdrop-filter: blur(7px);
+		backdrop-filter: blur(15px);
 		color: rgb(250 250 250);
-		background-color: var(--background);
+		mask-image: linear-gradient(to bottom, black, black);
+		background-color: rgb(var(--background-rgb) / 0.7);
 
 		inner-column {
-			padding: 0.8rem 1.05rem;
+			padding: 0.3rem 1.05rem;
 			height: 100%;
 
 			@media (min-width: 1000px) {

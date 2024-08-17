@@ -209,4 +209,16 @@
 			}
 		}
 	}
+
+	@media (min-width: 800px) {
+		footer {
+			footer-block {
+				display: flex;
+				flex-direction: column;
+			}
+			footer-group ul {
+				flex-direction: row;
+			}
+		}
+	}
 </style>
