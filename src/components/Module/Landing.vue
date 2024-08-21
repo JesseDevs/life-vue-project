@@ -146,6 +146,7 @@
 			position: relative;
 			pointer-events: none;
 			user-select: none;
+			animation: pulse-logo 3s infinite alternate;
 			img {
 				max-width: 100%;
 				height: auto;
@@ -210,6 +211,17 @@
 			transform: scale(0.8);
 			opacity: 0.7;
 			box-shadow: 0 0 60px 30px var(--brand-two-color);
+		}
+	}
+	@keyframes pulse-logo {
+		0% {
+			scale: 1;
+		}
+		50% {
+			scale: 1.006;
+		}
+		100% {
+			scale: 1;
 		}
 	}
 </style>

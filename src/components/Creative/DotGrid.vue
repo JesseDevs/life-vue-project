@@ -64,6 +64,7 @@
 				opacity: 0.45;
 			}
 			50% {
+				scale: 1.1;
 				opacity: 1;
 			}
 			75% {

@@ -187,6 +187,7 @@
 			opacity: 0.55;
 		}
 		50% {
+			scale: 1.1;
 			opacity: 1;
 		}
 		75% {
