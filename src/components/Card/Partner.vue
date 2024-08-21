@@ -30,7 +30,7 @@
 		flex-direction: column;
 		width: 100%;
 
-		height: 560px;
+		min-height: 560px;
 		column-gap: 0.9em;
 		row-gap: 1rem;
 
@@ -38,8 +38,8 @@
 
 		.picture-holder {
 			background-color: white;
-			margin-left: 2rem;
-			margin-right: 2rem;
+			margin-left: 1.4rem;
+			margin-right: 1.4rem;
 			height: fit-content;
 		}
 
@@ -56,8 +56,8 @@
 
 		h4,
 		p {
-			padding-left: 2rem;
-			padding-right: 2rem;
+			padding-left: 1.7rem;
+			padding-right: 1.7rem;
 		}
 
 		h4 {
@@ -69,8 +69,16 @@
 
 		a.general-btn {
 			margin-top: auto;
-			margin-left: 2rem;
-			margin-right: 2rem;
+			margin-left: 0.8rem;
+			margin-right: 0.8rem;
+
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media (min-width: 500px) {
+				margin-left: 1.4rem;
+				margin-right: 1.4rem;
+			}
 		}
 
 		&:active {

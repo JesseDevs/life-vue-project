@@ -137,6 +137,62 @@
 		opacity: 0.8 !important;
 	}
 
+	.swiper-button-prev {
+		height: 40px;
+		width: 40px;
+
+		background-color: var(--gray); /* Circle background */
+		border-radius: 50%;
+
+		left: -20px !important;
+		&:after {
+			content: none;
+		}
+
+		&:before {
+			content: ''; /* Create the arrow with pseudo-element */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='m10 18l-6-6l6-6l1.4 1.45L7.85 11H20v2H7.85l3.55 3.55z'/%3E%3C/svg%3E") !important;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 90% auto;
+			height: 100%; /* Same as the container height */
+			width: 100%; /* Same as the container width */
+			z-index: 2; /* Keep the arrow above the circle */
+		}
+	}
+
+	.swiper-button-next {
+		height: 40px;
+		width: 40px;
+
+		background-color: var(--gray); /* Circle background */
+		border-radius: 50%;
+
+		right: -20px !important;
+		&:after {
+			content: none;
+		}
+
+		&:before {
+			content: ''; /* Create the arrow with pseudo-element */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z'/%3E%3C/svg%3E") !important;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 90% auto;
+			height: 100%; /* Same as the container height */
+			width: 100%; /* Same as the container width */
+			z-index: 2; /* Keep the arrow above the circle */
+		}
+	}
+
 	module-partners {
 		display: flex;
 		flex-direction: column;
