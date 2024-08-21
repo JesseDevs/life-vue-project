@@ -28,7 +28,7 @@
 			// overflow: hidden;
 
 			section {
-				scroll-margin: -3.5rem;
+				scroll-margin: 3.5rem;
 			}
 		}
 

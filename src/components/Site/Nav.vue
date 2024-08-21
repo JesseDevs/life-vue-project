@@ -42,7 +42,7 @@
 					</li>
 
 					<li>
-						<a href="/team">Team <PathArrow /></a>
+						<a href="#team">Team </a>
 					</li>
 					<li>
 						<a href="/#events">Events </a>

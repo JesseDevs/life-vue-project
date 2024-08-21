@@ -14,9 +14,7 @@
 
 				<li>
 					<span class="step-3"> 03 </span>
-					<a class="step-3" href="/team" @click="ui.closeMenu">
-						Our Team <PathArrow
-					/></a>
+					<a class="step-3" href="#team" @click="ui.closeMenu"> Our Team </a>
 				</li>
 				<li>
 					<span class="step-3"> 04 </span>
@@ -70,9 +68,9 @@
 
 		totalButtons.value = buttons.length;
 		gsap.from(buttons, {
-			y: '-100%',
+			x: '-20%',
 			opacity: 0,
-			duration: 0.1,
+			duration: 0.5,
 			stagger: 0.1,
 		});
 
