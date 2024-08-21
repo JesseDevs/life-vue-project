@@ -48,6 +48,11 @@
 
 		.general-btn {
 			margin-top: 50px;
+
+			@media (max-width: 500px) {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
 		}
 	}
 </style>

@@ -12,7 +12,7 @@
 			</picture>
 
 			<p class="landing-sup">
-				Give the gift of saving lives<br />
+				Give the gift of saving&nbsp;lives<br />
 				from opioid overdose
 			</p>
 			<a href="https://www.instagram.com/lifeofthepartyorg/" class="flex-holder">
