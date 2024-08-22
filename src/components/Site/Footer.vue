@@ -74,18 +74,10 @@
 					<p class="group-head">Socials</p>
 					<ul>
 						<li>
-							<a href="https://twitter.com/" target="_blank"
-								>X/Twitter <PathArrow
-							/></a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/ " target="_blank"
+							<a
+								href="https://www.instagram.com/lifeofthepartyorg/"
+								target="_blank"
 								>Instagram <PathArrow
-							/></a>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/" target="_blank"
-								>Facebook <PathArrow
 							/></a>
 						</li>
 					</ul>
