@@ -52,7 +52,7 @@
 						<a href="/#resources">Resources </a>
 					</li>
 					<li>
-						<a :href="mailToHref" target="_blank">Volunteer <PathArrow /></a>
+						<a href="/#contact">Volunteer <PathArrow /></a>
 					</li>
 					<li>
 						<a href="/#contact">Contact </a>

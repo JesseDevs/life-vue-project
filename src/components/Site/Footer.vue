@@ -68,6 +68,11 @@
 								>Didi Hirsch</a
 							>
 						</li>
+						<li>
+							<a href="http://publichealth.lacounty.gov/" target="_blank"
+								>LA County Department of Public Health</a
+							>
+						</li>
 					</ul>
 				</footer-group>
 				<footer-group>

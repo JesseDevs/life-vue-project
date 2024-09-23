@@ -38,7 +38,7 @@
 						rows="5"
 						name="message"
 						id="message"
-						placeholder="Share your thoughts with us."
+						placeholder="Share your thought with us or volunteer with our team."
 						required=""
 					></textarea>
 					<input

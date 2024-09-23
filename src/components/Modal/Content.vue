@@ -33,7 +33,7 @@
 
 				<li>
 					<span class="step-3"> 07 </span>
-					<a class="step-3" :href="mailToHref" @click="ui.closeMenu">
+					<a class="step-3" href="/#contact" @click="ui.closeMenu">
 						Volunteer<PathArrow
 					/></a>
 				</li>

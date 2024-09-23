@@ -84,6 +84,13 @@
 				'Didi Hirsch is a leading provider of mental health, substance use and crisis care services and is home to the nation’s first and largest Suicide Prevention Center. ',
 			logo: '/partners/didi.png',
 		},
+		{
+			link: 'http://publichealth.lacounty.gov/',
+			name: 'LA County Department of Public Health',
+			context:
+				'The Los Angeles County Department of Public Health provides public health services to Los Angeles County residents. The department works with the County’s two other health departments, the Los Angeles County Department of Health Services, and the Los Angeles County Department of Mental Health, in a cooperative healthcare integration effort',
+			logo: '/partners/public.png',
+		},
 	]);
 </script>
 
