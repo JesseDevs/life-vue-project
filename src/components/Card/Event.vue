@@ -50,6 +50,8 @@
 	a {
 		height: 100%;
 		display: block;
+		width: 100%;
+		max-width: 400px;
 	}
 	event-card {
 		display: flex;

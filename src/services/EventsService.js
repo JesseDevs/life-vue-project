@@ -14,6 +14,7 @@ export const useEventService = defineStore('e', () => {
 			location: ['UCLA Campus', 'Wilson Plaza'],
 			link: 'https://didihirsch.akaraisin.com/ui/at24',
 			linkText: 'https://didihirsch.akaraisin.com/ui/at24',
+			flyer: '/images/event/alive-flyer.JPG',
 		},
 	]);
 	return { events };
