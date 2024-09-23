@@ -59,9 +59,10 @@
 		height: 100%;
 
 		align-items: center;
-		background-color: rgb(var(--brand-color-rgb) / 0.4);
+		background-color: rgb(var(--brand-color-rgb) / 0.5);
 		position: relative;
 		box-shadow: 0 5px 20px 0 rgba(var(--brand-color-rgb) / 0.2);
+		border: 1px solid transparent;
 		transition: background-color 0.3s ease-in-out;
 		img {
 			transition: transform 0.3s ease-in-out;
@@ -70,7 +71,8 @@
 			img {
 				transform: scale(1.1);
 			}
-			background-color: rgb(var(--brand-color-rgb) / 0.2);
+			background-color: rgb(var(--brand-color-rgb) / 0.3);
+			border-color: var(--brand-color);
 		}
 
 		picture {
@@ -143,7 +145,7 @@
 			div.location-block {
 				display: flex;
 				flex-direction: column;
-				gap: 2px;
+				gap: 0px;
 
 				max-width: fit-content;
 				p {
