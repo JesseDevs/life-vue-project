@@ -4,7 +4,7 @@ export const useEventService = defineStore('e', () => {
 	const events = ref([
 		{
 			id: 1,
-			title: 'Alive Together - United Preventing Suicide',
+			title: 'Alive Together - Uniting to Preventing Suicide',
 			img: '/images/event/alive.png',
 			dateDay: '29',
 			month: 'Sept.',
