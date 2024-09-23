@@ -5,7 +5,7 @@ export const useEventService = defineStore('e', () => {
 		{
 			id: 1,
 			title: 'Alive Together - United Preventing Suicide',
-			img: '/event/alive.png',
+			img: '/images/event/alive.png',
 			dateDay: '29',
 			month: 'Sept.',
 			detail: 'Join us for a 5K fun walk/run to raise awareness, build community, and benefit the Didi Hirsch Suicide Prevention Center.',
