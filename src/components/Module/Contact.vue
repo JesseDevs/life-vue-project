@@ -114,6 +114,11 @@
 			align-items: baseline;
 		}
 
+		input::placeholder,
+		textarea::placeholder {
+			color: rgba(0, 0, 0, 0.874);
+		}
+
 		/* border, padding, margin, width */
 		#fs-frm input,
 		#fs-frm select,
