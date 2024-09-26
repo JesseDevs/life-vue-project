@@ -47,7 +47,8 @@
 			padding: 0.5em;
 			max-width: 200px;
 			margin: 0 auto;
-			aspect-ratio: 5/3;
+			height: 100px;
+			/* aspect-ratio: 5/2; */
 
 			img {
 				object-fit: contain;
@@ -83,6 +84,23 @@
 
 		&:active {
 			cursor: grabbing;
+		}
+	}
+
+	@media (min-width: 550px) {
+		partner-card {
+			picture {
+				padding: 0.5em;
+				max-width: 350px;
+
+				margin: 0 auto;
+				height: 100%;
+				aspect-ratio: 5/3;
+
+				img {
+					object-fit: contain;
+				}
+			}
 		}
 	}
 
