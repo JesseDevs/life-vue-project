@@ -11,27 +11,52 @@
 	onMounted(async () => {
 		await nextTick();
 
+		// Fade-in animation for the landing section
+		gsap.to('.landing', {
+			opacity: 1,
+			y: 0,
+			ease: 'power2.out',
+		});
+
+		// Fade-in animations for other sections
+		const sections = document.querySelectorAll(
+			'section.GeneralContainer:not(.landing)',
+		);
+		sections.forEach((section) => {
+			gsap.to(section, {
+				opacity: 1,
+				y: 0,
+
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: section,
+					start: 'top 67%',
+					end: 'top 20%',
+					toggleActions: 'play none none none',
+				},
+			});
+		});
+
+		// Loading picture animation
 		gsap.timeline()
 			.to('.loading-picture', {
 				opacity: 1,
 				duration: 1.3,
 			})
-			.to(
-				'.loading-picture',
-				{
-					filter: 'blur(0px)',
-					duration: 0.5,
-				},
-				0,
-			)
+			.to('.loading-picture', {
+				duration: 0.5,
+				immediateRender: false,
+			})
 			.to('.loading-picture', {
 				opacity: 0,
-				duration: 0.5,
+
+				duration: 0.3,
+				ease: 'power2.inOut',
 				onComplete: () => {
 					gsap.to('.launch', {
-						filter: 'blur(10px)',
 						opacity: 0,
-						duration: 1,
+						duration: 0.5,
+						ease: 'power2.inOut',
 						onComplete: () => {
 							ui.loading = false;
 						},
@@ -39,14 +64,7 @@
 				},
 			});
 
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: 'section.landing',
-				start: 'bottom center',
-				end: 'bottom center',
-			},
-		});
-
+		// Timeline for dot-grid-left animation
 		gsap.fromTo(
 			'.dot-grid-left',
 			{
@@ -56,7 +74,6 @@
 			{
 				opacity: 1,
 				right: '0',
-
 				ease: 'power3.inOut',
 				scrollTrigger: {
 					trigger: '#mission',
@@ -83,14 +100,9 @@
 		<GeneralContainer class="landing" id="landing">
 			<Landing />
 		</GeneralContainer>
-		<!-- <div class="dot-create">
-			<inner-column>
-				<DotGridRight />
-			</inner-column>
-		</div> -->
-
-		<Info />
-
+		<GeneralContainer class="info" id="info">
+			<Info />
+		</GeneralContainer>
 		<GeneralContainer class="mission" id="mission">
 			<Mission />
 		</GeneralContainer>
@@ -122,6 +134,13 @@
 </template>
 
 <style lang="scss" scoped>
+	.GeneralContainer {
+		opacity: 0; // Default hidden state
+		// Start below original position
+		// Smooth transition
+		transform: translateY(100px);
+	}
+
 	.dot-create {
 		z-index: -99;
 		inner-column {
@@ -148,7 +167,8 @@
 
 		.loading-picture {
 			opacity: 0;
-			filter: blur(3px);
+
+			transition: filter 0.3s ease-in-out;
 		}
 
 		picture {

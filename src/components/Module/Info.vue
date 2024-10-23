@@ -1,24 +1,20 @@
 <template>
-	<section id="info">
-		<inner-column>
-			<module-info>
-				<h2 class="step-4">Save Lives Now</h2>
+	<module-info>
+		<h2 class="step-4">Save Lives Now</h2>
 
-				<a
-					class="general-btn"
-					href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
-					target="_blank"
-					>Donate
-					<Arrow class="arrow" />
-				</a>
-				<div class="spinner-wrap">
-					<div class="spinner-item"></div>
-					<div class="spinner-item spinner-item--2"></div>
-					<div class="spinner-item spinner-item--3"></div>
-				</div>
-			</module-info>
-		</inner-column>
-	</section>
+		<a
+			class="general-btn"
+			href="https://www.zeffy.com/en-US/donation-form/9dd05842-7a29-4423-9102-3060efb0e3fa"
+			target="_blank"
+			>Donate
+			<Arrow class="arrow" />
+		</a>
+		<div class="spinner-wrap">
+			<div class="spinner-item"></div>
+			<div class="spinner-item spinner-item--2"></div>
+			<div class="spinner-item spinner-item--3"></div>
+		</div>
+	</module-info>
 </template>
 
 <script setup>
@@ -26,31 +22,6 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
-
-	onMounted(() => {
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#info',
-				start: 'top+=70px center',
-				end: 'bottom center',
-			},
-		});
-
-		tl.fromTo(
-			'module-info',
-			{
-				opacity: 0,
-				y: 100,
-			},
-			{
-				y: 0,
-				opacity: 1,
-				duration: 1,
-				ease: 'power3.inOut',
-			},
-			'<',
-		);
-	});
 </script>
 
 <style lang="scss">
@@ -119,12 +90,10 @@
 		align-items: center;
 		justify-content: center;
 		gap: 30px;
-		opacity: 0;
 
 		width: 100%;
 		min-height: 350px;
 		margin: 0 auto;
-		padding: 30px 0;
 
 		.vol-link {
 			display: flex;

@@ -13,9 +13,9 @@
 </script>
 
 <style lang="scss" scoped>
-	div#section-heading {
-		opacity: 0;
-		z-index: 1;
+	div#seciton-heading {
+		width: 100%;
+		display: block;
 	}
 	h3 {
 		color: inherit;
