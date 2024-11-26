@@ -5,7 +5,7 @@
 			<div class="event-card">
 				<picture class="flyer">
 					<img
-						src="/public/images/event/kroqaac-flyer.jpg"
+						src="/public/images/event/kroq-da-flyer.webp"
 						alt="kroqaac event flyer"
 					/>
 				</picture>
