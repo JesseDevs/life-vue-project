@@ -64,6 +64,15 @@
 					'Conrad is passionate about addressing the current opioid crisis. His work in the field constantly reinforces the importance of Naloxone, his top choice in emergency overdose situations. He is a vocal advocate for its widespread availability and regularly conducts workshops and training sessions to educate both professionals and the public on its use and significance. Outside of his professional life, he actively volunteers for local events and initiatives, demonstrating his commitment to public health and safety.',
 				],
 			},
+			{
+				imgsrc: '/images/profile/helen.webp',
+				name: 'Helen Saucedo',
+				role: ['Board Member'],
+				text: [
+					'Helen Saucedo, a born and raised community member of East Los Angeles, brings over 15 years of experience as a peer advocate in mental health. Currently a Community Health Worker with the Los Angeles County Department of Public Health, she works directly with underserved populations to provide critical health education and access to life-saving interventions like Narcan. In addition, Helen is a certified Sound Healer and Reiki Master, integrating alternative healing methods with traditional public health approaches to promote well-being and recovery.',
+					'With a diverse background in public health, community outreach, holistic wellness, and mental health advocacy, she offers a unique and compassionate perspective on the organization’s mission to save lives and reduce harm in communities impacted by opioid use. As a mother of a young adult, Helen is particularly passionate about the mission of Life of the Party. Understanding the challenges families face when dealing with substance use, she is dedicated to ensuring that communities have the resources to protect their loved ones and prevent opioid overdoses.',
+				],
+			},
 		];
 		ui.loading = false;
 	});
