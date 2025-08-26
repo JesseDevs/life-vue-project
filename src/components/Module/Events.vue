@@ -1,8 +1,11 @@
 <template>
 	<module-events>
-		<SectionTitle text="Upcoming Events" />
+		<SectionTitle text="Past Events" />
 		<div class="events-container" id="section-content">
 			<div class="event-card">
+				<past-event>
+					<h2>PAST EVENT</h2>
+				</past-event>
 				<picture class="flyer">
 					<img
 						src="/public/images/event/kroq-da-flyer.webp"
