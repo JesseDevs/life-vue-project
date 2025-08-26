@@ -1,7 +1,10 @@
 <template>
 	<module-events>
+		<!-- Change the section title -->
 		<SectionTitle text="Past Events" />
+
 		<div class="events-container" id="section-content">
+			<!-- === KROQ EVENT MOVED TO PAST === -->
 			<div class="event-card">
 				<past-event>
 					<h2>PAST EVENT</h2>
@@ -19,19 +22,11 @@
 							<h2 class="step-1">KROQ Almost Acoustic Christmas</h2>
 							<p class="details">
 								The 33rd Annual KROQ Almost Acoustic Christmas returns to
-								<a href="https://www.instagram.com/kroq/?hl=en">
-									@kiaforum</a
-								>. Presented by
-								<a href="https://www.instagram.com/thekiaforum/?hl=en">
-									@kroq
-								</a>
-								<a href="https://www.instagram.com/audacy/?hl=en">
-									@audacy
-								</a>
-								+
-								<a href="https://www.instagram.com/ilovegain/?hl=en">
-									@ilovegain
-								</a>
+								<a href="https://www.instagram.com/kroq/?hl=en">@kiaforum</a>.
+								Presented by
+								<a href="https://www.instagram.com/thekiaforum/?hl=en">@kroq</a>,
+								<a href="https://www.instagram.com/audacy/?hl=en">@audacy</a>,
+								<a href="https://www.instagram.com/ilovegain/?hl=en">@ilovegain</a>
 								#KROQXMAS
 							</p>
 						</header-content>
@@ -49,6 +44,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- === PUNK EVENT (already past) === -->
 			<div class="event-card">
 				<past-event>
 					<h2>PAST EVENT</h2>
@@ -84,11 +81,12 @@
 </template>
 
 <script setup>
+	<!-- keep the script (event service etc.) even if unused for now -->
 	import { useEventService } from '~/services/EventsService';
 	const e = useEventService();
-
 	const events = computed(() => e.events);
 </script>
+
 
 <style lang="scss" scoped>
 	module-events {
